@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace DeadTired
 {
-    public class PlayerBehaviour : MonoBehaviour
+    public class PlayerBehaviour : MonoBehaviour, IMultiSceneAwake
     {
         public enum State {ghost, body, isReturning};
         
@@ -38,6 +38,17 @@ namespace DeadTired
         private float startTime;
         private float journeyLength;
         public GameObject anchor;
+
+
+        private InteractionsManager cachedInteractionsManager;
+
+        // Gets called when all the scenes for each level are loaded...
+        public void OnMultiSceneAwake()
+        {
+            // Gets the interaction manager no matter which scene it is in...
+            cachedInteractionsManager = SceneElly.GetComponentFromAllScenes<InteractionsManager>();
+        }
+
 
         // Start is called before the first frame update
         void Start()
@@ -73,7 +84,8 @@ namespace DeadTired
 
                 if(Input.GetButtonDown(interactInput))
                 {
-                    Debug.Log("Interacting TO DO");
+                    // Calls the interaction manager and tries to make an interaction if possible...
+                    cachedInteractionsManager.TryInteract();
                 }
 
                 //if a ghost keep checkign the distance
