@@ -320,6 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c585bf211f0f4c4d819e39fc3400047b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireOnAction: 1
   playerOrbCount:
     useConstant: 0
     constantValue: 0

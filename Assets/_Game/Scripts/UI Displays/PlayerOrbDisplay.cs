@@ -9,6 +9,7 @@ namespace DeadTired.UI
 {
     public class PlayerOrbDisplay : MonoBehaviour
     {
+        [SerializeField] private bool shouldFade;
         [SerializeField] private IntReference playerOrbCount;
         [SerializeField] private FloatReference activeTime;
 
@@ -29,12 +30,16 @@ namespace DeadTired.UI
         }
 
 
-        private void OnEnable() => OnOrbCountChanged += UpdateTextDisplay;
-        
+        private void OnEnable()
+        {
+            OnOrbCountChanged += UpdateTextDisplay;
+        }
+
         private void OnDisable()
-        { 
+        {
             OnOrbCountChanged -= UpdateTextDisplay;
             
+            if (!shouldFade) return;
             if (visualCo != null)
                 StopCoroutine(visualCo);
         }
@@ -43,7 +48,8 @@ namespace DeadTired.UI
         private void UpdateTextDisplay()
         {
             displayText.text = MoneyFormat.Format(playerOrbCount);
-            
+
+            if (!shouldFade) return;
             if (visualCo != null)
                 StopCoroutine(visualCo);
 
