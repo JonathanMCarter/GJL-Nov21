@@ -13,7 +13,8 @@ namespace DeadTired
 
         [Header("Player Settings")]
         [SerializeField]
-        private float maxDistanceFromAnchor =  5f;
+        private GameObject playerAnchor; // the players body
+        public float maxDistanceFromAnchor =  5f;
         private float minDistanceFromAnchor = 0.2f;
 
         // Movement speed in units per second.
@@ -21,7 +22,7 @@ namespace DeadTired
 
         public float currentDistanceFromAnchor;
         public GameObject playerObject; // want to make this automatically grab the playerobject
-        public GameObject playerAnchor; // the players body
+
 
         public float maxGhostTimeSeconds = 60f;
 
@@ -33,7 +34,7 @@ namespace DeadTired
         // Time when the movement back to body started.
         private float startTime;
         private float journeyLength;
-        private GameObject anchor;
+        public GameObject anchor;
 
         // Start is called before the first frame update
         void Start()
@@ -52,36 +53,26 @@ namespace DeadTired
             }
             else
             {
-               
-            if(Input.GetButtonDown(changeStateInput))
-            {
-                if(currentState == State.body)
+                
+                if(Input.GetButtonDown(changeStateInput))
                 {
-                    //GOING GHOST!!
-                    DropAnchor();
+                    if(currentState == State.body)
+                    {
+                        //GOING GHOST!!
+                        DropAnchor();
+                    }
+                    else
+                    {
+                        //BACK TO NORMAL
+                        returnPlayerToBody();
+                    }
                 }
-                else
+
+                if(Input.GetButtonDown(interactInput))
                 {
-                    //BACK TO NORMAL
-                    returnPlayerToBody();
+                    Debug.Log("Interacting TO DO");
                 }
-            }
 
-            if(Input.GetButtonDown(interactInput))
-            {
-                Debug.Log("Interacting TO DO");
-            }
-
-            //if a ghost keep checkign the distance
-            if(currentState == State.ghost)
-            {
-                currentDistanceFromAnchor = Vector3.Distance(anchor.transform.position, playerObject.transform.position);
-
-                if(currentDistanceFromAnchor > maxDistanceFromAnchor)
-                {                  
-                    returnPlayerToBody();
-                }
-            } 
             }
         }
 
