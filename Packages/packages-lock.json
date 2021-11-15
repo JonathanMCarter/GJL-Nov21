@@ -1,13 +1,13 @@
 {
   "dependencies": {
     "com.cartergames.tools.jtools": {
-      "version": "https://github.com/JonathanMCarter/com.cartergames.tools.jtools.git#0.1.16",
+      "version": "https://github.com/JonathanMCarter/com.cartergames.tools.jtools.git#0.1.17",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.textmeshpro": "2.0.0"
       },
-      "hash": "2c79d61b8dc5f59e9466707727ca3f345f5f5643"
+      "hash": "5b84d632c05bd8536274225628b7c48ce7aa65fc"
     },
     "com.coffee.upm-git-extension": {
       "version": "https://github.com/mob-sakai/UpmGitExtension.git",
@@ -165,22 +165,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.sysroot": {
-      "version": "0.1.19-preview",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.sysroot.linux-x86_64": {
-      "version": "0.1.14-preview",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.sysroot": "0.1.18-preview"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.test-framework": {
       "version": "1.1.29",
       "depth": 0,
@@ -210,16 +194,6 @@
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.toolchain.win-x86_64-linux-x86_64": {
-      "version": "0.1.21-preview",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.sysroot": "0.1.19-preview",
-        "com.unity.sysroot.linux-x86_64": "0.1.14-preview"
       },
       "url": "https://packages.unity.com"
     },

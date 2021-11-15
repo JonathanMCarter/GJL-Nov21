@@ -15,3 +15,8 @@ MonoBehaviour:
   scenes:
   - Managers
   - Menu
+  - Menu UI
+  - CreditsUI
+  - QuitConfirm
+  - How To Play UI
+  - BuildInformation
