@@ -8,7 +8,7 @@ namespace DeadTired.Interactables
         public UnityEvent OnLeverPulled;
         
         
-        public void OnPlayerInteract()
+        public virtual void OnPlayerInteract()
         {
             if (!IsPlayerInZone || !IsPlayerInCorrectState) return;
             OnLeverPulled?.Invoke();
