@@ -31,7 +31,7 @@ namespace DeadTired.Interactables
         public void OnMultiSceneEnable()
         {
             interactionsManager = SceneElly.GetComponentFromScene<InteractionsManager>();
-            canvas.worldCamera = SceneElly.GetComponentFromScene<MultiSceneOverlayCamera>("Player").GetCamera;
+            canvas.worldCamera = SceneElly.GetComponentFromScene<Camera>("Player");
             canvas.transform.rotation = canvas.worldCamera.transform.rotation;
             ConfigureUI(false);
         }
