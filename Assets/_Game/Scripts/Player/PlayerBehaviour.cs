@@ -53,7 +53,7 @@ namespace DeadTired
             }
             else
             {
-                
+               
                 if(Input.GetButtonDown(changeStateInput))
                 {
                     if(currentState == State.body)
@@ -73,6 +73,11 @@ namespace DeadTired
                     Debug.Log("Interacting TO DO");
                 }
 
+                //if a ghost keep checkign the distance
+                if(currentState == State.ghost)
+                {
+                    currentDistanceFromAnchor = Vector3.Distance(anchor.transform.position, playerObject.transform.position);
+                } 
             }
         }
 
