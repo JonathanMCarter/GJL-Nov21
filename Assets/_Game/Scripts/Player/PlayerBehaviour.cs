@@ -6,31 +6,53 @@ namespace DeadTired
 {
     public class PlayerBehaviour : MonoBehaviour
     {
-        enum State {ghost, body};
+        public enum State {ghost, body, isReturning};
+        
         //as the game changes depending on the player state we might want to store this somewhere else...but this works for now
-        [SerializeField]
-        private State currentState = State.body; //start the player in their body
+        public State currentState = State.body; //start the player in their body
 
         [Header("Player Settings")]
         [SerializeField]
         private float maxDistanceFromAnchor =  5f;
+        private float minDistanceFromAnchor = 0.2f;
+
+        // Movement speed in units per second.
+        public float returnSpeed = .5F;
+
         public float currentDistanceFromAnchor;
+        public GameObject playerObject; // want to make this automatically grab the playerobject
         public GameObject playerAnchor; // the players body
 
         public float maxGhostTimeSeconds = 60f;
 
         public string interactInput = "Fire1";
         public string changeStateInput = "Jump";
+        public string playerBodyLayer = "PlayerBody";
+        public string playerGhostLayer = "PlayerGhost";
+
+        // Time when the movement back to body started.
+        private float startTime;
+        private float journeyLength;
+        private GameObject anchor;
 
         // Start is called before the first frame update
         void Start()
         {
-        
+            //have it set in the physics settings so items on the player ghost layer cant interact with the anchor
+            playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
         }
 
         // Update is called once per frame
         void Update()
         {
+
+            if(currentState == State.isReturning)
+            {
+                movePlayer();
+            }
+            else
+            {
+               
             if(Input.GetButtonDown(changeStateInput))
             {
                 if(currentState == State.body)
@@ -49,6 +71,18 @@ namespace DeadTired
             {
                 Debug.Log("Interacting TO DO");
             }
+
+            //if a ghost keep checkign the distance
+            if(currentState == State.ghost)
+            {
+                currentDistanceFromAnchor = Vector3.Distance(anchor.transform.position, playerObject.transform.position);
+
+                if(currentDistanceFromAnchor > maxDistanceFromAnchor)
+                {                  
+                    returnPlayerToBody();
+                }
+            } 
+            }
         }
 
 
@@ -57,15 +91,47 @@ namespace DeadTired
         {
             //place the anchor prefab where the player is currently
             currentState = State.ghost;
+            playerObject.layer = LayerMask.NameToLayer(playerGhostLayer);
+
+            anchor = Instantiate(playerAnchor, playerObject.transform.position, playerObject.transform.rotation); //pooling this somewhere instead of instantiating might be better??
+
+            //want to bump the player forward slightly???
         }
 
         //return player
         private void returnPlayerToBody()
         {
-            //if the player goes too far/runs out of ghost time/asks to go back
-            currentState = State.body;
+            startTime = Time.time;
 
-            // destroy the anchor we placed
+            journeyLength = currentDistanceFromAnchor;
+
+            //move the player back to position of the body   
+            currentState = State.isReturning;         
+        }
+
+        private void movePlayer()
+        {
+            // Distance moved equals elapsed time times speed..
+            float distCovered = (Time.time - startTime) * returnSpeed;
+
+            float fractionOfJourney = distCovered / journeyLength;
+
+            playerObject.transform.position = Vector3.Lerp(playerObject.transform.position, anchor.transform.position, fractionOfJourney);
+            
+            currentDistanceFromAnchor = Vector3.Distance(anchor.transform.position, playerObject.transform.position);
+
+            if(currentDistanceFromAnchor <= minDistanceFromAnchor)
+            {
+                // destroy the anchor we placed
+                Destroy(anchor);
+
+                currentState = State.body;
+
+                playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
+
+            }
+        
+        
         }
 
         // call this from other scripts!!
