@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1471731398017824505}
   - component: {fileID: 1471731398017824502}
   - component: {fileID: 1471731398017824503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,8 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b16e9a526d3b94c8d8c15f84c44612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 4
+  movementSpeed: 6
   playerObject: {fileID: 1471731399327678217}
+  nextDistance: 0
 --- !u!114 &1471731398071488717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,14 +143,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 1
-  maxDistanceFromAnchor: 5
-  speed: 1
+  playerAnchor: {fileID: 4051389722103881825, guid: 4f1c0bfe67ffac349aabd8e8329a2654, type: 3}
+  maxDistanceFromAnchor: 8
+  returnSpeed: 0.5
   currentDistanceFromAnchor: 0
   playerObject: {fileID: 1471731399327678214}
-  playerAnchor: {fileID: 4051389722103881825, guid: 4f1c0bfe67ffac349aabd8e8329a2654, type: 3}
   maxGhostTimeSeconds: 60
   interactInput: Fire1
   changeStateInput: Jump
+  playerBodyLayer: PlayerBody
+  playerGhostLayer: PlayerGhost
+  anchor: {fileID: 0}
 --- !u!1 &1471731398727790133
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +166,7 @@ GameObject:
   - component: {fileID: 1471731398727790137}
   - component: {fileID: 1471731398727790134}
   - component: {fileID: 1471731398727790135}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,9 +260,9 @@ GameObject:
   - component: {fileID: 1471731399327678217}
   - component: {fileID: 1471731399327678219}
   - component: {fileID: 1471731399327678216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerObject
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
