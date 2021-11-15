@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25bfface43bd410bb49a04dd6d4902b8, type: 3}
-  m_Name: Build Information
+  m_Script: {fileID: 11500000, guid: 90f808fce8924c42a1f6a976f5d22d8f, type: 3}
+  m_Name: Player Orb Count
   m_EditorClassIdentifier: 
-  buildType: Prototype
-  buildDate: 15/11/2021
-  buildNumber: 7
+  <DevDescription>k__BackingField: The total number of orbs the player has
+  <Value>k__BackingField: 0
+  <DefaultValue>k__BackingField: 0

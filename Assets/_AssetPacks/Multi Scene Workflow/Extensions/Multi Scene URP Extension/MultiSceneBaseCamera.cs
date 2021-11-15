@@ -39,6 +39,7 @@ namespace MultiScene.Extensions.URP
         public void AddCamera(Camera overlayCam)
         {
             var _cameraData = cam.GetUniversalAdditionalCameraData();
+            if (_cameraData.cameraStack.Contains(overlayCam)) return;
             _cameraData.cameraStack.Add(overlayCam);
         }
     }
