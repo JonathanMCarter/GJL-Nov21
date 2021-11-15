@@ -10,8 +10,7 @@ namespace DeadTired
         [SerializeField] 
         float movementSpeed = 4f;
 
-        public Transform playerBody;
-        public Transform playerGhost;
+        public Transform playerObject;
 
         Vector3 forward, right; // differes from the world axis so we need to specifiy ourself
 
@@ -43,11 +42,11 @@ namespace DeadTired
             Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
             // handles the rotations of the player object
-            playerBody.forward = Vector3.Lerp(playerBody.forward, heading, 0.2f);;
+            playerObject.forward = Vector3.Lerp(playerObject.forward, heading, 0.2f);;
 
             // handles the position of the player object
-            playerBody.position += rightMovement;
-            playerBody.position += upMovement;
+            playerObject.position += rightMovement;
+            playerObject.position += upMovement;
         }
 
     }
