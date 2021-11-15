@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using DeadTired.Interactables;
+using MultiScene.Core;
 using UnityEngine;
 
 namespace DeadTired
@@ -21,6 +23,9 @@ namespace DeadTired
 
         public string interactInput = "Fire1";
         public string changeStateInput = "Jump";
+        
+        // Jonathan Added This xD
+        public bool IsInGhostForm => currentState.Equals(State.ghost);
 
         // Start is called before the first frame update
         void Start()
@@ -48,6 +53,7 @@ namespace DeadTired
             if(Input.GetButtonDown(interactInput))
             {
                 Debug.Log("Interacting TO DO");
+                SceneElly.GetComponentFromScene<InteractionsManager>().TryInteract();
             }
         }
 

@@ -2,6 +2,6 @@
 {
     public interface IInteractable
     {
-        void OnPlayerInteract(bool isInGhostForm);
+        void OnPlayerInteract();
     }
 }

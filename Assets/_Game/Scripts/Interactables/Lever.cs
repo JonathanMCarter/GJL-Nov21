@@ -1,43 +1,35 @@
-﻿using System;
-using DependencyLibrary;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace DeadTired.Interactables
 {
-    public class Lever : BaseControlsPrompt, IInteractable
+    public class Lever : BaseInteraction, IInteractable
     {
-        [SerializeField] private bool shouldBeGhost;
-        [SerializeField] private BoolReference isPlayerGhost;
-        private bool isPlayerInRange;
-
-        public UnityEvent onLeverPulled;
+        public UnityEvent OnLeverPulled;
         
         
-        public void OnPlayerInteract(bool isInGhostForm)
+        public void OnPlayerInteract()
         {
-            if (!isPlayerInRange) return;
-            if (shouldBeGhost != isInGhostForm) return;
-            onLeverPulled?.Invoke();
+            if (!IsPlayerInZone || !IsPlayerInCorrectState) return;
+            OnLeverPulled?.Invoke();
         }
 
 
-        private void OnTriggerEnter(Collider other)
+        protected override IInteractable GetInteractable()
         {
-            if (isPlayerInRange) return;
-            if (shouldBeGhost != isPlayerGhost) return;
-            if (!other.CompareTag("Player")) return;
-            isPlayerInRange = true;
+            return this;
+        }
+
+
+        protected override void OnPlayerEnterTriggerZone(Collider other)
+        {
+            base.OnPlayerEnterTriggerZone(other);
             ConfigureUI(true);
         }
 
-
-        private void OnTriggerExit(Collider other)
+        protected override void OnPlayerExitTriggerZone(Collider other)
         {
-            if (!isPlayerInRange) return;
-            if (shouldBeGhost != isPlayerGhost) return;
-            if (!other.CompareTag("Player")) return;
-            isPlayerInRange = false;
+            base.OnPlayerExitTriggerZone(other);
             ConfigureUI(false);
         }
     }

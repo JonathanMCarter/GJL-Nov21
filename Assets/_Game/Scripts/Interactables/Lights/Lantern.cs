@@ -1,56 +1,76 @@
-﻿using System;
-using System.Collections;
+﻿using DeadTired.UI;
 using DependencyLibrary;
 using UnityEngine;
 
 namespace DeadTired.Interactables
 {
-    public class Lantern : BaseControlsPrompt, IInteractable
+    public class Lantern : BaseInteraction, IInteractable
     {
-        [SerializeField] private BoolReference isPlayerGhost;
-        private int orbsInLamp;
-        private Light light;
-        private bool isInZone;
+        [SerializeField] private IntReference playerOrbCount;
+        [SerializeField] private MeshRenderer lampLightMeshRenderer;
         
+        private bool orbInLamp;
+        private Light light;
 
-        public bool isLightActive => light.enabled;
+
+        /// <summary>
+        /// Gets whether or not the lamp is on or not....
+        /// </summary>
+        public bool IsLampLit => light.enabled;
 
 
         protected override void Awake()
         {
-            ConfigureUI(false);
+            base.Awake();
+            light = GetComponentInChildren<Light>();
         }
 
 
-        public void OnPlayerInteract(bool isInGhostForm)
+        public void OnPlayerInteract()
         {
-            if (!isInGhostForm) return;
+            if (!IsPlayerInZone || !IsPlayerInCorrectState) return;
+            ToggleLamp();
         }
-
-
-        private void FillLamp()
-        {
-            orbsInLamp++;
-        }
-
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (!isPlayerGhost.Value) return;
-            if (!other.CompareTag("Player")) return;
-            if (isInZone) return;
-            ConfigureUI(true);
-            isInZone = true;
-        }
-
         
-        private void OnTriggerExit(Collider other)
+        
+        protected override IInteractable GetInteractable()
         {
-            if (!isPlayerGhost.Value) return;
-            if (!other.CompareTag("Player")) return;
-            if (!isInZone) return;
+            return this;
+        }
+
+
+        private void ToggleLamp()
+        {
+            if (!orbInLamp)
+            {
+                if (playerOrbCount.Value <= 0) return;
+                playerOrbCount.variable.IncrementValue(-1);
+                PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
+                orbInLamp = true;
+                light.enabled = true;
+                lampLightMeshRenderer.material.EnableKeyword("_EMISSION");
+                return;
+            }
+            
+            playerOrbCount.variable.IncrementValue(1);
+            PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
+            orbInLamp = false;
+            light.enabled = false;
+            lampLightMeshRenderer.material.DisableKeyword("_EMISSION");
+        }
+
+
+        protected override void OnPlayerEnterTriggerZone(Collider other)
+        {
+            base.OnPlayerEnterTriggerZone(other);
+            ConfigureUI(true);
+        }
+
+
+        protected override void OnPlayerExitTriggerZone(Collider other)
+        {
+            base.OnPlayerExitTriggerZone(other);
             ConfigureUI(false);
-            isInZone = false;
         }
     }
 }
