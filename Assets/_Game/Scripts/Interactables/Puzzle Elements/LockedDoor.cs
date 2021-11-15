@@ -13,7 +13,7 @@ namespace DeadTired.Interactables
         private Sprite normalSprite;
         private Image promptImage;
         
-        public bool isUnlocked { get; set; }
+        [field: SerializeField] public bool isUnlocked { get; set; }
         private bool isDoorOpen;
         private Animator anim;
 

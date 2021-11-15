@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DependencyLibrary;
 using UnityEngine;
 
 namespace DeadTired.Interactables
@@ -14,12 +15,14 @@ namespace DeadTired.Interactables
 
         public void AddInteraction(IInteractable interactable)
         {
+            if (interactable == null) return;
             if (validInteractions.Contains(interactable)) return;
             validInteractions.Add(interactable);
         }
 
         public void RemoveInteraction(IInteractable interactable)
         {
+            if (interactable == null) return;
             if (!validInteractions.Contains(interactable)) return;
             validInteractions.Remove(interactable);
         }

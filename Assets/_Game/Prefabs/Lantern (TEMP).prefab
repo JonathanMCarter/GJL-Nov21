@@ -303,6 +303,12 @@ MonoBehaviour:
     useConstant: 0
     constantValue: 0
     variable: {fileID: 11400000, guid: b22d3f446a99ffb4799dd2ffe0192dd1, type: 2}
+  shouldPlayerBeGhost: 1
+  playerOrbCount:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: fbe594d6eafd91b49814155741803d20, type: 2}
+  lampLightMeshRenderer: {fileID: 2574299555196830331}
 --- !u!135 &2574299555196830327
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ namespace MultiScene.Extensions.URP
         /// <summary>
         /// Gets the camera in the editor...
         /// </summary>
-        public Camera GetCameraInEditor => GetComponent<Camera>();
+        public Camera GetCamera => GetComponent<Camera>();
 
         private void Awake()
         {
