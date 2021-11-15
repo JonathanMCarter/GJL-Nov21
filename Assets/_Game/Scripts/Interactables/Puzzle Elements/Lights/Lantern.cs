@@ -33,10 +33,7 @@ namespace DeadTired.Interactables
         }
         
         
-        protected override IInteractable GetInteractable()
-        {
-            return this;
-        }
+        protected override IInteractable GetInteractable() => this;
 
 
         private void ToggleLamp()

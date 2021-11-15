@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DeadTired.Interactables
 {
@@ -7,6 +8,10 @@ namespace DeadTired.Interactables
     {
         private static readonly int OpenDoor = Animator.StringToHash("OpenDoor");
         private static readonly int CloseDoor = Animator.StringToHash("CloseDoor");
+
+        [SerializeField] private Sprite lockedSprite;
+        private Sprite normalSprite;
+        private Image promptImage;
         
         public bool isUnlocked { get; set; }
         private bool isDoorOpen;
@@ -17,6 +22,8 @@ namespace DeadTired.Interactables
         {
             base.Awake();
             anim = GetComponentInChildren<Animator>();
+            promptImage = GetComponentInChildren<Image>();
+            normalSprite = promptImage.sprite;
         }
 
 
@@ -28,16 +35,13 @@ namespace DeadTired.Interactables
             isDoorOpen = !isDoorOpen;
         }
 
-        protected override IInteractable GetInteractable()
-        {
-            return this;
-        }
+        protected override IInteractable GetInteractable() => this;
 
         protected override void OnPlayerEnterTriggerZone(Collider other)
         {
             base.OnPlayerEnterTriggerZone(other);
-            
-            if (!isUnlocked) return;
+
+            promptImage.sprite = isUnlocked ? normalSprite : lockedSprite;
             ConfigureUI(true);
         }
 
@@ -45,8 +49,6 @@ namespace DeadTired.Interactables
         protected override void OnPlayerExitTriggerZone(Collider other)
         {
             base.OnPlayerExitTriggerZone(other);
-            
-            if (!isUnlocked) return;
             ConfigureUI(false);
         }
     }
