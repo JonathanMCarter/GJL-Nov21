@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using DeadTired.Interactables;
+using MultiScene.Core;
 using UnityEngine;
 
 namespace DeadTired
@@ -28,6 +30,7 @@ namespace DeadTired
 
         public string interactInput = "Fire1";
         public string changeStateInput = "Jump";
+
         public string playerBodyLayer = "PlayerBody";
         public string playerGhostLayer = "PlayerGhost";
 

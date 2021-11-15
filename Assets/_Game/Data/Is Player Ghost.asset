@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 092ace514add42a08f54a9e7274f9ff4, type: 3}
-  m_Name: IsGhostForm
+  m_Name: Is Player Ghost
   m_EditorClassIdentifier: 
   <DevDescription>k__BackingField: Defines if the player is in ghost form or not.
   <Value>k__BackingField: 0
