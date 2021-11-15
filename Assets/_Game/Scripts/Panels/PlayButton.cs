@@ -6,11 +6,11 @@ namespace DeadTired.UI
 {
     public class PlayButton : MonoBehaviour, IMultiSceneAwake
     {
-        private SceneGroupChangeWithFade levelLoad;
+        private MenuSceneGroupChange levelLoad;
 
         public void OnMultiSceneAwake()
         {
-            levelLoad = SceneElly.GetComponentFromScene<SceneGroupChangeWithFade>("Menu");
+            levelLoad = SceneElly.GetComponentFromScene<MenuSceneGroupChange>("Menu");
         }
 
         public void PlayGame()

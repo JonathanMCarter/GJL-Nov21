@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f808fce8924c42a1f6a976f5d22d8f, type: 3}
   m_Name: Player Orb Count
   m_EditorClassIdentifier: 
-  <DevDescription>k__BackingField: The total number of orbs the player has
+  <DevDescription>k__BackingField: The total number of orbs the player has.
   <Value>k__BackingField: 0
   <DefaultValue>k__BackingField: 0
