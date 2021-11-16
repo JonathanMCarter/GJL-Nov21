@@ -8,17 +8,13 @@ namespace DeadTired.Sokoban
         
         public bool HasCorrectBlock => IsOccupied && OccupyingBlock.BlockID.Equals(blockIDWanted);
 
-        private SokobanManager sokobanManager;
-        
-        
+
         public override void SetBlockToTile(SokobanBlock block)
         {
             base.SetBlockToTile(block);
 
-            if (HasCorrectBlock)
-            {
-                
-            }
+            if (!HasCorrectBlock) return;
+            sokobanManager.CompleteBlock(block.BlockID);
         }
     }
 }
