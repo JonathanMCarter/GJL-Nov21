@@ -742,6 +742,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 463354129, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_Intensity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5084896
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.769273
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.1212244
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7924426
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.49118212
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.30674353
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.19152857
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 63.633
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 42.144
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.286
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299554695026463, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_Intensity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1026,6 +1074,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.784996
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.264027
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.1975021
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.705394
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.70879656
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.004449904
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.002621606
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90.31299
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 27.964005
+      objectReference: {fileID: 0}
+    - target: {fileID: 463354130, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 28.537003
+      objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1354,7 +1442,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a47348b1a64455f94b96a143f0d033f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSpot: {fileID: 0}
+  isPlayerGhost:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: b22d3f446a99ffb4799dd2ffe0192dd1, type: 2}
 --- !u!65 &933458071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1484,120 +1575,44 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 933458071}
+      objectReference: {fileID: 933458070}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1670241075}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Stop
+      value: ToggleDarkness
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 933458071}
+      objectReference: {fileID: 933458070}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1670241075}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
+      value: ToggleDarkness
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Collider, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 0
+      value: DeadTired.Interactables.Darkness, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Collider, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: DeadTired.Interactables.Darkness, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830329, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: m_Name
