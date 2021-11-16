@@ -1,6 +1,7 @@
 ﻿using DeadTired.UI;
 using DependencyLibrary;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DeadTired.Interactables
 {
@@ -11,6 +12,10 @@ namespace DeadTired.Interactables
         
         private bool orbInLamp;
         private Light light;
+
+
+        public UnityEvent OnLanternLit;
+        public UnityEvent OnLanternExtinguished;
 
 
         /// <summary>
@@ -46,6 +51,7 @@ namespace DeadTired.Interactables
                 orbInLamp = true;
                 light.enabled = true;
                 lampLightMeshRenderer.material.EnableKeyword("_EMISSION");
+                OnLanternLit?.Invoke();
                 return;
             }
             
@@ -54,6 +60,7 @@ namespace DeadTired.Interactables
             orbInLamp = false;
             light.enabled = false;
             lampLightMeshRenderer.material.DisableKeyword("_EMISSION");
+            OnLanternExtinguished?.Invoke();
         }
 
 
