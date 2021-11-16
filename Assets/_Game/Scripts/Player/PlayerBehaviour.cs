@@ -45,6 +45,9 @@ namespace DeadTired
         public GlobalVolumeManager globalVolumeManager; 
         //want to add some camera effects when as a ghost
 
+        public SwitchParticleBehaviour switchParticle;
+        public SpiritLineBehaviour sprirtLine;
+
         // Time when the movement back to body started.
         private float startTime;
         private float journeyLength;
@@ -113,6 +116,9 @@ namespace DeadTired
 
             anchor = Instantiate(playerAnchor, playerObject.transform.position, playerObject.transform.rotation); //pooling this somewhere instead of instantiating might be better??
 
+            switchParticle.emitParticle(anchor.transform.position);
+            sprirtLine.activateSpiritLine(playerObject.transform, anchor.transform);
+
             globalVolumeManager.setGhostvolume();
         }
 
@@ -125,6 +131,9 @@ namespace DeadTired
 
             //move the player back to position of the body   
             currentState = State.isReturning;
+
+            switchParticle.emitParticle(anchor.transform.position);
+
         }
 
         private void movePlayer()
@@ -140,6 +149,8 @@ namespace DeadTired
 
             if(currentDistanceFromAnchor <= minDistanceFromAnchor)
             {
+                sprirtLine.deactiveSpiritLine();
+
                 // destroy the anchor we placed
                 Destroy(anchor);
 

@@ -145,16 +145,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 1
   playerAnchor: {fileID: 4051389722103881825, guid: 4f1c0bfe67ffac349aabd8e8329a2654, type: 3}
+  anchor: {fileID: 0}
   maxDistanceFromAnchor: 8
   returnSpeed: 0.5
-  currentDistanceFromAnchor: 0
   playerObject: {fileID: 1471731399327678214}
   maxGhostTimeSeconds: 60
   interactInput: Fire1
   changeStateInput: Jump
   playerBodyLayer: PlayerBody
   playerGhostLayer: PlayerGhost
-  anchor: {fileID: 0}
+  currentDistanceFromAnchor: 0
+  timeTillReturn: 0
+  globalVolumeManager: {fileID: 0}
+  switchParticle: {fileID: 0}
+  sprirtLine: {fileID: 0}
 --- !u!114 &136206720518692525
 MonoBehaviour:
   m_ObjectHideFlags: 0
