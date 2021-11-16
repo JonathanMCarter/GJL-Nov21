@@ -274,6 +274,37 @@ namespace MultiScene.Core
         }
         
         
+        
+        /// <summary>
+        /// Loads the scenes in the selected scene group but leaves the base scene as is...
+        /// </summary>
+        public void LoadScenesKeepBase()
+        {
+            var _activeScene = SceneManager.GetActiveScene().name;
+            
+            UnloadAllAdditiveScenes();
+
+            for (var i = 0; i < activeSceneGroup.scenes.Count; i++)
+            {
+                var _s = activeSceneGroup.scenes[i];
+
+                if (i.Equals(activeSceneGroup.scenes.Count - 1))
+                {
+                    SceneManager.sceneLoaded += CallListeners;
+                }
+
+                if (_s.Equals(_activeScene)) continue;
+                
+                if (i.Equals(0))
+                    SceneManager.LoadSceneAsync(_s, LoadSceneMode.Single);
+                else
+                    SceneManager.LoadSceneAsync(_s, LoadSceneMode.Additive);
+            }
+            
+            GetActiveSceneNames();
+        }
+        
+        
         /// <summary>
         /// Loads the scenes in the selected scene group but leaves the base scene as is...
         /// </summary>
