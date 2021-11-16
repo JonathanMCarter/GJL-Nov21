@@ -18,3 +18,5 @@ MonoBehaviour:
   - Player
   - Player UI
   - PauseGame
+  - Level1-Interactables
+  - Death
