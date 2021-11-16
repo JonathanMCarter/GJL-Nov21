@@ -16,15 +16,15 @@ namespace DeadTired
         [Header("Player Settings")]
         [SerializeField]
         private GameObject playerAnchor; // the players body
+        public GameObject anchor;
+
         public float maxDistanceFromAnchor =  5f;
         private float minDistanceFromAnchor = 0.2f;
 
         // Movement speed in units per second.
         public float returnSpeed = .5F;
 
-        public float currentDistanceFromAnchor;
         public GameObject playerObject; // want to make this automatically grab the playerobject
-
 
         public float maxGhostTimeSeconds = 60f;
 
@@ -34,12 +34,23 @@ namespace DeadTired
         public string playerBodyLayer = "PlayerBody";
         public string playerGhostLayer = "PlayerGhost";
 
+        [Header("Values to Watch")]
+        [SerializeField]
+        private float currentDistanceFromAnchor;
+        [SerializeField]
+        private float timeTillReturn; //The player has a limited time as a ghost, this is that remaining time
+
+
+        [Header("Other scripts")]
+        public GlobalVolumeManager globalVolumeManager; 
+        //want to add some camera effects when as a ghost
+
+        public SwitchParticleBehaviour switchParticle;
+        public SpiritLineBehaviour sprirtLine;
+
         // Time when the movement back to body started.
         private float startTime;
         private float journeyLength;
-        public GameObject anchor;
-
-
         private InteractionsManager cachedInteractionsManager;
 
         // Gets called when all the scenes for each level are loaded...
@@ -105,7 +116,10 @@ namespace DeadTired
 
             anchor = Instantiate(playerAnchor, playerObject.transform.position, playerObject.transform.rotation); //pooling this somewhere instead of instantiating might be better??
 
-            //want to bump the player forward slightly???
+            switchParticle.emitParticle(anchor.transform.position);
+            sprirtLine.activateSpiritLine(playerObject.transform, anchor.transform);
+
+            globalVolumeManager.setGhostvolume();
         }
 
         //return player
@@ -116,7 +130,10 @@ namespace DeadTired
             journeyLength = currentDistanceFromAnchor;
 
             //move the player back to position of the body   
-            currentState = State.isReturning;         
+            currentState = State.isReturning;
+
+            switchParticle.emitParticle(anchor.transform.position);
+
         }
 
         private void movePlayer()
@@ -132,12 +149,15 @@ namespace DeadTired
 
             if(currentDistanceFromAnchor <= minDistanceFromAnchor)
             {
+                sprirtLine.deactiveSpiritLine();
+
                 // destroy the anchor we placed
                 Destroy(anchor);
 
                 currentState = State.body;
 
                 playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
+                globalVolumeManager.setBodyVolume();
 
             }
         
