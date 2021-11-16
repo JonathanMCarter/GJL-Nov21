@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_Game/Scenes/Level 1/Level1-Env.unity
     guid: 456cfe16f1b670b4d925ccbc76d82c66
   - enabled: 1
+    path: Assets/_Game/Scenes/Level 1/Level1-Interactables.unity
+    guid: c9e02ccb573f64e48bf971a7700395cd
+  - enabled: 1
     path: Assets/_Game/Scenes/Level 2/Level2-Env.unity
     guid: ed2c4482b7e528f4e8442040d085ba92
   - enabled: 1
@@ -30,7 +33,7 @@ EditorBuildSettings:
     path: Assets/_Game/Scenes/Menu/QuitConfirm.unity
     guid: d77a435312dbbc84e975d39e50238f7c
   - enabled: 1
-    path: Assets/_Game/Scenes/Menu/Lose.unity
+    path: Assets/_Game/Scenes/Menu/Death.unity
     guid: dc594b8c4ef47584e81ff2e929b5be64
   - enabled: 1
     path: Assets/_Game/Scenes/Menu/Menu.unity

@@ -18,7 +18,7 @@ namespace DeadTired
         private void Update()
         {
             if (!FrameLimiter.LimitEveryXFrames(10)) return;
-            isPlayerGhost.SetValue(playerBehaviour.currentState == PlayerBehaviour.State.ghost);
+            isPlayerGhost.SetValue(playerBehaviour.currentState == PlayerBehaviour.State.ghost || playerBehaviour.currentState == PlayerBehaviour.State.isReturning);
         }
     }
 }

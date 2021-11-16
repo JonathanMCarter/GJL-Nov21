@@ -11,6 +11,7 @@ namespace DeadTired.Pause
     {
         [SerializeField] private BoolReference isPaused;
         [SerializeField] private FloatReference transitionTime;
+        [SerializeField] private BoolReference isPLayerDead;
 
         private Canvas canvas;
         private GraphicRaycaster graphicRaycaster;
@@ -30,6 +31,7 @@ namespace DeadTired.Pause
 
         private void Update()
         {
+            if (isPLayerDead.Value) return;
             if (!Input.GetKeyDown(KeyCode.Escape)) return;
             PauseGame();
         }
