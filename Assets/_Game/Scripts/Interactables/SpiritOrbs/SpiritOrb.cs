@@ -12,6 +12,8 @@ namespace DeadTired.Interactables
         [SerializeField] private IntReference playerOrbCount;
 
         private Hashtable spiritOrbIdleTween;
+        private ParticleSystem[] particles;
+        private Light light;
 
 
         private void Awake()
@@ -25,6 +27,25 @@ namespace DeadTired.Interactables
             };
             
             iTween.MoveTo(gameObject, spiritOrbIdleTween);
+            particles = transform.parent.GetComponentsInChildren<ParticleSystem>();
+            light = GetComponentInChildren<Light>();
+        }
+
+
+        private void OnEnable()
+        {
+            foreach (var p in particles)
+                p.Play();
+            
+            light.enabled = true;
+        }
+
+        private void OnDisable()
+        {
+            foreach (var p in particles)
+                p.Stop();
+
+            light.enabled = false;
         }
 
         private void OnTriggerEnter(Collider other)

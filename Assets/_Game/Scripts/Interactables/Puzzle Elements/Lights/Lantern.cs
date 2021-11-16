@@ -10,7 +10,7 @@ namespace DeadTired.Interactables
         [SerializeField] private IntReference playerOrbCount;
         [SerializeField] private MeshRenderer lampLightMeshRenderer;
         
-        private bool orbInLamp;
+        [SerializeField] private bool orbInLamp;
         private Light light;
 
 
@@ -28,6 +28,11 @@ namespace DeadTired.Interactables
         {
             base.Awake();
             light = GetComponentInChildren<Light>();
+
+            if (orbInLamp)
+                TurnLightOn();
+            else
+                TurnLightOff();
         }
 
 
@@ -41,20 +46,32 @@ namespace DeadTired.Interactables
         protected override IInteractable GetInteractable() => this;
 
 
-        private void ToggleLamp()
+        protected virtual void ToggleLamp()
         {
             if (!orbInLamp)
             {
-                if (playerOrbCount.Value <= 0) return;
-                playerOrbCount.variable.IncrementValue(-1);
-                PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
-                orbInLamp = true;
-                light.enabled = true;
-                lampLightMeshRenderer.material.EnableKeyword("_EMISSION");
-                OnLanternLit?.Invoke();
+                TurnLightOn();
                 return;
             }
-            
+
+            TurnLightOff();
+        }
+
+
+        protected virtual void TurnLightOn()
+        {
+            if (playerOrbCount.Value <= 0) return;
+            playerOrbCount.variable.IncrementValue(-1);
+            PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
+            orbInLamp = true;
+            light.enabled = true;
+            lampLightMeshRenderer.material.EnableKeyword("_EMISSION");
+            OnLanternLit?.Invoke();
+        }
+        
+        
+        protected virtual void TurnLightOff()
+        {
             playerOrbCount.variable.IncrementValue(1);
             PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
             orbInLamp = false;

@@ -12,6 +12,7 @@ namespace DeadTired.Interactables
         [SerializeField] private Sprite needOrbSprite;
         [SerializeField] private Sprite normalSprite;
         [SerializeField, ReadOnly] private bool isPowered;
+        [SerializeField, ReadOnly] private bool isPulled;
 
         private Image promptImage;
 
@@ -26,6 +27,7 @@ namespace DeadTired.Interactables
 
         public override void OnPlayerInteract()
         {
+            if (isPulled) return;
             if (!isPowered && playerOrbCount.Value > 0)
             {
                 playerOrbCount.variable.IncrementValue(-1);
@@ -37,6 +39,7 @@ namespace DeadTired.Interactables
 
             if (!isPowered) return;
             base.OnPlayerInteract();
+            isPulled = true;
         }
     }
 }

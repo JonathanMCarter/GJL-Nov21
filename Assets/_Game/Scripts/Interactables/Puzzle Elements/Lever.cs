@@ -6,9 +6,9 @@ namespace DeadTired.Interactables
     public class Lever : BaseInteraction, IInteractable
     {
         public UnityEvent OnLeverPulled;
-        private bool leverPulled;
-        
-        
+        protected bool leverPulled;
+
+
         public virtual void OnPlayerInteract()
         {
             if (leverPulled) return;

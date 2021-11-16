@@ -13,7 +13,7 @@ namespace DeadTired.Interactables
         private Sprite normalSprite;
         private Image promptImage;
         
-        [field: SerializeField] public bool IsUnlocked { get; set; }
+        [field: SerializeField] public bool IsUnlocked { get; protected set; }
         private bool isDoorOpen;
         private Animator anim;
 
@@ -29,7 +29,7 @@ namespace DeadTired.Interactables
         }
 
 
-        public void OnPlayerInteract()
+        public virtual void OnPlayerInteract()
         {
             if (!IsUnlocked) return;
 
@@ -39,7 +39,7 @@ namespace DeadTired.Interactables
 
         protected override IInteractable GetInteractable() => this;
 
-        public void UnlockDoor()
+        public virtual void UnlockDoor()
         {
             IsUnlocked = true;
             OnDoorUnlocked?.Invoke();
