@@ -59,6 +59,13 @@ namespace DeadTired
         {
             // Gets the interaction manager no matter which scene it is in...
             cachedInteractionsManager = SceneElly.GetComponentFromAllScenes<InteractionsManager>();
+            enemyParentBehaviour = SceneElly.GetComponentFromAllScenes<EnemyParentBehaviour>();
+            sprirtLine = SceneElly.GetComponentFromAllScenes<SpiritLineBehaviour>();
+            switchParticle = SceneElly.GetComponentFromAllScenes<SwitchParticleBehaviour>();
+            globalVolumeManager = SceneElly.GetComponentFromAllScenes<GlobalVolumeManager>();
+
+
+            enemyParentBehaviour.playerObject = playerObject.transform;
         }
 
 

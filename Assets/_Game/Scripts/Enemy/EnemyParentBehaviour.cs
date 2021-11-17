@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using MultiScene.Core;
 
 namespace DeadTired
 {
@@ -24,7 +25,6 @@ namespace DeadTired
         public int enemyCount;
         public Transform HidingSpot;
         //hide the enemies here once they're disabled instead of destroying them
-
 
         public void SpawnEnemies()
         {
