@@ -7,15 +7,23 @@ namespace DeadTired
 {
     public class EnemyBehaviour : MonoBehaviour
     {
-        private Transform target;
+        public Transform target;
 
         private NavMeshAgent agent;
-
 
         public void ActivateEnemy(Transform passedTarget)
         {
             target = passedTarget;
+
+            if(agent == null)
+            {
+                //sometimes the parent scripts work faster than this one can set itself up
+                agent = GetComponent<NavMeshAgent>();
+            }
+
             agent.enabled = true;
+
+            Debug.Log("Activating Enemy");
         }
 
         public void DeactivateEnemy()
@@ -28,16 +36,11 @@ namespace DeadTired
         void Start ()
         {
             agent = GetComponent<NavMeshAgent>();
-
-            //just in case, we dont want them enabled straight off the bat
-            if(agent.enabled == true)
-                agent.enabled = false;
-
         }
 
         void Update()
         {
-            if (target != null)
+            if (target != null && agent.enabled == true)
             {
                 agent.SetDestination(target.position);
             }

@@ -74,7 +74,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61c3216f4dc5d54f8ed7c5a714bdf06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyObjects:
+  - {fileID: 0}
+  grabbedBehaviour: {fileID: 0}
   enemyPrefab: {fileID: 6221711849224806742, guid: b84acf5ac8a759b4396d28abc23eed88, type: 3}
   enemyPool: {fileID: 6416982918273756764}
+  playerObject: {fileID: 0}
+  maxPositionX: 10
+  minPositionX: 1
+  maxPositionZ: 10
+  minPositionZ: 1
   enemyCount: 5
   HidingSpot: {x: 0, y: 0, z: 0}
