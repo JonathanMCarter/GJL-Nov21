@@ -18,8 +18,14 @@ EditorBuildSettings:
     path: Assets/_Game/Scenes/Level 2/Level2-Env.unity
     guid: ed2c4482b7e528f4e8442040d085ba92
   - enabled: 1
+    path: Assets/_Game/Scenes/Level 2/Level2-Interactables.unity
+    guid: 0804df6bce2319847907ccbd443a9dea
+  - enabled: 1
     path: Assets/_Game/Scenes/Level 2/Level2-Sokoban-1.unity
     guid: 02374cee22646614fbc662e62f6c5859
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 2/Level2-Sokoban-2.unity
+    guid: a96ac9e98a21f134aa045c2cf53e718f
   - enabled: 1
     path: Assets/_Game/Scenes/Level 3/Level3-Env.unity
     guid: 92f3453adc1f0084bab57312fa43b20e

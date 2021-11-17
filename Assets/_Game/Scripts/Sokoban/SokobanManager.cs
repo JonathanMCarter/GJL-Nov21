@@ -9,17 +9,18 @@ namespace DeadTired.Sokoban
 {
     public class SokobanManager : MonoBehaviour
     {
+        [SerializeField] private string managerID;
         [SerializeField] private List<SokobanTile> tiles;
         [SerializeField] private int gridColumnCount = 6;
         [SerializeField] private int gridRowCount = 6;
 
         [SerializeField] private List<SokobanRequirementData> sokobanRequirements;
 
-        private List<SokobanTileData> defaultTileSetup;
+        public Action<SokobanRequirementData> OnRequirementCompleted;
+        public Action OnPuzzleCompleted;
 
-        public static Action<SokobanRequirementData> OnRequirementCompleted;
-        public static Action OnPuzzleCompleted;
 
+        public string GetID => managerID;
 
         public SokobanTile GetTileOn(string id)
         {
@@ -40,10 +41,6 @@ namespace DeadTired.Sokoban
         private void Awake()
         {
             tiles = SceneElly.GetComponentsFromScene<SokobanTile>("Level2-Sokoban-1");
-            defaultTileSetup = new List<SokobanTileData>();
-
-            foreach (var t in tiles)
-                defaultTileSetup.Add(new SokobanTileData(t));
         }
 
 
@@ -125,15 +122,13 @@ namespace DeadTired.Sokoban
 
         public void ResetBoard()
         {
-            foreach (var t in tiles)
+            var _tilesToReset = tiles.Where(t => t.IsOccupied);
+
+            foreach (var tile in _tilesToReset)
             {
-                if (t.transform.childCount > 0)
-                {
-                    if (TryGet.ComponentInChildren(t.gameObject, out SokobanEndTile _endTile))
-                    {
-                        if (_endTile.transform.childCount <= 1) continue;
-                    }
-                }
+                if (tile.OccupyingBlock == null) continue;
+                tile.OccupyingBlock.ResetToDefaultTile();
+                tile.ResetTile();
             }
         }
     }
