@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using MultiScene.Core;
+using JTools;
 using UnityEngine;
+using SceneElly = MultiScene.Core.SceneElly;
 
 namespace DeadTired.Sokoban
 {
@@ -12,6 +14,12 @@ namespace DeadTired.Sokoban
         [SerializeField] private int gridRowCount = 6;
 
         [SerializeField] private List<SokobanRequirementData> sokobanRequirements;
+
+        private List<SokobanTileData> defaultTileSetup;
+
+        public static Action<SokobanRequirementData> OnRequirementCompleted;
+        public static Action OnPuzzleCompleted;
+
 
         public SokobanTile GetTileOn(string id)
         {
@@ -32,6 +40,10 @@ namespace DeadTired.Sokoban
         private void Awake()
         {
             tiles = SceneElly.GetComponentsFromScene<SokobanTile>("Level2-Sokoban-1");
+            defaultTileSetup = new List<SokobanTileData>();
+
+            foreach (var t in tiles)
+                defaultTileSetup.Add(new SokobanTileData(t));
         }
 
 
@@ -41,6 +53,15 @@ namespace DeadTired.Sokoban
 
             if (_element == null) return;
             _element.isComplete = true;
+            OnRequirementCompleted?.Invoke(_element);
+            CheckPuzzleComplete();
+        }
+
+
+        private void CheckPuzzleComplete()
+        {
+            if (!sokobanRequirements.All(t => t.isComplete)) return;
+            OnPuzzleCompleted?.Invoke();
         }
         
 
@@ -99,6 +120,21 @@ namespace DeadTired.Sokoban
             if (list.Contains(tile)) return list;
             list.Add(tile);
             return list;
+        }
+
+
+        public void ResetBoard()
+        {
+            foreach (var t in tiles)
+            {
+                if (t.transform.childCount > 0)
+                {
+                    if (TryGet.ComponentInChildren(t.gameObject, out SokobanEndTile _endTile))
+                    {
+                        if (_endTile.transform.childCount <= 1) continue;
+                    }
+                }
+            }
         }
     }
 }

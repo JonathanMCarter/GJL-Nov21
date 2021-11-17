@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using DeadTired.Interactables;
 using DependencyLibrary;
 using JTools;
@@ -15,12 +16,14 @@ namespace DeadTired.Sokoban
 
         private SokobanManager sokobanManager;
         private SokobanTile tileOn;
+        private BoxCollider triggerVolume;
 
 
         protected override void Awake()
         {
             base.Awake();
             sokobanManager = SceneElly.GetComponentFromScene<SokobanManager>("Level2-Sokoban-1");
+            triggerVolume = GetComponentsInChildren<BoxCollider>().FirstOrDefault(t => t.isTrigger);
         }
 
         public string BlockID => blockID;
@@ -28,19 +31,21 @@ namespace DeadTired.Sokoban
 
         protected override IInteractable GetInteractable() => this;
 
-        public void OnPlayerInteract()
+        public virtual void OnPlayerInteract()
         {
             var _newTile = EvaluateDirection();
-            _newTile.SetBlockToTile(this);
-            
-            Debug.LogError(_newTile);
-            
+
             if (_newTile == null) return;
+            _newTile.SetBlockToTile(this);
+            triggerVolume.enabled = false;
+            
             var _tween = iTween.Hash
             (
+                "name", blockID,
                 "position", GetVector.Vector3DifferentY(Vector3.zero, transform.localPosition.y), 
-                "tile", 2.5f,
-                "islocal", true
+                "tile", 2f,
+                "islocal", true,
+                "oncomplete", "OnBlockMoveComplete"
             );
             
             iTween.MoveTo(gameObject, _tween);
@@ -48,25 +53,31 @@ namespace DeadTired.Sokoban
         }
 
 
+        public void OnBlockMoveComplete()
+        {
+            triggerVolume.enabled = true;
+        }
+        
+
         private SokobanTile EvaluateDirection()
         {
             if (tileOn == null)
                 tileOn = sokobanManager.GetTileOn(BlockID);
 
             // Direction A - 
-            if (playerDirection.Value.x > .75f && playerDirection.Value.z > .75f)
+            if (playerDirection.Value.x > .1f && playerDirection.Value.z > .1f)
                 return tileOn.DirectionalData.posX;
             
             // Direction B - 
-            if (playerDirection.Value.x < -.75f && playerDirection.Value.z > .75f)
+            if (playerDirection.Value.x < -.1f && playerDirection.Value.z > .1f)
                 return tileOn.DirectionalData.posZ;
             
             // Direction C - 
-            if (playerDirection.Value.x > .75f && playerDirection.Value.z < -.75f)
+            if (playerDirection.Value.x > .1f && playerDirection.Value.z < -.1f)
                 return tileOn.DirectionalData.negZ;
             
             // Direction D - 
-            if (playerDirection.Value.x < -.75f && playerDirection.Value.z < -.75f)
+            if (playerDirection.Value.x < -.1f && playerDirection.Value.z < -.1f)
                 return tileOn.DirectionalData.negX;
 
             return null;

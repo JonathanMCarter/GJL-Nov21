@@ -14,9 +14,9 @@ namespace DeadTired.Sokoban
 
         public SokobanDirectionalData DirectionalData => directionalData;
         
-        public bool IsOccupied => transform.childCount > 0;
+        public virtual bool IsOccupied => transform.childCount > 0;
         
-        public GameObject OccupyingObject => IsOccupied ? transform.GetChild(0).gameObject : null;
+        public virtual GameObject OccupyingObject => IsOccupied ? transform.GetChild(0).gameObject : null;
 
         public SokobanBlock OccupyingBlock
         {
