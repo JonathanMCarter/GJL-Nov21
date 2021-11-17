@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25bfface43bd410bb49a04dd6d4902b8, type: 3}
   m_Name: Build Information
   m_EditorClassIdentifier: 
-  buildType: 
-  buildDate: 
-  buildNumber: 1
+  buildType: Prototype
+  buildDate: 16/11/2021
+  buildNumber: 19
