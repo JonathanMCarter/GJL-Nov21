@@ -159,6 +159,7 @@ MonoBehaviour:
   globalVolumeManager: {fileID: 0}
   switchParticle: {fileID: 0}
   sprirtLine: {fileID: 0}
+  enemyParentBehaviour: {fileID: 0}
 --- !u!114 &136206720518692525
 MonoBehaviour:
   m_ObjectHideFlags: 0

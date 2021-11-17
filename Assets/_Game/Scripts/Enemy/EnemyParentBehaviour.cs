@@ -10,7 +10,7 @@ namespace DeadTired
 
         public List<GameObject> enemyObjects = new List<GameObject>();
 
-        public EnemyBehaviour grabbedBehaviour;
+        private EnemyBehaviour grabbedBehaviour;
 
         [Header("Setup")]
         public GameObject enemyPrefab;
@@ -22,7 +22,7 @@ namespace DeadTired
         [Header("Settings")]
         
         public int enemyCount;
-        public Vector3 HidingSpot;
+        public Transform HidingSpot;
         //hide the enemies here once they're disabled instead of destroying them
 
 
@@ -41,21 +41,21 @@ namespace DeadTired
             foreach (var enemyObject in enemyObjects)
             {
                 //disable thier nav agents
-
+                grabbedBehaviour = enemyObject.GetComponent<EnemyBehaviour>();
+                grabbedBehaviour.DeactivateEnemy();
 
                 //move them to the hiding spot
-                enemyObject.transform.position = HidingSpot;
+                enemyObject.transform.position = HidingSpot.position;
             }
         }
 
         public void EnableEnemies()
         {
-            Debug.Log("Enabling Enemies");
+            
             foreach (var enemyObject in enemyObjects)
             {
                 //make a new spot for the enemies
-                //enemyObject.transform.position = HidingSpot; // TO DO
-
+                enemyObject.transform.position = GenerateEnemyPosition();
                 grabbedBehaviour = enemyObject.GetComponent<EnemyBehaviour>();
                 grabbedBehaviour.ActivateEnemy(playerObject);
             }
@@ -81,7 +81,7 @@ namespace DeadTired
             {
                 for (int i = count; i < enemyCount; i++)
                 {
-                    GameObject newEnemy = Instantiate(enemyPrefab, GenerateEnemyPosition(), enemyPool.transform.rotation, enemyPool.transform);
+                    GameObject newEnemy = Instantiate(enemyPrefab, HidingSpot.position, enemyPool.transform.rotation, enemyPool.transform);
 
                     enemyObjects.Add(newEnemy);
 
@@ -90,7 +90,7 @@ namespace DeadTired
                 
             }
 
-            EnableEnemies();
+            //EnableEnemies();
         }
 
         // Update is called once per frame

@@ -47,6 +47,7 @@ namespace DeadTired
 
         public SwitchParticleBehaviour switchParticle;
         public SpiritLineBehaviour sprirtLine;
+        public EnemyParentBehaviour enemyParentBehaviour;
 
         // Time when the movement back to body started.
         private float startTime;
@@ -116,10 +117,15 @@ namespace DeadTired
 
             anchor = Instantiate(playerAnchor, playerObject.transform.position, playerObject.transform.rotation); //pooling this somewhere instead of instantiating might be better??
 
+            // some fancy particles so it looks nice
             switchParticle.emitParticle(anchor.transform.position);
             sprirtLine.activateSpiritLine(playerObject.transform, anchor.transform);
 
+            //changes the camera to look ghostie
             globalVolumeManager.setGhostvolume();
+
+            //plop the enemies about the place
+            enemyParentBehaviour.EnableEnemies();
         }
 
         //return player
@@ -133,6 +139,9 @@ namespace DeadTired
             currentState = State.isReturning;
 
             switchParticle.emitParticle(anchor.transform.position);
+
+            //hide and deactivate the enemies about the place
+            enemyParentBehaviour.DisableEnemies();
         }
 
         private void movePlayer()
