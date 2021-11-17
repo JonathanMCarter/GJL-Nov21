@@ -34,24 +34,15 @@ namespace DeadTired.Sokoban
             var _tiles = new List<SokobanTile>();
             var _tileLocation = tiles.IndexOf(tile);
 
+            // Cause 0 % 6 is 0 lol xD
             if (_tileLocation.Equals(0))
-            {
                 _tiles.Add(tiles[1]);
-                _tiles.Add(tiles[6]);
-                return _tiles;
-            }
 
-            if (_tileLocation.Equals((gridRowCount * gridColumnCount) - 1))
-            {
-                _tiles.Add(tiles[34]);
-                _tiles.Add(tiles[29]);
-            }
-
-            // tile -1 of this tile...
+            // tile - grindcount of this tile...
             if (_tileLocation - gridColumnCount >= 0)
                 _tiles = TryAddTile(_tiles, tiles[_tileLocation - gridColumnCount]);
 
-            // tile + 1 of this tile...
+            // tile + grindcount of this tile...
             if (_tileLocation + gridColumnCount <= gridColumnCount * gridRowCount)
             {
                 if (_tileLocation + gridColumnCount < gridColumnCount * gridRowCount)
@@ -59,20 +50,29 @@ namespace DeadTired.Sokoban
             }
 
             // tile - 1 if it is on the end of a row...
-            if ((_tileLocation - 1) % gridColumnCount == 5 || (_tileLocation - 1) % gridColumnCount == 0)
-                _tiles = TryAddTile(_tiles, tiles[_tileLocation - 1]);
-            else if (_tileLocation - gridColumnCount >= 0)
-                _tiles = TryAddTile(_tiles, tiles[_tileLocation - gridColumnCount]);
+            if (_tileLocation % gridColumnCount != 5)
+            {
+                if (_tileLocation - 1 >= 0)
+                    _tiles = TryAddTile(_tiles, tiles[_tileLocation - 1]);
+            }
+            else
+            {
+                if (_tileLocation - gridColumnCount >= 0)
+                    _tiles = TryAddTile(_tiles, tiles[_tileLocation - gridColumnCount]);
+            }
 
 
             // tile + 1 if it is on the end of a row...
-            if ((_tileLocation + 1) % gridColumnCount == 5 || (_tileLocation + 1) % gridColumnCount == 0)
+            if (_tileLocation % gridColumnCount != 0)
             {
-                if ((_tileLocation + 1) < gridColumnCount * gridRowCount)
+                if (_tileLocation + 1 < gridColumnCount * gridRowCount)
                     _tiles = TryAddTile(_tiles, tiles[_tileLocation + 1]);
             }
-            else if (_tileLocation + gridColumnCount < gridColumnCount * gridRowCount)
-                _tiles = TryAddTile(_tiles, tiles[_tileLocation + gridColumnCount]);
+            else
+            {
+                if (_tileLocation + gridColumnCount < gridColumnCount * gridRowCount)
+                    _tiles = TryAddTile(_tiles, tiles[_tileLocation + gridColumnCount]);
+            }
 
 
             return _tiles;

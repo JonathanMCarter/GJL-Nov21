@@ -14,6 +14,7 @@ namespace DeadTired.Sokoban
         public void OnPlayerInteract()
         {
             //TODO - make this do something xD
+            
         }
     }
 }
