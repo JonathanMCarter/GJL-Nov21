@@ -65,7 +65,7 @@ namespace DeadTired.Sokoban
             }
 
             // tile - 1 if it is on the end of a row...
-            if (_tileLocation % gridColumnCount != 5)
+            if ((_tileLocation - 1) % gridColumnCount != 5)
             {
                 if (_tileLocation - 1 >= 0)
                     _tiles = TryAddTile(_tiles, tiles[_tileLocation - 1]);
@@ -78,7 +78,7 @@ namespace DeadTired.Sokoban
 
 
             // tile + 1 if it is on the end of a row...
-            if (_tileLocation % gridColumnCount != 0)
+            if ((_tileLocation + 1) % gridColumnCount != 0)
             {
                 if (_tileLocation + 1 < gridColumnCount * gridRowCount)
                     _tiles = TryAddTile(_tiles, tiles[_tileLocation + 1]);

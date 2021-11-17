@@ -38,7 +38,7 @@ namespace DeadTired.Sokoban
             if (_newTile == null) return;
             var _tween = iTween.Hash
             (
-                "position", GetVector.Vector3DifferentY(Vector3.zero, transform.position.y), 
+                "position", GetVector.Vector3DifferentY(Vector3.zero, transform.localPosition.y), 
                 "tile", 2.5f,
                 "islocal", true
             );
