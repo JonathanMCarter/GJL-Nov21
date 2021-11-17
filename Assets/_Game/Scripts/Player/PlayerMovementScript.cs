@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DependencyLibrary;
 using UnityEngine;
 
 namespace DeadTired
@@ -18,6 +19,9 @@ namespace DeadTired
 
         Vector3 forward, right, nextPosition; // differes from the world axis so we need to specifiy ourself
 
+
+        [SerializeField] private Vector3Reference facing;
+        
         void Start()
         {
             forward = Camera.main.transform.forward;
@@ -44,7 +48,7 @@ namespace DeadTired
         {                            
             nextPosition = playerObject.position;
 
-            Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0 , Input.GetAxis("Vertical"));
+            facing.SetValue(new Vector3(Input.GetAxis("Horizontal"), 0 , Input.GetAxis("Vertical")));
             Vector3 rightMovement = right * movementSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
             Vector3 upMovement = forward * movementSpeed * Time.deltaTime * Input.GetAxis("Vertical");
 
