@@ -37,7 +37,6 @@ namespace DeadTired
         public void DisableEnemies()
         {
             //when the user goes back into their body we need to diable the enemies
-            Debug.Log("Diabling Enemies");
             foreach (var enemyObject in enemyObjects)
             {
                 //disable thier nav agents

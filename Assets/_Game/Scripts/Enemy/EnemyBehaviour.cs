@@ -22,8 +22,6 @@ namespace DeadTired
             }
 
             agent.enabled = true;
-
-            Debug.Log("Activating Enemy");
         }
 
         public void DeactivateEnemy()
