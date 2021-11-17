@@ -23,6 +23,10 @@ namespace DeadTired.Interactables
         /// </summary>
         public bool IsLampLit => light.enabled;
 
+       private void start(){
+             AkSoundEngine.PostEvent("PlayOrbz", gameObject);
+       }
+     
 
         protected override void Awake()
         {
@@ -31,8 +35,12 @@ namespace DeadTired.Interactables
 
             if (orbInLamp)
                 TurnLightOn();
+              
+
+                
             else
                 TurnLightOff();
+                  
         }
 
 
@@ -51,10 +59,13 @@ namespace DeadTired.Interactables
             if (!orbInLamp)
             {
                 TurnLightOn();
+                 
                 return;
             }
 
             TurnLightOff();
+             
+            
         }
 
 
@@ -67,6 +78,8 @@ namespace DeadTired.Interactables
             light.enabled = true;
             lampLightMeshRenderer.material.EnableKeyword("_EMISSION");
             OnLanternLit?.Invoke();
+            AkSoundEngine.PostEvent("PlayOrbz", gameObject);
+            
         }
         
         
@@ -78,6 +91,7 @@ namespace DeadTired.Interactables
             light.enabled = false;
             lampLightMeshRenderer.material.DisableKeyword("_EMISSION");
             OnLanternExtinguished?.Invoke();
+          AkSoundEngine.PostEvent("OrbPickup", gameObject);
         }
 
 
