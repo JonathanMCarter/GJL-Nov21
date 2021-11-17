@@ -16,7 +16,7 @@ namespace DeadTired.Interactables
         private Canvas canvas;
         private CanvasGroup canvasGroup;
         private Coroutine fadeCo;
-        private InteractionsManager interactionsManager;
+        protected InteractionsManager interactionsManager;
 
 
         protected virtual void Awake()

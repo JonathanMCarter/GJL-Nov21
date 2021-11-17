@@ -34,5 +34,11 @@ namespace DeadTired.Interactables
             foreach (var interaction in validInteractions)
                 interaction.OnPlayerInteract();
         }
+
+
+        public bool HasInteraction(IInteractable toCheck)
+        {
+            return validInteractions.Contains(toCheck);
+        }
     }
 }

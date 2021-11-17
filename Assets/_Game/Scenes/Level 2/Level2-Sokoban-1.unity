@@ -495,7 +495,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &86580372
 GameObject:
@@ -616,6 +616,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1099839511972790106, guid: e80e8853d26e6174d92e38745cc10783, type: 3}
   m_PrefabInstance: {fileID: 1715887064}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &140496470
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5360165147523249289, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_Name
+      value: Spirit Lever
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249290, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249290, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249290, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249290, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249290, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249290, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249290, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249290, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249290, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249290, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249290, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249291, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: OnLeverPulled.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 61272452}
+    - target: {fileID: 5360165147523249291, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: OnLeverPulled.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360165147523249291, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+      propertyPath: OnLeverPulled.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeadTired.Sokoban.SokobanManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
 --- !u!4 &156680892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6430238952214629407, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
@@ -655,7 +724,7 @@ Transform:
   - {fileID: 1455901055}
   - {fileID: 648527820}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &206105875
 PrefabInstance:
@@ -664,6 +733,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1575943720}
     m_Modifications:
+    - target: {fileID: 5041395381051217380, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041395381051217380, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041395381051217380, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.z
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5041395381051217383, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -715,6 +796,18 @@ PrefabInstance:
     - target: {fileID: 5041395381051217383, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041395381051217400, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041395381051217400, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041395381051217400, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.z
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 5041395381051217402, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
       propertyPath: m_Name
@@ -1171,6 +1264,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1485696007}
     m_Modifications:
+    - target: {fileID: 5041395381051217380, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041395381051217380, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041395381051217380, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.z
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5041395381051217383, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1223,6 +1328,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5041395381051217400, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041395381051217400, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041395381051217400, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: m_Size.z
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5041395381051217401, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1231,7 +1348,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sokaban Spirit Block
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5041395381051217403, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: shouldPlayerBeGhost
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5041395381051217403, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
 --- !u!1 &366856186
 GameObject:
@@ -3043,7 +3165,7 @@ Transform:
   - {fileID: 1339622439}
   - {fileID: 863124112}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1324354794
 GameObject:

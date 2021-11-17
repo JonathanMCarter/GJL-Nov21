@@ -5,13 +5,11 @@ using UnityEngine;
 
 namespace DeadTired.Sokoban
 {
-    public class SokobanSpiritBlock : SokobanBlock, IInteractable
+    public class SokobanSpiritBlock : SokobanBlock
     {
         [SerializeField] private IntReference playerOrbCount;
         [SerializeField] private bool isPowered;
-
         
-        protected override IInteractable GetInteractable() => this;
         
         public override void OnPlayerInteract()
         {

@@ -15,8 +15,6 @@ namespace DeadTired.Sokoban
 
         [SerializeField] private List<SokobanRequirementData> sokobanRequirements;
 
-        private List<SokobanTileData> defaultTileSetup;
-
         public static Action<SokobanRequirementData> OnRequirementCompleted;
         public static Action OnPuzzleCompleted;
 
@@ -40,10 +38,6 @@ namespace DeadTired.Sokoban
         private void Awake()
         {
             tiles = SceneElly.GetComponentsFromScene<SokobanTile>("Level2-Sokoban-1");
-            defaultTileSetup = new List<SokobanTileData>();
-
-            foreach (var t in tiles)
-                defaultTileSetup.Add(new SokobanTileData(t));
         }
 
 
@@ -125,15 +119,12 @@ namespace DeadTired.Sokoban
 
         public void ResetBoard()
         {
-            foreach (var t in tiles)
+            var _tilesToReset = tiles.Where(t => t.IsOccupied);
+
+            foreach (var tile in _tilesToReset)
             {
-                if (t.transform.childCount > 0)
-                {
-                    if (TryGet.ComponentInChildren(t.gameObject, out SokobanEndTile _endTile))
-                    {
-                        if (_endTile.transform.childCount <= 1) continue;
-                    }
-                }
+                if (tile.OccupyingBlock == null) continue;
+                tile.OccupyingBlock.ResetToDefaultTile();
             }
         }
     }
