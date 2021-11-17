@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7c8c284d263da50479dc9c0edd80da4c
+guid: a456d7cf9f303cf49809bc6f626abdf8
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: bb740bbe7099c8d449de94c5a31e07d3, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: 174dca699e679804f9afb05ddf1e17b2, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: WhiteBoardUVLayout2
-    second: {fileID: 2800000, guid: 3f9dcb26ef2a8fa46bd1905325ff8b59, type: 3}
+      name: Material.002
+    second: {fileID: 2100000, guid: 1969f72d6ebe84149b9a4559399608b0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -95,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.099999994
+    globalScale: 10
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
