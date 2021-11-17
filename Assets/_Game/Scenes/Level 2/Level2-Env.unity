@@ -4617,3 +4617,133 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45269a374dc0d494f9e482d8404626ab, type: 3}
+--- !u!114 &4501215809127421577 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+  m_PrefabInstance: {fileID: 8615197529545272427}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4501215809127421578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710aab6b2e424862a2d0c3ab69e33e17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4501215809127421578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5330242620108569313, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+  m_PrefabInstance: {fileID: 8615197529545272427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4501215809127421580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4501215809127421578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb8b86a47aa4a54a75c0f885e2064ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Sokoban1
+  sokobanManager: {fileID: 0}
+  OnPuzzleFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4501215809127421577}
+        m_TargetAssemblyTypeName: DeadTired.Interactables.LockedDoor, Assembly-CSharp
+        m_MethodName: UnlockDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1001 &8615197529545272427
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569313, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4501215809127421577}
+    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPlayerInteract
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeadTired.Interactables.LockedDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
+      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}

@@ -2,6 +2,7 @@
 using DeadTired.UI;
 using DependencyLibrary;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DeadTired.Sokoban
 {
@@ -9,8 +10,19 @@ namespace DeadTired.Sokoban
     {
         [SerializeField] private IntReference playerOrbCount;
         [SerializeField] private bool isPowered;
-        
-        
+        [SerializeField] private Sprite normalSprite;
+        [SerializeField] private Sprite needOrbSprite;
+        private Image promptImage;
+
+
+        protected override void Awake()
+        {
+            base.Awake();
+            promptImage = GetComponentInChildren<Image>();
+            promptImage.sprite = isPowered ? normalSprite : needOrbSprite;
+        }
+
+
         public override void OnPlayerInteract()
         {
             if (isPowered)
@@ -21,6 +33,7 @@ namespace DeadTired.Sokoban
                 playerOrbCount.variable.IncrementValue(-1);
                 PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
                 isPowered = true;
+                promptImage.sprite = isPowered ? normalSprite : needOrbSprite;
             }
         }
     }

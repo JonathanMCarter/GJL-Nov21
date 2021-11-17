@@ -17,5 +17,6 @@ MonoBehaviour:
   - Level2-Env
   - Level2-Sokoban-1
   - Player
+  - Player UI
   - PauseGame
   - Death

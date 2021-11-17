@@ -477,6 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02da53c6c8f344529b205c62a46045e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  managerID: Sokoban1
   tiles: []
   gridColumnCount: 6
   gridRowCount: 6
@@ -1012,7 +1013,7 @@ MonoBehaviour:
     useConstant: 0
     constantValue: 0
     variable: {fileID: 11400000, guid: b22d3f446a99ffb4799dd2ffe0192dd1, type: 2}
-  shouldPlayerBeGhost: 1
+  shouldPlayerBeGhost: 0
   playerDirection:
     useConstant: 0
     constantValue: {x: 0, y: 0, z: 0}
@@ -1023,6 +1024,8 @@ MonoBehaviour:
     constantValue: 0
     variable: {fileID: 11400000, guid: fbe594d6eafd91b49814155741803d20, type: 2}
   isPowered: 0
+  normalSprite: {fileID: 2101006894745679085, guid: 63701acbb0b0a244a8a6aa28bd8260b8, type: 3}
+  needOrbSprite: {fileID: 21300000, guid: a3b5e8b3af6790247aa0252eca543c52, type: 3}
 --- !u!1 &270803790
 GameObject:
   m_ObjectHideFlags: 0

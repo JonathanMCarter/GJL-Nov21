@@ -60,6 +60,16 @@ namespace DeadTired.Sokoban
         }
 
 
+        public void ResetTile()
+        {
+            OccupyingBlock = null;
+            
+            cachedBlockOnTile = IsOccupied
+                ? GetComponentInChildren<SokobanBlock>()
+                : null;
+        }
+
+
         private void GetDirectionalData()
         {
             directionalData = new SokobanDirectionalData();

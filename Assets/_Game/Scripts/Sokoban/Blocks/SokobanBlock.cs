@@ -65,7 +65,6 @@ namespace DeadTired.Sokoban
             
             iTween.MoveTo(gameObject, _tween);
             tileOn = sokobanManager.GetTileOn(BlockID);
-            base.OnPlayerExitTriggerZone(triggerVolume);
             ConfigureUI(false);
         }
 
@@ -73,6 +72,7 @@ namespace DeadTired.Sokoban
         public void OnBlockMoveComplete()
         {
             triggerVolume.enabled = true;
+            base.OnPlayerExitTriggerZone(triggerVolume);
         }
         
 
@@ -108,6 +108,7 @@ namespace DeadTired.Sokoban
         {
             if (defaultTile == null) return;
             defaultTile.ForceSetBlockToTile(this);
+            tileOn = defaultTile;
             transform.localPosition = GetVector.Vector3DifferentY(Vector3.zero, transform.localPosition.y);
         }
     }

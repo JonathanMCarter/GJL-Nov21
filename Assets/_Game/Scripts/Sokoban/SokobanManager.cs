@@ -9,15 +9,18 @@ namespace DeadTired.Sokoban
 {
     public class SokobanManager : MonoBehaviour
     {
+        [SerializeField] private string managerID;
         [SerializeField] private List<SokobanTile> tiles;
         [SerializeField] private int gridColumnCount = 6;
         [SerializeField] private int gridRowCount = 6;
 
         [SerializeField] private List<SokobanRequirementData> sokobanRequirements;
 
-        public static Action<SokobanRequirementData> OnRequirementCompleted;
-        public static Action OnPuzzleCompleted;
+        public Action<SokobanRequirementData> OnRequirementCompleted;
+        public Action OnPuzzleCompleted;
 
+
+        public string GetID => managerID;
 
         public SokobanTile GetTileOn(string id)
         {
@@ -125,6 +128,7 @@ namespace DeadTired.Sokoban
             {
                 if (tile.OccupyingBlock == null) continue;
                 tile.OccupyingBlock.ResetToDefaultTile();
+                tile.ResetTile();
             }
         }
     }
