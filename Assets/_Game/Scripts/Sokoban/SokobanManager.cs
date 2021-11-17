@@ -13,6 +13,21 @@ namespace DeadTired.Sokoban
 
         [SerializeField] private List<SokobanRequirementData> sokobanRequirements;
 
+        public SokobanTile GetTileOn(string id)
+        {
+            var _tile = tiles.Where(t => t.OccupyingBlock != null);
+
+            foreach (var option in _tile)
+            {
+                if (!option.IsOccupied) continue;
+                if (!option.OccupyingBlock.BlockID.Equals(id)) continue;
+                return option;
+            }
+
+            Debug.LogError("Unable to find tile with block...");
+            return null;
+        }
+
 
         private void Awake()
         {

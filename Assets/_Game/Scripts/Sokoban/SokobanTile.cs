@@ -10,18 +10,29 @@ namespace DeadTired.Sokoban
         [SerializeField] private List<SokobanTile> neighbours;
         [SerializeField] private SokobanDirectionalData directionalData;
         protected SokobanManager sokobanManager;
+        private SokobanBlock cachedBlockOnTile;
 
-
+        public SokobanDirectionalData DirectionalData => directionalData;
+        
         public bool IsOccupied => transform.childCount > 0;
         
         public GameObject OccupyingObject => IsOccupied ? transform.GetChild(0).gameObject : null;
-        public SokobanBlock OccupyingBlock { get; private set; }
+
+        public SokobanBlock OccupyingBlock
+        {
+            get => cachedBlockOnTile;
+            set => cachedBlockOnTile = value;
+        }
 
         
         private void Start()
         {
             sokobanManager = SceneElly.GetComponentFromScene<SokobanManager>("Level2-Sokoban-1");
             neighbours = sokobanManager.GetNeighbours(this);
+            cachedBlockOnTile = IsOccupied
+                ? GetComponentInChildren<SokobanBlock>()
+                : null;
+            
             GetDirectionalData();
         }
 
@@ -30,6 +41,7 @@ namespace DeadTired.Sokoban
         {
             if (IsOccupied) return;
             OccupyingBlock = block;
+            block.transform.SetParent(transform);
         }
 
 
@@ -43,24 +55,16 @@ namespace DeadTired.Sokoban
                 var _cachedTransform = transform.position;
                 
                 if (_tileTransform.x > _cachedTransform.x)
-                {
                     directionalData.posX = tile;
-                }  
-                
+
                 if (_tileTransform.x < _cachedTransform.x)
-                {
                     directionalData.negX = tile;
-                }  
 
                 if (_tileTransform.z > _cachedTransform.z)
-                {
                     directionalData.posZ = tile;
-                }  
-                
+
                 if (_tileTransform.z < _cachedTransform.z)
-                {
                     directionalData.negZ = tile;
-                }  
             }
         }
     }
