@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using DependencyLibrary;
 using MultiScene.Core;
-using MultiScene.Extensions.URP;
 using UnityEngine;
 
 namespace DeadTired.Interactables
@@ -30,7 +28,7 @@ namespace DeadTired.Interactables
 
         public void OnMultiSceneEnable()
         {
-            interactionsManager = SceneElly.GetComponentFromScene<InteractionsManager>();
+            interactionsManager = SceneElly.GetComponentFromAllScenes<InteractionsManager>();
             canvas.worldCamera = SceneElly.GetComponentFromScene<Camera>("Player");
             canvas.transform.rotation = canvas.worldCamera.transform.rotation;
             ConfigureUI(false);

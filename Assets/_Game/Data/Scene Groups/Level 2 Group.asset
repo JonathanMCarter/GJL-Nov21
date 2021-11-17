@@ -15,6 +15,7 @@ MonoBehaviour:
   scenes:
   - Managers
   - Level2-Env
+  - Level2-Sokoban-1
   - Player
   - PauseGame
   - Death
