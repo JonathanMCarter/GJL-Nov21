@@ -133,7 +133,6 @@ namespace DeadTired
             currentState = State.isReturning;
 
             switchParticle.emitParticle(anchor.transform.position);
-
         }
 
         private void movePlayer()
