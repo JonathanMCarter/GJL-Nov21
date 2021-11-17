@@ -6,54 +6,103 @@ using UnityEngine;
 
 namespace DeadTired
 {
-    public class PlayerBehaviour : MonoBehaviour
+    public class PlayerBehaviour : MonoBehaviour, IMultiSceneAwake
     {
-        enum State {ghost, body};
+        public enum State {ghost, body, isReturning};
+        
         //as the game changes depending on the player state we might want to store this somewhere else...but this works for now
-        [SerializeField]
-        private State currentState = State.body; //start the player in their body
+        public State currentState = State.body; //start the player in their body
 
         [Header("Player Settings")]
         [SerializeField]
-        private float maxDistanceFromAnchor =  5f;
-        public float currentDistanceFromAnchor;
-        public GameObject playerAnchor; // the players body
+        private GameObject playerAnchor; // the players body
+        public GameObject anchor;
+
+        public float maxDistanceFromAnchor =  5f;
+        private float minDistanceFromAnchor = 0.2f;
+
+        // Movement speed in units per second.
+        public float returnSpeed = .5F;
+
+        public GameObject playerObject; // want to make this automatically grab the playerobject
 
         public float maxGhostTimeSeconds = 60f;
 
         public string interactInput = "Fire1";
         public string changeStateInput = "Jump";
-        
-        // Jonathan Added This xD
-        public bool IsInGhostForm => currentState.Equals(State.ghost);
+
+        public string playerBodyLayer = "PlayerBody";
+        public string playerGhostLayer = "PlayerGhost";
+
+        [Header("Values to Watch")]
+        [SerializeField]
+        private float currentDistanceFromAnchor;
+        [SerializeField]
+        private float timeTillReturn; //The player has a limited time as a ghost, this is that remaining time
+
+
+        [Header("Other scripts")]
+        public GlobalVolumeManager globalVolumeManager; 
+        //want to add some camera effects when as a ghost
+
+        public SwitchParticleBehaviour switchParticle;
+        public SpiritLineBehaviour sprirtLine;
+
+        // Time when the movement back to body started.
+        private float startTime;
+        private float journeyLength;
+        private InteractionsManager cachedInteractionsManager;
+
+        // Gets called when all the scenes for each level are loaded...
+        public void OnMultiSceneAwake()
+        {
+            // Gets the interaction manager no matter which scene it is in...
+            cachedInteractionsManager = SceneElly.GetComponentFromAllScenes<InteractionsManager>();
+        }
+
 
         // Start is called before the first frame update
         void Start()
         {
-        
+            //have it set in the physics settings so items on the player ghost layer cant interact with the anchor
+            playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
         }
 
         // Update is called once per frame
         void Update()
         {
-            if(Input.GetButtonDown(changeStateInput))
+            if(currentState == State.isReturning)
             {
-                if(currentState == State.body)
-                {
-                    //GOING GHOST!!
-                    DropAnchor();
-                }
-                else
-                {
-                    //BACK TO NORMAL
-                    returnPlayerToBody();
-                }
+                movePlayer();
             }
-
-            if(Input.GetButtonDown(interactInput))
+            else
             {
-                Debug.Log("Interacting TO DO");
-                SceneElly.GetComponentFromScene<InteractionsManager>().TryInteract();
+               
+                if(Input.GetButtonDown(changeStateInput))
+                {
+                    if(currentState == State.body)
+                    {
+                        //GOING GHOST!!
+                        DropAnchor();
+                    }
+                    else
+                    {
+                        //BACK TO NORMAL
+                        returnPlayerToBody();
+                    }
+                }
+
+                if(Input.GetButtonDown(interactInput))
+                {
+                    // Calls the interaction manager and tries to make an interaction if possible...
+                    cachedInteractionsManager.TryInteract();
+                }
+
+                //if a ghost keep checkign the distance
+                if(currentState == State.ghost)
+                {
+                    currentDistanceFromAnchor = Vector3.Distance(anchor.transform.position, playerObject.transform.position);
+                } 
             }
         }
 
@@ -63,15 +112,56 @@ namespace DeadTired
         {
             //place the anchor prefab where the player is currently
             currentState = State.ghost;
+            playerObject.layer = LayerMask.NameToLayer(playerGhostLayer);
+
+            anchor = Instantiate(playerAnchor, playerObject.transform.position, playerObject.transform.rotation); //pooling this somewhere instead of instantiating might be better??
+
+            switchParticle.emitParticle(anchor.transform.position);
+            sprirtLine.activateSpiritLine(playerObject.transform, anchor.transform);
+
+            globalVolumeManager.setGhostvolume();
         }
 
         //return player
         private void returnPlayerToBody()
         {
-            //if the player goes too far/runs out of ghost time/asks to go back
-            currentState = State.body;
+            startTime = Time.time;
 
-            // destroy the anchor we placed
+            journeyLength = currentDistanceFromAnchor;
+
+            //move the player back to position of the body   
+            currentState = State.isReturning;
+
+            switchParticle.emitParticle(anchor.transform.position);
+
+        }
+
+        private void movePlayer()
+        {
+            // Distance moved equals elapsed time times speed..
+            float distCovered = (Time.time - startTime) * returnSpeed;
+
+            float fractionOfJourney = distCovered / journeyLength;
+
+            playerObject.transform.position = Vector3.Lerp(playerObject.transform.position, anchor.transform.position, fractionOfJourney);
+            
+            currentDistanceFromAnchor = Vector3.Distance(anchor.transform.position, playerObject.transform.position);
+
+            if(currentDistanceFromAnchor <= minDistanceFromAnchor)
+            {
+                sprirtLine.deactiveSpiritLine();
+
+                // destroy the anchor we placed
+                Destroy(anchor);
+
+                currentState = State.body;
+
+                playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
+                globalVolumeManager.setBodyVolume();
+
+            }
+        
+        
         }
 
         // call this from other scripts!!

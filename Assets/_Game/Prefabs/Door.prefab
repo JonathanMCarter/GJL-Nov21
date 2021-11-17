@@ -186,7 +186,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a07b17a266d535148a5e310d3a1a4057, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -376,7 +376,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a07b17a266d535148a5e310d3a1a4057, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -471,7 +471,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 059929c6f79099f4b850e0fa335564fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -572,3 +572,5 @@ MonoBehaviour:
     constantValue: 0
     variable: {fileID: 11400000, guid: b22d3f446a99ffb4799dd2ffe0192dd1, type: 2}
   shouldPlayerBeGhost: 0
+  lockedSprite: {fileID: 21300000, guid: 14b2f9e5815bd0d4495cc187c5c0ede1, type: 3}
+  <isUnlocked>k__BackingField: 0
