@@ -16,14 +16,11 @@ namespace DeadTired
         [Header("Player Settings")]
         [SerializeField]
         private GameObject playerAnchor; // the players body
-        public GameObject anchor;
-
         public float maxDistanceFromAnchor =  5f;
         private float minDistanceFromAnchor = 0.2f;
 
         // Movement speed in units per second.
         public float returnSpeed = .5F;
-
         public GameObject playerObject; // want to make this automatically grab the playerobject
 
         public float maxGhostTimeSeconds = 60f;
@@ -52,6 +49,8 @@ namespace DeadTired
         // Time when the movement back to body started.
         private float startTime;
         private float journeyLength;
+        public GameObject anchor;
+
         private InteractionsManager cachedInteractionsManager;
 
         // Gets called when all the scenes for each level are loaded...
@@ -63,7 +62,6 @@ namespace DeadTired
             sprirtLine = SceneElly.GetComponentFromAllScenes<SpiritLineBehaviour>();
             switchParticle = SceneElly.GetComponentFromAllScenes<SwitchParticleBehaviour>();
             globalVolumeManager = SceneElly.GetComponentFromAllScenes<GlobalVolumeManager>();
-
 
             enemyParentBehaviour.playerObject = playerObject.transform;
         }
@@ -92,11 +90,13 @@ namespace DeadTired
                     {
                         //GOING GHOST!!
                         DropAnchor();
+                        AkSoundEngine.PostEvent("Normal_breath", gameObject);
                     }
                     else
                     {
                         //BACK TO NORMAL
                         returnPlayerToBody();
+                        AkSoundEngine.PostEvent("Backto_body", gameObject);
                     }
                 }
 
@@ -164,15 +164,12 @@ namespace DeadTired
 
             if(currentDistanceFromAnchor <= minDistanceFromAnchor)
             {
-                sprirtLine.deactiveSpiritLine();
-
                 // destroy the anchor we placed
                 Destroy(anchor);
 
                 currentState = State.body;
 
                 playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
-                globalVolumeManager.setBodyVolume();
 
             }
         

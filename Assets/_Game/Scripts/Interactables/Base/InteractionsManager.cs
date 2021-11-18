@@ -32,7 +32,16 @@ namespace DeadTired.Interactables
             if (validInteractions.Count <= 0) return;
 
             foreach (var interaction in validInteractions)
+            {
+                if (interaction == null) continue;
                 interaction.OnPlayerInteract();
+            }
+        }
+
+
+        public bool HasInteraction(IInteractable toCheck)
+        {
+            return validInteractions.Contains(toCheck);
         }
     }
 }
