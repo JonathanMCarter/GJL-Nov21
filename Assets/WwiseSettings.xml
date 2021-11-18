@@ -2,13 +2,13 @@
 <WwiseSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <CopySoundBanksAsPreBuildStep>true</CopySoundBanksAsPreBuildStep>
   <GenerateSoundBanksAsPreBuildStep>true</GenerateSoundBanksAsPreBuildStep>
-  <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
+  <SoundbankPath>Audio/GeneratedSoundBanks/Mac</SoundbankPath>
   <CreatedPicker>true</CreatedPicker>
   <CreateWwiseGlobal>true</CreateWwiseGlobal>
-  <CreateWwiseListener>true</CreateWwiseListener>
+  <CreateWwiseListener>false</CreateWwiseListener>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
-  <WwiseInstallationPathMac>/Volumes/Dillan hoyos/UNITY/Wwise/Wwise.app</WwiseInstallationPathMac>
+  <WwiseInstallationPathMac>/Applications/Wwise.app</WwiseInstallationPathMac>
   <WwiseInstallationPathWindows />
   <WwiseProjectPath>../../../../../../Users/dillannhoyos/Documents/WwiseProjects/Dead Tired/Dead Tired.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>

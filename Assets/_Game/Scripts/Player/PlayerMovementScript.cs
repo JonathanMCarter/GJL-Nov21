@@ -21,9 +21,9 @@ namespace DeadTired
 
 
         [SerializeField] private Vector3Reference facing;
-        
+       
         void Start()
-        {
+        {  
             forward = Camera.main.transform.forward;
             forward.y = 0f;
 

@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: 834486fe3000d942a95e6e8f3e0c8aa2
     GuidInternal: 
-    m_lastTime: -8585646049534775808
+    m_lastTime: -8585643919854775808
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,41 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
+    - name: Music & Sound Scapes
+      guid: 5bfd59aac7b74c49887bb4c9acf356ea
+      id: 2697438318
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 834486fe3000d942a95e6e8f3e0c8aa2
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music & Sound Scapes
+        ObjectType: 2
+        guid: 5bfd59aac7b74c49887bb4c9acf356ea
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Music & Sound
+        Scapes
+    - name: SFX
+      guid: 3b092adc7196b7459950cb4c55907c9d
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 834486fe3000d942a95e6e8f3e0c8aa2
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 3b092adc7196b7459950cb4c55907c9d
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/SFX
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +101,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 1cb27a857f6e2d4da662cda6a0480074
     GuidInternal: 
-    m_lastTime: -8585644858484775808
+    m_lastTime: -8585643940044775808
     List:
     - name: New_Game
       guid: 318a9d2ddc196847b6448532e5e3f938
@@ -94,7 +129,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 12dc4efafa13e646abb1ec0e0128b47e
     GuidInternal: 
-    m_lastTime: -8585644847564775808
+    m_lastTime: -8585643940044775808
     List:
     - name: Backto_body
       guid: 5b2cd08616a5cc40b01a05cbeac8b19e
@@ -147,6 +182,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: Infinity
       minDuration: 1.674667
+    - name: Gnomes
+      guid: 8c6d26b188333d499296435ead10d84b
+      id: 1265364722
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Gnomes
+        ObjectType: 3
+        guid: 8c6d26b188333d499296435ead10d84b
+      Path: Events/Default Work Unit/Gnomes
+      maxAttenuation: 8
+      maxDuration: -1
+      minDuration: -1
     - name: Normal_breath
       guid: 83c20de02bf5234b9276d72477ebbc3d
       id: 4163868301
@@ -196,8 +248,8 @@ MonoBehaviour:
         guid: 57198ba94a310e41b64f23d0a48d4481
       Path: Events/Default Work Unit/OrbPickup
       maxAttenuation: 0
-      maxDuration: 2.120792
-      minDuration: 2.120792
+      maxDuration: 2.248199
+      minDuration: 2.000605
     - name: Panic_Breath
       guid: 5cd8fbcc4e0a9c429004e9bf5a8d97eb
       id: 2330720011
@@ -215,6 +267,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Music
+      guid: 05fc43ba0b15234cb356e42ca1d8cee9
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: 05fc43ba0b15234cb356e42ca1d8cee9
+      Path: Events/Default Work Unit/Play_Music
+      maxAttenuation: 0
+      maxDuration: 508.23566
+      minDuration: 508.23566
     - name: PlayOrbz
       guid: 1b0bf8585241a34d929c9bcef129047f
       id: 1380233920
@@ -232,6 +301,23 @@ MonoBehaviour:
       maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
+    - name: Stop_Music
+      guid: 958ba132e8db264b88aacae6756a2a7d
+      id: 2837384057
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Stop_Music
+        ObjectType: 3
+        guid: 958ba132e8db264b88aacae6756a2a7d
+      Path: Events/Default Work Unit/Stop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Unlocked
       guid: 4862d4bfa30ca34fb248eff82d315ce2
       id: 2798721810
@@ -261,8 +347,22 @@ MonoBehaviour:
     ParentPath: Game Parameters/Default Work Unit
     guid: 915aa470c438394ca40d1a7f0d3209b3
     GuidInternal: 
-    m_lastTime: -8585646049534775808
-    List: []
+    m_lastTime: -8585643919854775808
+    List:
+    - name: SIDECHAIN
+      guid: 4c1cc4e4ab787a469f14d619de5b8e0e
+      id: 1883033791
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 915aa470c438394ca40d1a7f0d3209b3
+      - ElementName: SIDECHAIN
+        ObjectType: 13
+        guid: 4c1cc4e4ab787a469f14d619de5b8e0e
+      Path: Game Parameters/Default Work Unit/SIDECHAIN
   StateWwu:
   - PhysicalPath: States/Default Work Unit.wwu
     PathAndIcons:
@@ -372,7 +472,7 @@ MonoBehaviour:
     m_lastTime: -8585646049534775808
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000050000000600000007000000100000001100000012000000130000001400000027000000
+  ExpandedWaapiItemIds: 010000000500000006000000070000001000000011000000120000001300000014000000190000001a00000027000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

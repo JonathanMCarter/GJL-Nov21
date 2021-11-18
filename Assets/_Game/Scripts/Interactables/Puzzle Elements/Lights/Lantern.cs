@@ -1,4 +1,4 @@
-﻿using DeadTired.UI;
+using DeadTired.UI;
 using DependencyLibrary;
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,13 +23,15 @@ namespace DeadTired.Interactables
         /// </summary>
         public bool IsLampLit => light.enabled;
 
-       private void start(){
-             AkSoundEngine.PostEvent("PlayOrbz", gameObject);
-       }
+        private void Start(){
+            AkSoundEngine.PostEvent("PlayOrbz", gameObject);
+            AkSoundEngine.PostEvent("Play_Music", gameObject);
+        }    
      
 
         protected override void Awake()
         {
+           
             base.Awake();
             light = GetComponentInChildren<Light>();
 
@@ -91,7 +93,7 @@ namespace DeadTired.Interactables
             light.enabled = false;
             lampLightMeshRenderer.material.DisableKeyword("_EMISSION");
             OnLanternExtinguished?.Invoke();
-          AkSoundEngine.PostEvent("OrbPickup", gameObject);
+            AkSoundEngine.PostEvent("OrbPickup", gameObject);
         }
 
 
