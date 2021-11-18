@@ -91,13 +91,13 @@ namespace DeadTired
                     {
                         //GOING GHOST!!
                         DropAnchor();
-                        AkSoundEngine.PostEvent("Normal_breath", gameObject);
+                        //AkSoundEngine.PostEvent("Normal_breath", gameObject);
                     }
                     else
                     {
                         //BACK TO NORMAL
                         returnPlayerToBody();
-                        AkSoundEngine.PostEvent("Backto_body", gameObject);
+                        //AkSoundEngine.PostEvent("Backto_body", gameObject);
                     }
                 }
 

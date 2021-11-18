@@ -17,7 +17,7 @@ namespace DeadTired.Interactables
 
         private void Start()
         {
-            AkSoundEngine.PostEvent("PlayOrbz", gameObject);
+            //AkSoundEngine.PostEvent("PlayOrbz", gameObject);
         }
 
         private void Awake()
@@ -38,7 +38,7 @@ namespace DeadTired.Interactables
 
         private void OnEnable()
         {
-            AkSoundEngine.PostEvent("PlayOrbz", gameObject);
+            //AkSoundEngine.PostEvent("PlayOrbz", gameObject);
             
             foreach (var p in particles)
                 p.Play();
@@ -48,7 +48,7 @@ namespace DeadTired.Interactables
 
         private void OnDisable()
         {
-            AkSoundEngine.PostEvent("OrbPickup", gameObject);
+            //AkSoundEngine.PostEvent("OrbPickup", gameObject);
             
             foreach (var p in particles)
                 p.Stop();

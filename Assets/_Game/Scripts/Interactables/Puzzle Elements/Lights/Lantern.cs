@@ -26,7 +26,7 @@ namespace DeadTired.Interactables
         
         private void Start()
         {
-            AkSoundEngine.PostEvent("PlayOrbz", gameObject);
+            //AkSoundEngine.PostEvent("PlayOrbz", gameObject);
         }
 
 
@@ -77,7 +77,7 @@ namespace DeadTired.Interactables
             lampLightMeshRenderer.material.EnableKeyword("_EMISSION");
             OnLanternLit?.Invoke();
             
-            AkSoundEngine.PostEvent("PlayOrbz", gameObject);
+            //AkSoundEngine.PostEvent("PlayOrbz", gameObject);
         }
 
 
@@ -93,7 +93,7 @@ namespace DeadTired.Interactables
             lampLightMeshRenderer.material.DisableKeyword("_EMISSION");
             OnLanternExtinguished?.Invoke();
             
-            AkSoundEngine.PostEvent("OrbPickup", gameObject);
+            //AkSoundEngine.PostEvent("OrbPickup", gameObject);
         }
 
 
