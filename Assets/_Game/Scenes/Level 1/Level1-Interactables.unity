@@ -1968,6 +1968,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 4402419019426863998, guid: 55edc4e935fcde24a90a2cbd155098e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4402419019426863999, guid: 55edc4e935fcde24a90a2cbd155098e7, type: 3}
       propertyPath: m_Name
       value: TerrainParent
