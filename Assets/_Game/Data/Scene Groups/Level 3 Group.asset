@@ -15,6 +15,10 @@ MonoBehaviour:
   scenes:
   - Managers
   - Level3-Env
+  - Level3-Props
+  - Level3-Routes
+  - Level3-Enemies
   - Player
+  - Player UI
   - PauseGame
   - Death
