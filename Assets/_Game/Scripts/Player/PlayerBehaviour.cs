@@ -118,7 +118,7 @@ namespace DeadTired
         //when the player goes ghost we drop the anchor
         private void DropAnchor()
         {
-            AkSoundEngine.PostEvent("Normal_breath", gameObject);
+            //AkSoundEngine.PostEvent("Normal_breath", gameObject);
 
             //place the anchor prefab where the player is currently
             currentState = State.ghost;
@@ -140,7 +140,7 @@ namespace DeadTired
         //return player
         private void returnPlayerToBody()
         {
-            AkSoundEngine.PostEvent("Backto_body", gameObject);
+            //AkSoundEngine.PostEvent("Backto_body", gameObject);
 
             startTime = Time.time;
 
