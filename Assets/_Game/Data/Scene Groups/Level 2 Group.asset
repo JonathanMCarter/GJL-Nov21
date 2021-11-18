@@ -16,6 +16,8 @@ MonoBehaviour:
   - Managers
   - Level2-Env
   - Level2-Interactables
+  - Level2-Props
+  - Level2-Enemies
   - Level2-Sokoban-1
   - Level2-Sokoban-2
   - Player
