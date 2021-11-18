@@ -164,6 +164,8 @@ namespace DeadTired
 
             if(currentDistanceFromAnchor <= minDistanceFromAnchor)
             {
+                sprirtLine.deactiveSpiritLine();
+
                 // destroy the anchor we placed
                 Destroy(anchor);
 
