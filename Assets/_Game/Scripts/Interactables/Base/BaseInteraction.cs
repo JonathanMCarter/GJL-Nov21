@@ -52,6 +52,7 @@ namespace DeadTired.Interactables
 
         private void OnTriggerEnter(Collider other)
         {
+            OnOtherEnterTriggerZone(other);
             if (!shouldPlayerBeGhost.Equals(isPlayerGhost)) return;
             if (!other.CompareTag("Player")) return;
             IsPlayerInZone = true;
@@ -60,6 +61,7 @@ namespace DeadTired.Interactables
 
         private void OnTriggerExit(Collider other)
         {
+            OnOtherExitTriggerZone(other);
             if (!other.CompareTag("Player")) return;
             IsPlayerInZone = false;
             OnPlayerExitTriggerZone(other);
@@ -75,6 +77,16 @@ namespace DeadTired.Interactables
         protected virtual void OnPlayerExitTriggerZone(Collider other)
         {
             interactionsManager.RemoveInteraction(GetInteractable());
+        }
+
+
+        protected virtual void OnOtherEnterTriggerZone(Collider other)
+        {
+        }
+        
+        
+        protected virtual void OnOtherExitTriggerZone(Collider other)
+        {
         }
 
 

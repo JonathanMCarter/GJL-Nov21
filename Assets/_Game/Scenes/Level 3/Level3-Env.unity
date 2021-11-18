@@ -134,8 +134,9 @@ GameObject:
   - component: {fileID: 8269013}
   - component: {fileID: 8269017}
   - component: {fileID: 8269016}
-  - component: {fileID: 8269015}
   - component: {fileID: 8269014}
+  - component: {fileID: 8269018}
+  - component: {fileID: 8269015}
   m_Layer: 0
   m_Name: Plane (15)
   m_TagString: Untagged
@@ -173,9 +174,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &8269015
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &8269015
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -184,10 +189,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.000022888184, y: 0, z: 0.0000076293945}
 --- !u!23 &8269016
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -237,6 +241,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8269012}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &8269018
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8269012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.000022888184, y: 0, z: 0.0000076293945}
 --- !u!1001 &19351531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -345,8 +362,9 @@ GameObject:
   - component: {fileID: 41249470}
   - component: {fileID: 41249474}
   - component: {fileID: 41249473}
-  - component: {fileID: 41249472}
   - component: {fileID: 41249471}
+  - component: {fileID: 41249475}
+  - component: {fileID: 41249472}
   m_Layer: 0
   m_Name: Plane (16)
   m_TagString: Untagged
@@ -384,9 +402,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &41249472
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &41249472
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -395,10 +417,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.000022888184, y: 0, z: 0.0000076293945}
 --- !u!23 &41249473
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -448,6 +469,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41249469}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &41249475
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41249469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.000022888184, y: 0, z: 0.0000076293945}
 --- !u!1 &61344853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a9d3d06ac3d15c64982a01b4b402896c, type: 3}
@@ -483,8 +517,9 @@ GameObject:
   - component: {fileID: 158588445}
   - component: {fileID: 158588444}
   - component: {fileID: 158588443}
-  - component: {fileID: 158588442}
   - component: {fileID: 158588446}
+  - component: {fileID: 158588447}
+  - component: {fileID: 158588442}
   m_Layer: 0
   m_Name: Plane (2)
   m_TagString: Untagged
@@ -492,8 +527,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &158588442
-MeshCollider:
+--- !u!65 &158588442
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -502,10 +537,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.0000076293945, y: 0, z: 0}
 --- !u!23 &158588443
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -585,7 +619,24 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &158588447
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158588441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.0000076293945, y: 0, z: 0}
 --- !u!1 &188298596
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,8 +648,9 @@ GameObject:
   - component: {fileID: 188298597}
   - component: {fileID: 188298601}
   - component: {fileID: 188298600}
-  - component: {fileID: 188298599}
   - component: {fileID: 188298598}
+  - component: {fileID: 188298602}
+  - component: {fileID: 188298599}
   m_Layer: 0
   m_Name: Plane (6)
   m_TagString: Untagged
@@ -636,9 +688,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &188298599
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &188298599
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -647,10 +703,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: -0.0000038146973}
 --- !u!23 &188298600
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -700,6 +755,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188298596}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &188298602
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188298596}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: -0.0000038146973}
 --- !u!1 &268215050
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,8 +779,9 @@ GameObject:
   - component: {fileID: 268215051}
   - component: {fileID: 268215055}
   - component: {fileID: 268215054}
-  - component: {fileID: 268215053}
   - component: {fileID: 268215052}
+  - component: {fileID: 268215056}
+  - component: {fileID: 268215053}
   m_Layer: 0
   m_Name: Plane (7)
   m_TagString: Untagged
@@ -750,9 +819,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &268215053
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &268215053
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -761,10 +834,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: 0.0000076293945}
 --- !u!23 &268215054
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -814,6 +886,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268215050}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &268215056
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268215050}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: 0.0000076293945}
 --- !u!1 &269085203
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,8 +910,9 @@ GameObject:
   - component: {fileID: 269085207}
   - component: {fileID: 269085206}
   - component: {fileID: 269085205}
-  - component: {fileID: 269085204}
   - component: {fileID: 269085208}
+  - component: {fileID: 269085209}
+  - component: {fileID: 269085204}
   m_Layer: 0
   m_Name: Plane (3)
   m_TagString: Untagged
@@ -834,8 +920,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &269085204
-MeshCollider:
+--- !u!65 &269085204
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -844,10 +930,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.0000076293945, y: 0, z: 0.0000076293945}
 --- !u!23 &269085205
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -927,7 +1012,24 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &269085209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269085203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.0000076293945, y: 0, z: 0.0000076293945}
 --- !u!1 &273099392
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,8 +1041,9 @@ GameObject:
   - component: {fileID: 273099393}
   - component: {fileID: 273099397}
   - component: {fileID: 273099396}
-  - component: {fileID: 273099395}
   - component: {fileID: 273099394}
+  - component: {fileID: 273099398}
+  - component: {fileID: 273099395}
   m_Layer: 0
   m_Name: Plane (13)
   m_TagString: Untagged
@@ -978,9 +1081,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &273099395
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &273099395
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -989,10 +1096,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.000022888184, y: 0, z: 0.000015258789}
 --- !u!23 &273099396
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1042,6 +1148,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273099392}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &273099398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273099392}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.000022888184, y: 0, z: 0.000015258789}
 --- !u!1 &354345668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,8 +1671,9 @@ GameObject:
   - component: {fileID: 785490614}
   - component: {fileID: 785490618}
   - component: {fileID: 785490617}
-  - component: {fileID: 785490616}
   - component: {fileID: 785490615}
+  - component: {fileID: 785490619}
+  - component: {fileID: 785490616}
   m_Layer: 0
   m_Name: Plane (10)
   m_TagString: Untagged
@@ -1591,9 +1711,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &785490616
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &785490616
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1602,10 +1726,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: 0}
 --- !u!23 &785490617
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1655,6 +1778,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785490613}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &785490619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785490613}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: 0}
 --- !u!1 &794421701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2574299555196830329, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
@@ -1677,6 +1813,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199c9c95e0bf470b9956922f02807d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerGhost:
+    useConstant: 1
+    constantValue: 0
+    variable: {fileID: 0}
+  shouldPlayerBeGhost: 0
+  playerOrbCount:
+    useConstant: 1
+    constantValue: 0
+    variable: {fileID: 0}
+  lampLightMeshRenderer: {fileID: 0}
+  orbInLamp: 0
+  OnLanternLit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLanternExtinguished:
+    m_PersistentCalls:
+      m_Calls: []
+  lampRadius:
+    useConstant: 1
+    constantValue: 7.5
+    variable: {fileID: 0}
+  lampRadiusSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  validTiles: []
 --- !u!1001 &831899036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1935,8 +2097,9 @@ GameObject:
   - component: {fileID: 1019899679}
   - component: {fileID: 1019899683}
   - component: {fileID: 1019899682}
-  - component: {fileID: 1019899681}
   - component: {fileID: 1019899680}
+  - component: {fileID: 1019899684}
+  - component: {fileID: 1019899681}
   m_Layer: 0
   m_Name: Plane (5)
   m_TagString: Untagged
@@ -1974,9 +2137,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &1019899681
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &1019899681
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1985,10 +2152,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.0000076293945, y: 0, z: -0.0000038146973}
 --- !u!23 &1019899682
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2038,6 +2204,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019899678}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1019899684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019899678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.0000076293945, y: 0, z: -0.0000038146973}
 --- !u!1 &1078901273 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2574299555196830329, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
@@ -2055,6 +2234,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199c9c95e0bf470b9956922f02807d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerGhost:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: b22d3f446a99ffb4799dd2ffe0192dd1, type: 2}
+  shouldPlayerBeGhost: 1
+  playerOrbCount:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: fbe594d6eafd91b49814155741803d20, type: 2}
+  lampLightMeshRenderer: {fileID: 1078901278}
+  orbInLamp: 0
+  OnLanternLit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1078901274}
+        m_TargetAssemblyTypeName: DeadTired.GroundRevealLamp, Assembly-CSharp
+        m_MethodName: OnLampLitGround
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnLanternExtinguished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1078901274}
+        m_TargetAssemblyTypeName: DeadTired.GroundRevealLamp, Assembly-CSharp
+        m_MethodName: OnLampExtinguishedGround
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  lampRadius:
+    useConstant: 1
+    constantValue: 7.5
+    variable: {fileID: 0}
+  lampRadiusSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  validTiles: []
+--- !u!54 &1078901276
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078901273}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!23 &1078901278 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2574299555196830331, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+  m_PrefabInstance: {fileID: 1645616143}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1078901280 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
@@ -2341,15 +2591,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -2358,22 +2608,42 @@ PrefabInstance:
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1513508426}
+      objectReference: {fileID: 794421703}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1513508426}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_enabled
+      value: OnLampLit
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: set_enabled
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 794421703}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnLampExtinguished
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Behaviour, UnityEngine
+      value: DeadTired.GroundRevealLamp, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -2381,11 +2651,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeadTired.GroundRevealLamp, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830327, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: m_Radius
@@ -2394,6 +2680,10 @@ PrefabInstance:
     - target: {fileID: 2574299555196830329, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: m_Name
       value: Lantern (TEMP) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830329, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
@@ -2513,8 +2803,9 @@ GameObject:
   - component: {fileID: 1312717446}
   - component: {fileID: 1312717450}
   - component: {fileID: 1312717449}
-  - component: {fileID: 1312717448}
   - component: {fileID: 1312717447}
+  - component: {fileID: 1312717451}
+  - component: {fileID: 1312717448}
   m_Layer: 0
   m_Name: Plane (14)
   m_TagString: Untagged
@@ -2552,9 +2843,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &1312717448
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &1312717448
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2563,10 +2858,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.000022888184, y: 0, z: 0.000015258789}
 --- !u!23 &1312717449
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2616,6 +2910,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312717445}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1312717451
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312717445}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.000022888184, y: 0, z: 0.000015258789}
 --- !u!1001 &1331066081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2825,8 +3132,9 @@ GameObject:
   - component: {fileID: 1501947276}
   - component: {fileID: 1501947280}
   - component: {fileID: 1501947279}
-  - component: {fileID: 1501947278}
   - component: {fileID: 1501947277}
+  - component: {fileID: 1501947281}
+  - component: {fileID: 1501947278}
   m_Layer: 0
   m_Name: Plane (8)
   m_TagString: Untagged
@@ -2864,9 +3172,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &1501947278
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &1501947278
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2875,10 +3187,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: 0}
 --- !u!23 &1501947279
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2928,6 +3239,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501947275}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1501947281
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501947275}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: 0}
 --- !u!1001 &1506177807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3045,8 +3369,9 @@ GameObject:
   - component: {fileID: 1539774932}
   - component: {fileID: 1539774936}
   - component: {fileID: 1539774935}
-  - component: {fileID: 1539774934}
   - component: {fileID: 1539774933}
+  - component: {fileID: 1539774937}
+  - component: {fileID: 1539774934}
   m_Layer: 0
   m_Name: Plane (9)
   m_TagString: Untagged
@@ -3084,9 +3409,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &1539774934
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &1539774934
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3095,10 +3424,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.000022888184, y: 0, z: 0}
 --- !u!23 &1539774935
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3148,6 +3476,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539774931}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1539774937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539774931}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.000022888184, y: 0, z: 0}
 --- !u!1001 &1585404819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3305,7 +3646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1603953365
 Transform:
   m_ObjectHideFlags: 0
@@ -3386,7 +3727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.37
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3394,47 +3735,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2574299555196830325, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -10.69
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -3443,22 +3756,42 @@ PrefabInstance:
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1940512084}
+      objectReference: {fileID: 1078901274}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1940512084}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_enabled
+      value: OnLampLit
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: set_enabled
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1078901274}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnLampExtinguished
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Behaviour, UnityEngine
+      value: DeadTired.GroundRevealLamp, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -3466,21 +3799,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeadTired.GroundRevealLamp, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternLit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
+      propertyPath: OnLanternExtinguished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830327, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: m_Radius
-      value: 7.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2574299555196830329, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
       propertyPath: m_Name
       value: Lantern (TEMP)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2574299555196830326, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35901af6cefc9de44af5dcf23ef9d29b, type: 3}
 --- !u!1 &1669140344 stripped
 GameObject:
@@ -3506,6 +3856,101 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 346991974059583332, guid: 26558070d88a3354295b0235019793d5, type: 3}
+--- !u!1 &1687517064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1687517068}
+  - component: {fileID: 1687517067}
+  - component: {fileID: 1687517066}
+  - component: {fileID: 1687517065}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1687517065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687517064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1687517066
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687517064}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1687517067
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687517064}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1687517068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687517064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.8, y: 0, z: 28.1}
+  m_LocalScale: {x: 20, y: 1, z: 25}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1809081580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3739,8 +4184,9 @@ GameObject:
   - component: {fileID: 1869874457}
   - component: {fileID: 1869874456}
   - component: {fileID: 1869874455}
-  - component: {fileID: 1869874454}
   - component: {fileID: 1869874458}
+  - component: {fileID: 1869874459}
+  - component: {fileID: 1869874454}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -3748,8 +4194,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1869874454
-MeshCollider:
+--- !u!65 &1869874454
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3758,10 +4204,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.0000076293945, y: 0, z: 0}
 --- !u!23 &1869874455
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3841,7 +4286,24 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &1869874459
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869874453}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.0000076293945, y: 0, z: 0}
 --- !u!1001 &1921351326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4032,8 +4494,9 @@ GameObject:
   - component: {fileID: 1960617991}
   - component: {fileID: 1960617995}
   - component: {fileID: 1960617994}
-  - component: {fileID: 1960617993}
   - component: {fileID: 1960617992}
+  - component: {fileID: 1960617996}
+  - component: {fileID: 1960617993}
   m_Layer: 0
   m_Name: Plane (12)
   m_TagString: Untagged
@@ -4071,9 +4534,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &1960617993
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &1960617993
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4082,10 +4549,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: 0}
 --- !u!23 &1960617994
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4135,6 +4601,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960617990}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1960617996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960617990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: 0}
 --- !u!1001 &1976379476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4247,8 +4726,9 @@ GameObject:
   - component: {fileID: 2013337812}
   - component: {fileID: 2013337811}
   - component: {fileID: 2013337810}
-  - component: {fileID: 2013337809}
   - component: {fileID: 2013337813}
+  - component: {fileID: 2013337814}
+  - component: {fileID: 2013337809}
   m_Layer: 0
   m_Name: Plane (1)
   m_TagString: Untagged
@@ -4256,8 +4736,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &2013337809
-MeshCollider:
+--- !u!65 &2013337809
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4266,10 +4746,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.0000076293945, y: 0, z: 0}
 --- !u!23 &2013337810
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4349,7 +4828,24 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &2013337814
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013337808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.0000076293945, y: 0, z: 0}
 --- !u!1001 &2057166420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4462,8 +4958,9 @@ GameObject:
   - component: {fileID: 2090633191}
   - component: {fileID: 2090633195}
   - component: {fileID: 2090633194}
-  - component: {fileID: 2090633193}
   - component: {fileID: 2090633192}
+  - component: {fileID: 2090633196}
+  - component: {fileID: 2090633193}
   m_Layer: 0
   m_Name: Plane (11)
   m_TagString: Untagged
@@ -4501,9 +4998,13 @@ MonoBehaviour:
     useConstant: 1
     constantValue: 7.5
     variable: {fileID: 0}
-  lamp: {fileID: 1078901274}
---- !u!64 &2090633193
-MeshCollider:
+  transitionSpeed:
+    useConstant: 1
+    constantValue: 15
+    variable: {fileID: 0}
+  lamp: {fileID: 0}
+--- !u!65 &2090633193
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4512,10 +5013,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 2.220446e-16, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: 0.0000076293945}
 --- !u!23 &2090633194
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4565,3 +5065,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090633190}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &2090633196
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090633190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000005, y: 0.5, z: 10.000005}
+  m_Center: {x: 0.000011444092, y: 0, z: 0.0000076293945}
