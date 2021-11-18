@@ -56,6 +56,7 @@ namespace DeadTired.Interactables
             light.enabled = false;
         }
 
+        
         private void OnTriggerEnter(Collider other)
         {
             if (!isGhostForm.Value) return;

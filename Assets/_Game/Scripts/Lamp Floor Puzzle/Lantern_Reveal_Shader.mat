@@ -131,7 +131,7 @@ Material:
     - _SrcBlend: 1
     - _Strength: 50
     - _Surface: 0
-    - _VisibleDistance: 7.5316496
+    - _VisibleDistance: 7.5100083
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -148,7 +148,7 @@ Material:
     - _LightPosition: {r: 12.91, g: 4.65, b: 29, a: 0}
     - _MainTex: {r: 0, g: 0, b: 0, a: 0}
     - _OutlineColour: {r: 0.36040404, g: 0.8396226, b: 0.8202642, a: 1}
-    - _PlayerPosition: {r: 26.54273, g: 1.2441826, b: 26.550009, a: 0}
+    - _PlayerPosition: {r: 0, g: 0, b: 0, a: 0}
     - _Pos: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []

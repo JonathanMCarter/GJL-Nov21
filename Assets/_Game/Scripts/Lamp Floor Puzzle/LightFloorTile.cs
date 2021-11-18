@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using DependencyLibrary;
 using UnityEngine;
@@ -10,9 +11,13 @@ namespace DeadTired
         private static readonly int VisibleDistance = Shader.PropertyToID("_VisibleDistance");
 
         [SerializeField] private FloatReference maxDistanceFromLight;
+        [SerializeField] private FloatReference transitionSpeed;
+        
         private Renderer rend;
         private float currentDistance = 0;
         [SerializeField] private GroundRevealLamp lamp;
+
+        private Coroutine activeCo;
   
 
 
@@ -20,51 +25,72 @@ namespace DeadTired
         {
             rend = GetComponent<Renderer>();
             currentDistance = 0;
-            GenerateGroundVisuals();
-            StartCoroutine(RevealGroundSmoothCo());
         }
 
         public void AssignLamp(GroundRevealLamp l)
         {
             lamp = l;
+            if (!l.IsLampLit) return;
+            GenerateGroundVisuals();
+            
+            if (activeCo != null)
+                StopCoroutine(activeCo);
+            
+            activeCo = StartCoroutine(RevealGroundSmoothCo());
         }
 
 
-        public void ClearLamps()
+        public void RemoveLamp()
         {
             lamp = null;
+            
+            if (activeCo != null)
+                StopCoroutine(activeCo);
+            
+            activeCo = StartCoroutine(HideGroundSmoothCo());
         }
-
+        
 
         public void GenerateGroundVisuals()
         {
             // Pass the player location to the shader
-            rend.sharedMaterial.SetVector(PlayerPosition, lamp.transform.position);
+            rend.material.SetVector(PlayerPosition, lamp.transform.position);
         }
 
 
         private IEnumerator RevealGroundSmoothCo()
         {
-            rend.sharedMaterial.SetFloat(VisibleDistance, 0);
+            rend.material.SetFloat(VisibleDistance, 0);
             currentDistance = rend.sharedMaterial.GetFloat(VisibleDistance);
             
             while (currentDistance < maxDistanceFromLight)
             {
                 yield return null;
-                rend.sharedMaterial.SetFloat(VisibleDistance, currentDistance += 15 * Time.deltaTime);
+                rend.material.SetFloat(VisibleDistance, currentDistance += transitionSpeed * Time.deltaTime);
             }
         }
 
 
         private IEnumerator HideGroundSmoothCo()
         {
-            currentDistance = rend.sharedMaterial.GetFloat(VisibleDistance);
+            currentDistance = rend.material.GetFloat(VisibleDistance);
             
             while (currentDistance > 0)
             {
                 yield return null;
-                rend.sharedMaterial.SetFloat(VisibleDistance, currentDistance -= 15 * Time.deltaTime);
+                rend.material.SetFloat(VisibleDistance, currentDistance -= transitionSpeed * Time.deltaTime);
             }
+        }
+
+
+        /// <summary>
+        /// Draws the gizmo for the point so it can be seen in the scene easier without needed a mesh renderer
+        /// </summary>
+        private void OnDrawGizmos()
+        {
+            var _pos = transform.position;
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawCube(_pos, Vector3.one * 5);
         }
     }
 }
