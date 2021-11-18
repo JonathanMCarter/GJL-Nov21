@@ -17,12 +17,11 @@ namespace DeadTired.Interactables
 
         private void Start()
         {
-                AkSoundEngine.PostEvent("PlayOrbz", gameObject);
+            //AkSoundEngine.PostEvent("PlayOrbz", gameObject);
         }
 
         private void Awake()
         {
-          
             spiritOrbIdleTween = new Hashtable
             {
                 { "y", transform.localPosition.y + .5f },
@@ -39,25 +38,25 @@ namespace DeadTired.Interactables
 
         private void OnEnable()
         {
-            AkSoundEngine.PostEvent("PlayOrbz", gameObject);
+            //AkSoundEngine.PostEvent("PlayOrbz", gameObject);
+            
             foreach (var p in particles)
                 p.Play();
-              
-            
+
             light.enabled = true;
         }
 
         private void OnDisable()
         {
-
-            AkSoundEngine.PostEvent("OrbPickup", gameObject);
+            //AkSoundEngine.PostEvent("OrbPickup", gameObject);
+            
             foreach (var p in particles)
                 p.Stop();
-                
-
+            
             light.enabled = false;
         }
 
+        
         private void OnTriggerEnter(Collider other)
         {
             if (!isGhostForm.Value) return;

@@ -16,7 +16,7 @@ namespace DeadTired.Interactables
         private Canvas canvas;
         private CanvasGroup canvasGroup;
         private Coroutine fadeCo;
-        private InteractionsManager interactionsManager;
+        protected InteractionsManager interactionsManager;
 
 
         protected virtual void Awake()
@@ -29,6 +29,13 @@ namespace DeadTired.Interactables
         public void OnMultiSceneEnable()
         {
             interactionsManager = SceneElly.GetComponentFromAllScenes<InteractionsManager>();
+
+            if (canvas == null)
+            {
+                canvas = GetComponentInChildren<Canvas>();
+                canvasGroup = GetComponentInChildren<CanvasGroup>();    
+            }
+            
             canvas.worldCamera = SceneElly.GetComponentFromScene<Camera>("Player");
             canvas.transform.rotation = canvas.worldCamera.transform.rotation;
             ConfigureUI(false);
@@ -43,6 +50,8 @@ namespace DeadTired.Interactables
 
         protected virtual void ConfigureUI(bool enable)
         {
+            if (!gameObject.activeInHierarchy) return;
+            
             if (fadeCo != null)
                 StopCoroutine(fadeCo);
             
@@ -52,6 +61,7 @@ namespace DeadTired.Interactables
 
         private void OnTriggerEnter(Collider other)
         {
+            OnOtherEnterTriggerZone(other);
             if (!shouldPlayerBeGhost.Equals(isPlayerGhost)) return;
             if (!other.CompareTag("Player")) return;
             IsPlayerInZone = true;
@@ -60,6 +70,7 @@ namespace DeadTired.Interactables
 
         private void OnTriggerExit(Collider other)
         {
+            OnOtherExitTriggerZone(other);
             if (!other.CompareTag("Player")) return;
             IsPlayerInZone = false;
             OnPlayerExitTriggerZone(other);
@@ -75,6 +86,16 @@ namespace DeadTired.Interactables
         protected virtual void OnPlayerExitTriggerZone(Collider other)
         {
             interactionsManager.RemoveInteraction(GetInteractable());
+        }
+
+
+        protected virtual void OnOtherEnterTriggerZone(Collider other)
+        {
+        }
+        
+        
+        protected virtual void OnOtherExitTriggerZone(Collider other)
+        {
         }
 
 

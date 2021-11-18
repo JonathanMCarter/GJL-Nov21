@@ -42,6 +42,31 @@ namespace DeadTired.Sokoban
             if (IsOccupied) return;
             OccupyingBlock = block;
             block.transform.SetParent(transform);
+            
+            cachedBlockOnTile = IsOccupied
+                ? GetComponentInChildren<SokobanBlock>()
+                : null;
+        }
+        
+        
+        public void ForceSetBlockToTile(SokobanBlock block)
+        {
+            OccupyingBlock = block;
+            block.transform.SetParent(transform);
+            
+            cachedBlockOnTile = IsOccupied
+                ? GetComponentInChildren<SokobanBlock>()
+                : null;
+        }
+
+
+        public void ResetTile()
+        {
+            OccupyingBlock = null;
+            
+            cachedBlockOnTile = IsOccupied
+                ? GetComponentInChildren<SokobanBlock>()
+                : null;
         }
 
 

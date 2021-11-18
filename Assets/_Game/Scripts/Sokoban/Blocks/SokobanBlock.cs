@@ -14,6 +14,7 @@ namespace DeadTired.Sokoban
         [SerializeField] private Vector3Reference playerDirection;
         [SerializeField] private string blockID;
 
+        private SokobanTile defaultTile;
         private SokobanManager sokobanManager;
         private SokobanTile tileOn;
         private BoxCollider triggerVolume;
@@ -30,9 +31,23 @@ namespace DeadTired.Sokoban
 
 
         protected override IInteractable GetInteractable() => this;
+        
+        
+        protected override void OnPlayerEnterTriggerZone(Collider other)
+        {
+            base.OnPlayerEnterTriggerZone(other);
+            ConfigureUI(true);
+        }
+
+        protected override void OnPlayerExitTriggerZone(Collider other)
+        {
+            base.OnPlayerExitTriggerZone(other);
+            ConfigureUI(false);
+        }
 
         public virtual void OnPlayerInteract()
         {
+            if (!interactionsManager.HasInteraction(GetInteractable()) || !IsPlayerInZone) return;
             var _newTile = EvaluateDirection();
 
             if (_newTile == null) return;
@@ -50,12 +65,14 @@ namespace DeadTired.Sokoban
             
             iTween.MoveTo(gameObject, _tween);
             tileOn = sokobanManager.GetTileOn(BlockID);
+            ConfigureUI(false);
         }
 
 
         public void OnBlockMoveComplete()
         {
             triggerVolume.enabled = true;
+            base.OnPlayerExitTriggerZone(triggerVolume);
         }
         
 
@@ -63,6 +80,9 @@ namespace DeadTired.Sokoban
         {
             if (tileOn == null)
                 tileOn = sokobanManager.GetTileOn(BlockID);
+
+            if (defaultTile == null)
+                defaultTile = tileOn;
 
             // Direction A - 
             if (playerDirection.Value.x > .1f && playerDirection.Value.z > .1f)
@@ -81,6 +101,15 @@ namespace DeadTired.Sokoban
                 return tileOn.DirectionalData.negX;
 
             return null;
+        }
+
+
+        public void ResetToDefaultTile()
+        {
+            if (defaultTile == null) return;
+            defaultTile.ForceSetBlockToTile(this);
+            tileOn = defaultTile;
+            transform.localPosition = GetVector.Vector3DifferentY(Vector3.zero, transform.localPosition.y);
         }
     }
 }

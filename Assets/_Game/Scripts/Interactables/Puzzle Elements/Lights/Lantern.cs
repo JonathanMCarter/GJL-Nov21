@@ -1,4 +1,4 @@
-using DeadTired.UI;
+﻿using DeadTired.UI;
 using DependencyLibrary;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,7 +9,7 @@ namespace DeadTired.Interactables
     {
         [SerializeField] private IntReference playerOrbCount;
         [SerializeField] private MeshRenderer lampLightMeshRenderer;
-        
+
         [SerializeField] private bool orbInLamp;
         private Light light;
 
@@ -21,28 +21,24 @@ namespace DeadTired.Interactables
         /// <summary>
         /// Gets whether or not the lamp is on or not....
         /// </summary>
-        public bool IsLampLit => light.enabled;
+        public bool IsLampLit => orbInLamp;
 
-        private void Start(){
-            AkSoundEngine.PostEvent("PlayOrbz", gameObject);
-            AkSoundEngine.PostEvent("Play_Music", gameObject);
-        }    
-     
+        
+        private void Start()
+        {
+            //AkSoundEngine.PostEvent("PlayOrbz", gameObject);
+        }
+
 
         protected override void Awake()
         {
-           
             base.Awake();
             light = GetComponentInChildren<Light>();
 
             if (orbInLamp)
                 TurnLightOn();
-              
-
-                
             else
                 TurnLightOff();
-                  
         }
 
 
@@ -51,8 +47,8 @@ namespace DeadTired.Interactables
             if (!IsPlayerInZone || !IsPlayerInCorrectState) return;
             ToggleLamp();
         }
-        
-        
+
+
         protected override IInteractable GetInteractable() => this;
 
 
@@ -61,13 +57,10 @@ namespace DeadTired.Interactables
             if (!orbInLamp)
             {
                 TurnLightOn();
-                 
                 return;
             }
 
             TurnLightOff();
-             
-            
         }
 
 
@@ -77,23 +70,30 @@ namespace DeadTired.Interactables
             playerOrbCount.variable.IncrementValue(-1);
             PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
             orbInLamp = true;
-            light.enabled = true;
+
+            if (light != null)
+                light.enabled = true;
+
             lampLightMeshRenderer.material.EnableKeyword("_EMISSION");
             OnLanternLit?.Invoke();
-            AkSoundEngine.PostEvent("PlayOrbz", gameObject);
             
+            //AkSoundEngine.PostEvent("PlayOrbz", gameObject);
         }
-        
-        
+
+
         protected virtual void TurnLightOff()
         {
             playerOrbCount.variable.IncrementValue(1);
             PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
             orbInLamp = false;
-            light.enabled = false;
+
+            if (light != null)
+                light.enabled = false;
+
             lampLightMeshRenderer.material.DisableKeyword("_EMISSION");
             OnLanternExtinguished?.Invoke();
-            AkSoundEngine.PostEvent("OrbPickup", gameObject);
+            
+            //AkSoundEngine.PostEvent("OrbPickup", gameObject);
         }
 
 
