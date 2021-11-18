@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 5838589294635020556, guid: b16093caaade2914ab70b44f6c5e8a36, type: 3}
     - target: {fileID: 919132149155446097, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_Name
       value: Modular_02_Wall_2m (45)
@@ -1233,11 +1237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1251,6 +1255,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 5838589294635020556, guid: b16093caaade2914ab70b44f6c5e8a36, type: 3}
     - target: {fileID: 919132149155446097, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_Name
       value: Modular_02_Wall_2m (43)
@@ -1386,6 +1394,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 5838589294635020556, guid: b16093caaade2914ab70b44f6c5e8a36, type: 3}
     - target: {fileID: 919132149155446097, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_Name
       value: Modular_02_Wall_2m (41)
@@ -3507,6 +3519,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 5838589294635020556, guid: b16093caaade2914ab70b44f6c5e8a36, type: 3}
     - target: {fileID: 919132149155446097, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_Name
       value: Modular_02_Wall_2m (42)
@@ -4851,6 +4867,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 5838589294635020556, guid: b16093caaade2914ab70b44f6c5e8a36, type: 3}
     - target: {fileID: 919132149155446097, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_Name
       value: Modular_02_Wall_2m (39)
@@ -6543,6 +6563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 5838589294635020556, guid: b16093caaade2914ab70b44f6c5e8a36, type: 3}
     - target: {fileID: 919132149155446097, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_Name
       value: Modular_02_Wall_2m (40)
@@ -7503,6 +7527,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2d4c9aa41039a0b46851908bb33e99ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 5838589294635020556, guid: b16093caaade2914ab70b44f6c5e8a36, type: 3}
     - target: {fileID: 919132149155446097, guid: 2d4c9aa41039a0b46851908bb33e99ed, type: 3}
       propertyPath: m_Name
       value: Modular_02_Door
@@ -7993,11 +8021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8011,6 +8039,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 5838589294635020556, guid: b16093caaade2914ab70b44f6c5e8a36, type: 3}
     - target: {fileID: 919132149155446097, guid: 2f17fca8f1dc1c84899888df2283953c, type: 3}
       propertyPath: m_Name
       value: Modular_02_Wall_2m (44)
