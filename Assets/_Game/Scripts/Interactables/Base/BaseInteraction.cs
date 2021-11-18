@@ -29,6 +29,13 @@ namespace DeadTired.Interactables
         public void OnMultiSceneEnable()
         {
             interactionsManager = SceneElly.GetComponentFromAllScenes<InteractionsManager>();
+
+            if (canvas == null)
+            {
+                canvas = GetComponentInChildren<Canvas>();
+                canvasGroup = GetComponentInChildren<CanvasGroup>();    
+            }
+            
             canvas.worldCamera = SceneElly.GetComponentFromScene<Camera>("Player");
             canvas.transform.rotation = canvas.worldCamera.transform.rotation;
             ConfigureUI(false);
@@ -43,6 +50,8 @@ namespace DeadTired.Interactables
 
         protected virtual void ConfigureUI(bool enable)
         {
+            if (!gameObject.activeInHierarchy) return;
+            
             if (fadeCo != null)
                 StopCoroutine(fadeCo);
             

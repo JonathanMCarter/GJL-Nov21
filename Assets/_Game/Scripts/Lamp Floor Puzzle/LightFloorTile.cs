@@ -1,6 +1,6 @@
+using System;
 using System.Collections;
 using DependencyLibrary;
-using JTools;
 using UnityEngine;
 
 namespace DeadTired
@@ -80,6 +80,17 @@ namespace DeadTired
                 yield return null;
                 rend.material.SetFloat(VisibleDistance, currentDistance -= transitionSpeed * Time.deltaTime);
             }
+        }
+
+
+        /// <summary>
+        /// Draws the gizmo for the point so it can be seen in the scene easier without needed a mesh renderer
+        /// </summary>
+        private void OnDrawGizmos()
+        {
+            var _pos = transform.position;
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawCube(_pos, Vector3.one * 5);
         }
     }
 }
