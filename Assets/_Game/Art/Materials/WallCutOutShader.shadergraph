@@ -1041,7 +1041,7 @@
     },
     "m_Name": "Size",
     "m_DefaultReferenceName": "Vector1_213cf4dde7a64ba9aa4a1ec410d3b4e6",
-    "m_OverrideReferenceName": "_size",
+    "m_OverrideReferenceName": "_Size",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
