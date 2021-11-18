@@ -64,6 +64,7 @@ namespace DeadTired
             globalVolumeManager = SceneElly.GetComponentFromAllScenes<GlobalVolumeManager>();
 
             enemyParentBehaviour.playerObject = playerObject.transform;
+            globalVolumeManager.setBodyVolume();
         }
 
 
@@ -72,8 +73,6 @@ namespace DeadTired
         {
             //have it set in the physics settings so items on the player ghost layer cant interact with the anchor
             playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
-
-            globalVolumeManager.setBodyVolume();
         }
 
         // Update is called once per frame
@@ -118,7 +117,7 @@ namespace DeadTired
         //when the player goes ghost we drop the anchor
         private void DropAnchor()
         {
-            AkSoundEngine.PostEvent("Normal_breath", gameObject);
+            //AkSoundEngine.PostEvent("Normal_breath", gameObject);
 
             //place the anchor prefab where the player is currently
             currentState = State.ghost;
@@ -140,7 +139,7 @@ namespace DeadTired
         //return player
         private void returnPlayerToBody()
         {
-            AkSoundEngine.PostEvent("Backto_body", gameObject);
+            //AkSoundEngine.PostEvent("Backto_body", gameObject);
 
             startTime = Time.time;
 

@@ -17,6 +17,8 @@ MonoBehaviour:
   - Level1-Env
   - Player
   - Player UI
-  - PauseGame
   - Level1-Interactables
+  - Level1-Props
+  - Level1-Enemies
+  - PauseGame
   - Death
