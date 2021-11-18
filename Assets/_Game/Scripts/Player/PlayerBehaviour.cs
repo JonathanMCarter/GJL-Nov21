@@ -64,6 +64,7 @@ namespace DeadTired
             globalVolumeManager = SceneElly.GetComponentFromAllScenes<GlobalVolumeManager>();
 
             enemyParentBehaviour.playerObject = playerObject.transform;
+            globalVolumeManager.setBodyVolume();
         }
 
 
@@ -72,8 +73,6 @@ namespace DeadTired
         {
             //have it set in the physics settings so items on the player ghost layer cant interact with the anchor
             playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
-
-            globalVolumeManager.setBodyVolume();
         }
 
         // Update is called once per frame
