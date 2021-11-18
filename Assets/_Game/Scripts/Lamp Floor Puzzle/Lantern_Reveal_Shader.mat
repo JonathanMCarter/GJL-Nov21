@@ -121,7 +121,7 @@ Material:
     - _LightAngle: 84.111984
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _OutlineWidth: 3
+    - _OutlineWidth: 0.07
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -131,7 +131,7 @@ Material:
     - _SrcBlend: 1
     - _Strength: 50
     - _Surface: 0
-    - _VisibleDistance: 10
+    - _VisibleDistance: 7.5316496
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -146,8 +146,9 @@ Material:
     - _LightDir: {r: -0, g: 1.0000001, b: 0.00000011920929, a: 0}
     - _LightDirection: {r: -0, g: 1.0000001, b: 0.00000011920929, a: 0}
     - _LightPosition: {r: 12.91, g: 4.65, b: 29, a: 0}
-    - _OutlineColour: {r: 1, g: 1, b: 0, a: 1}
-    - _PlayerPosition: {r: 26.002731, g: -0.49790573, b: 29.160007, a: 0}
+    - _MainTex: {r: 0, g: 0, b: 0, a: 0}
+    - _OutlineColour: {r: 0.36040404, g: 0.8396226, b: 0.8202642, a: 1}
+    - _PlayerPosition: {r: 26.54273, g: 1.2441826, b: 26.550009, a: 0}
     - _Pos: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
