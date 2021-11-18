@@ -154,7 +154,12 @@ MonoBehaviour:
   changeStateInput: Jump
   playerBodyLayer: PlayerBody
   playerGhostLayer: PlayerGhost
-  anchor: {fileID: 0}
+  currentDistanceFromAnchor: 0
+  timeTillReturn: 0
+  globalVolumeManager: {fileID: 0}
+  switchParticle: {fileID: 0}
+  sprirtLine: {fileID: 0}
+  enemyParentBehaviour: {fileID: 0}
 --- !u!114 &136206720518692525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +282,7 @@ GameObject:
   - component: {fileID: 1471731399327678217}
   - component: {fileID: 1471731399327678219}
   - component: {fileID: 1471731399327678216}
+  - component: {fileID: 351331033}
   m_Layer: 8
   m_Name: PlayerObject
   m_TagString: Player
@@ -329,3 +335,15 @@ CapsuleCollider:
   m_Height: 1.9422252
   m_Direction: 1
   m_Center: {x: 0, y: -0.029444575, z: 0}
+--- !u!114 &351331033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471731399327678214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e225358c19186f43ab9cb9ed5a73555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
