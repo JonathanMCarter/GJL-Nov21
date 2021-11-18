@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 479c7549080619446a3faea26368257b, type: 2}
 --- !u!1 &155542352
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadOnAwake: 1
-  scenesToLoad: {fileID: 11400000, guid: 4cc4893eb8c63084c9906527637593e3, type: 2}
+  scenesToLoad: {fileID: 11400000, guid: cbbe9e8812a6be04d988f3a65537da16, type: 2}
   BeforeScenesLoaded:
     m_PersistentCalls:
       m_Calls: []
