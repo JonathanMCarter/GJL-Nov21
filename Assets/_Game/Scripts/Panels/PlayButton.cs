@@ -15,6 +15,7 @@ namespace DeadTired.UI
 
         public void PlayGame()
         {
+            AkSoundEngine.PostEvent("PlayButton", gameObject); 
             levelLoad.LevelSelected = Levels.Level1;
             levelLoad.LoadSceneGroup();
         }
