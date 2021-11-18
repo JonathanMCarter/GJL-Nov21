@@ -8,15 +8,15 @@ namespace DeadTired
 {
     public class GlobalVolumeManager : MonoBehaviour
     {
-
         private Volume globalVolume;
         public VolumeProfile bodyProfile;
         public VolumeProfile ghostProfile;
  
+        
         // Start is called before the first frame update
         void Start()
         {
-            globalVolume = gameObject.GetComponent<Volume>();
+            globalVolume = GetComponent<Volume>();
         }
 
         public void setBodyVolume()

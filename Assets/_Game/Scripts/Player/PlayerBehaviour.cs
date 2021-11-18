@@ -63,6 +63,7 @@ namespace DeadTired
             switchParticle = SceneElly.GetComponentFromAllScenes<SwitchParticleBehaviour>();
             globalVolumeManager = SceneElly.GetComponentFromAllScenes<GlobalVolumeManager>();
 
+            if (enemyParentBehaviour == null) return;
             enemyParentBehaviour.playerObject = playerObject.transform;
         }
 
@@ -132,6 +133,7 @@ namespace DeadTired
             globalVolumeManager.setGhostvolume();
 
             //plop the enemies about the place
+            if (enemyParentBehaviour == null) return;
             enemyParentBehaviour.EnableEnemies();
         }
 
@@ -147,7 +149,10 @@ namespace DeadTired
 
             switchParticle.emitParticle(anchor.transform.position);
 
+            globalVolumeManager.setBodyVolume();
+            
             //hide and deactivate the enemies about the place
+            if (enemyParentBehaviour == null) return;
             enemyParentBehaviour.DisableEnemies();
         }
 
