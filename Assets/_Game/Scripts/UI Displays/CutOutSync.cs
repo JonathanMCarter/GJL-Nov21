@@ -28,7 +28,7 @@ namespace DeadTired
             var dir = camera.transform.position - transform.position;
             var ray = new Ray(transform.position, dir.normalized);
 
-            if(Physics.Raycast(ray, 3000, mask))
+            if(Physics.Raycast(ray, Mathf.Infinity, mask))
             {
                 wallMaterial.SetFloat(sizeID, 1);
             }
