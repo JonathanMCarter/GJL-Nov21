@@ -16,14 +16,11 @@ namespace DeadTired
         [Header("Player Settings")]
         [SerializeField]
         private GameObject playerAnchor; // the players body
-        public GameObject anchor;
-
         public float maxDistanceFromAnchor =  5f;
         private float minDistanceFromAnchor = 0.2f;
 
         // Movement speed in units per second.
         public float returnSpeed = .5F;
-
         public GameObject playerObject; // want to make this automatically grab the playerobject
 
         public float maxGhostTimeSeconds = 60f;
@@ -47,10 +44,13 @@ namespace DeadTired
 
         public SwitchParticleBehaviour switchParticle;
         public SpiritLineBehaviour sprirtLine;
+        public EnemyParentBehaviour enemyParentBehaviour;
 
         // Time when the movement back to body started.
         private float startTime;
         private float journeyLength;
+        public GameObject anchor;
+
         private InteractionsManager cachedInteractionsManager;
 
         // Gets called when all the scenes for each level are loaded...
@@ -58,6 +58,12 @@ namespace DeadTired
         {
             // Gets the interaction manager no matter which scene it is in...
             cachedInteractionsManager = SceneElly.GetComponentFromAllScenes<InteractionsManager>();
+            enemyParentBehaviour = SceneElly.GetComponentFromAllScenes<EnemyParentBehaviour>();
+            sprirtLine = SceneElly.GetComponentFromAllScenes<SpiritLineBehaviour>();
+            switchParticle = SceneElly.GetComponentFromAllScenes<SwitchParticleBehaviour>();
+            globalVolumeManager = SceneElly.GetComponentFromAllScenes<GlobalVolumeManager>();
+
+            enemyParentBehaviour.playerObject = playerObject.transform;
         }
 
 
@@ -66,6 +72,8 @@ namespace DeadTired
         {
             //have it set in the physics settings so items on the player ghost layer cant interact with the anchor
             playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
+
+            globalVolumeManager.setBodyVolume();
         }
 
         // Update is called once per frame
@@ -110,21 +118,30 @@ namespace DeadTired
         //when the player goes ghost we drop the anchor
         private void DropAnchor()
         {
+            AkSoundEngine.PostEvent("Normal_breath", gameObject);
+
             //place the anchor prefab where the player is currently
             currentState = State.ghost;
             playerObject.layer = LayerMask.NameToLayer(playerGhostLayer);
 
             anchor = Instantiate(playerAnchor, playerObject.transform.position, playerObject.transform.rotation); //pooling this somewhere instead of instantiating might be better??
 
+            // some fancy particles so it looks nice
             switchParticle.emitParticle(anchor.transform.position);
             sprirtLine.activateSpiritLine(playerObject.transform, anchor.transform);
 
+            //changes the camera to look ghostie
             globalVolumeManager.setGhostvolume();
+
+            //plop the enemies about the place
+            enemyParentBehaviour.EnableEnemies();
         }
 
         //return player
         private void returnPlayerToBody()
         {
+            AkSoundEngine.PostEvent("Backto_body", gameObject);
+
             startTime = Time.time;
 
             journeyLength = currentDistanceFromAnchor;
@@ -134,6 +151,8 @@ namespace DeadTired
 
             switchParticle.emitParticle(anchor.transform.position);
 
+            //hide and deactivate the enemies about the place
+            enemyParentBehaviour.DisableEnemies();
         }
 
         private void movePlayer()
@@ -149,6 +168,9 @@ namespace DeadTired
 
             if(currentDistanceFromAnchor <= minDistanceFromAnchor)
             {
+
+                globalVolumeManager.setBodyVolume();
+
                 sprirtLine.deactiveSpiritLine();
 
                 // destroy the anchor we placed
@@ -157,7 +179,6 @@ namespace DeadTired
                 currentState = State.body;
 
                 playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
-                globalVolumeManager.setBodyVolume();
 
             }
         
@@ -179,5 +200,6 @@ namespace DeadTired
                 //then deaded
             }
         }
+
     }
 }
