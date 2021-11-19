@@ -124,7 +124,8 @@ namespace DeadTired.Sokoban
         public void ResetBoard()
         {
             var _tilesToReset = tiles.Where(t => t.IsOccupied);
-
+            
+            AkSoundEngine.PostEvent("Gnomes", gameObject);
             foreach (var tile in _tilesToReset)
             {
                 if (tile.OccupyingBlock == null) continue;

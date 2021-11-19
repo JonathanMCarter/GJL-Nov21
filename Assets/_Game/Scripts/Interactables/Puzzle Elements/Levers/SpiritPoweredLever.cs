@@ -42,6 +42,7 @@ namespace DeadTired.Interactables
             }
 
             if (!isPowered) return;
+           
             base.OnPlayerInteract();
             isPulled = true;
         }

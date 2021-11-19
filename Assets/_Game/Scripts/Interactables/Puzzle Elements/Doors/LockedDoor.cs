@@ -35,7 +35,7 @@ namespace DeadTired.Interactables
 
             anim.SetTrigger(isDoorOpen ? CloseDoor : OpenDoor);
 
-            //AkSoundEngine.PostEvent("Open_Door", gameObject);
+            AkSoundEngine.PostEvent("Open_Door", gameObject);
             
             isDoorOpen = !isDoorOpen;
         }
@@ -46,7 +46,8 @@ namespace DeadTired.Interactables
         {
 
             IsUnlocked = true;
-            //AkSoundEngine.PostEvent("Unlocked", gameObject);
+            AkSoundEngine.PostEvent("Unlocked", gameObject);
+           
             OnDoorUnlocked?.Invoke();
         }
 
@@ -58,7 +59,7 @@ namespace DeadTired.Interactables
             
             if (promptImage.sprite == lockedSprite)
             {
-                //AkSoundEngine.PostEvent("Closed_Door", gameObject);
+                AkSoundEngine.PostEvent("Closed_Door", gameObject);
             }
             
             ConfigureUI(true);

@@ -13,9 +13,16 @@ namespace DeadTired.UI
             levelLoad = SceneElly.GetComponentFromScene<MenuSceneGroupChange>("MenuScene");
         }
 
+        public void Playbutton()
+        {
+                    AkSoundEngine.PostEvent("PlayButton", gameObject);
+        }
+
         public void PlayGame()
         {
+            
             levelLoad.LoadSceneGroup();
         }
+       
     }
 }

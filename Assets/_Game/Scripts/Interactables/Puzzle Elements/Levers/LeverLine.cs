@@ -26,22 +26,30 @@ namespace DeadTired.Interactables
 
         public void EnableLine()
         {
+            
             StartCoroutine(TurnOnLineCo());
+            
         }
 
 
         private IEnumerator TurnOnLineCo()
         {
+            AkSoundEngine.PostEvent("LightSwitch", gameObject);
             var _pos = 0;
 
             while (_pos < lineObjects.Length)
             {
                 lineObjects[_pos].material = onMaterial;
+               if(lineObjects[_pos].material == onMaterial){
+                    
+               }
                 _pos++;
                 yield return wait;
+                
             }
             
             OnLineComplete?.Invoke();
+            
         }
     }
 }
