@@ -51,6 +51,9 @@ EditorBuildSettings:
     path: Assets/_Game/Scenes/Level 3/Level3-Enemies.unity
     guid: d4680e8b19004b34d906b27ce85c28c3
   - enabled: 1
+    path: Assets/_Game/Scenes/Menu/MenuScene.unity
+    guid: b139a5d5b9946ec43b9a65aec4bdccba
+  - enabled: 1
     path: Assets/_Game/Scenes/Menu/Menu UI.unity
     guid: 88f46b1ebbb09c5448337636e0ceadcc
   - enabled: 1
@@ -65,9 +68,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Game/Scenes/Menu/Death.unity
     guid: dc594b8c4ef47584e81ff2e929b5be64
-  - enabled: 1
-    path: Assets/_Game/Scenes/Menu/Menu.unity
-    guid: b139a5d5b9946ec43b9a65aec4bdccba
   - enabled: 1
     path: Assets/_Game/Scenes/Menu/Win.unity
     guid: 1f12c0d9ae1fb1c4ea716cea228c9570

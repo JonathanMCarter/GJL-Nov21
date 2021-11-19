@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenes:
   - Managers
-  - Menu
+  - MenuScene
   - Menu UI
   - CreditsUI
   - QuitConfirm

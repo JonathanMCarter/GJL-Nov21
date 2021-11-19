@@ -245,12 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0386dfc257045e7913ec90f8423f7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadGroup: {fileID: 0}
-  levels:
-  - {fileID: 11400000, guid: 4cc4893eb8c63084c9906527637593e3, type: 2}
-  - {fileID: 11400000, guid: cbbe9e8812a6be04d988f3a65537da16, type: 2}
-  - {fileID: 11400000, guid: dee692e7219cb3e45980adfe3862592c, type: 2}
-  levelChoice: 0
+  loadGroup: {fileID: 11400000, guid: 4cc4893eb8c63084c9906527637593e3, type: 2}
 --- !u!4 &480162905
 Transform:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using DependencyLibrary;
 using UnityEngine;
 
 namespace DeadTired.Interactables
