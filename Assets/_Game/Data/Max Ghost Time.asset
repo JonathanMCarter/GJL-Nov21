@@ -9,17 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fa88d5d3c5d4f14b8d0f729d37d1ff3, type: 3}
-  m_Name: Level 1 Group
+  m_Script: {fileID: 11500000, guid: bbd6af33a44147d2ac1512e111b09004, type: 3}
+  m_Name: Max Ghost Time
   m_EditorClassIdentifier: 
-  scenes:
-  - Managers
-  - Level1-Env
-  - Player
-  - Player UI
-  - Level1-Interactables
-  - Level1-Props
-  - Level1-Enemies
-  - PauseGame
-  - Death
-  - GhostLighting
+  <DevDescription>k__BackingField: The longest amount of time the player can be a
+    ghost for.
+  <Value>k__BackingField: 30
+  <DefaultValue>k__BackingField: 30

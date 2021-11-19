@@ -57,28 +57,28 @@ namespace DeadTired
             // handles the rotations of the player object
             playerObject.forward = Vector3.Lerp(playerObject.forward, heading, 0.2f);;
 
-            if(playerBehaviour.currentState == PlayerBehaviour.State.ghost)
+            if(playerBehaviour.currentState == PlayerState.Ghost)
             {
                 //want to check where the player is heading to in the next frame
                 nextPosition += rightMovement;
                 nextPosition += upMovement;
 
-                nextDistance = Vector3.Distance(playerBehaviour.anchor.transform.position, playerObject.position);
+                nextDistance = Vector3.Distance(playerBehaviour.PlayerAnchorPosition, playerObject.position);
 
                 //if the next position ownt take the player otuside the max distance from the anchor then let them go
-                if(nextDistance + .2f < playerBehaviour.maxDistanceFromAnchor)
+                if(nextDistance + .2f < playerBehaviour.MaxDistanceFromAnchor)
                 {
                     playerObject.position = nextPosition;
                 }
                 else
                 {
                     //if somehow the player has managed to go too far we need to pull them back
-                    playerObject.position = Vector3.MoveTowards(playerObject.position, playerBehaviour.anchor.transform.position, 1f * Time.deltaTime);
+                    playerObject.position = Vector3.MoveTowards(playerObject.position, playerBehaviour.PlayerAnchorPosition, 1f * Time.deltaTime);
                 }
 
             
             }
-            else if (playerBehaviour.currentState == PlayerBehaviour.State.body)
+            else if (playerBehaviour.currentState == PlayerState.Body)
             {
                 playerObject.position += rightMovement;
                 playerObject.position += upMovement;
