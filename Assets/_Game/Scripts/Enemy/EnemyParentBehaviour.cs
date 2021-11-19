@@ -39,6 +39,7 @@ namespace DeadTired
             //when the user goes back into their body we need to diable the enemies
             foreach (var enemyObject in enemyObjects)
             {
+                AkSoundEngine.PostEvent("Stop_Ghost", gameObject);
                 //disable thier nav agents
                 grabbedBehaviour = enemyObject.GetComponent<EnemyBehaviour>();
                 grabbedBehaviour.DeactivateEnemy();
@@ -53,10 +54,12 @@ namespace DeadTired
             
             foreach (var enemyObject in enemyObjects)
             {
+                
                 //make a new spot for the enemies
                 enemyObject.transform.position = GenerateEnemyPosition();
                 grabbedBehaviour = enemyObject.GetComponent<EnemyBehaviour>();
                 grabbedBehaviour.ActivateEnemy(playerObject);
+                AkSoundEngine.PostEvent("Play_Ghost", enemyObject);
             }
         }
 

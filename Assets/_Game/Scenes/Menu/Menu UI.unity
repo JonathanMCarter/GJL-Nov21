@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 242476075}
   - component: {fileID: 242476074}
   - component: {fileID: 242476077}
+  - component: {fileID: 242476078}
   m_Layer: 5
   m_Name: How To Play Button
   m_TagString: Untagged
@@ -269,6 +270,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570e3ce0f41746b59987ce4e5eac20d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &242476078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242476072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.19607843}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &438497829
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +298,7 @@ GameObject:
   - component: {fileID: 438497832}
   - component: {fileID: 438497831}
   - component: {fileID: 438497834}
+  - component: {fileID: 438497835}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -355,6 +372,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 438497834}
         m_TargetAssemblyTypeName: DeadTired.UI.PlayButton, Assembly-CSharp
+        m_MethodName: Playbutton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 438497834}
+        m_TargetAssemblyTypeName: DeadTired.UI.PlayButton, Assembly-CSharp
         m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
@@ -415,6 +444,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf89674831a54f14bb0ca0d7988112c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &438497835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438497829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.19607843}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &488964145
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,8 +730,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 12, y: 371}
-  m_SizeDelta: {x: 533.514, y: 561.922}
+  m_AnchoredPosition: {x: 21.286, y: 127}
+  m_SizeDelta: {x: 1877.971, y: 216.295}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738350369
 MonoBehaviour:
@@ -698,12 +742,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 738350367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
+    m_Left: 50
+    m_Right: 50
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
@@ -883,8 +927,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -183}
-  m_SizeDelta: {x: 0, y: 260.097}
+  m_AnchoredPosition: {x: 256.44, y: -195}
+  m_SizeDelta: {x: -515.98, y: 260.097}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907623849
 MonoBehaviour:
@@ -940,7 +984,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -969,7 +1013,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 80.67145, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1130,6 +1174,7 @@ GameObject:
   - component: {fileID: 1350083354}
   - component: {fileID: 1350083353}
   - component: {fileID: 1350083356}
+  - component: {fileID: 1350083357}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -1263,6 +1308,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570e3ce0f41746b59987ce4e5eac20d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1350083357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350083351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.19607843}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1635588689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,6 +1570,7 @@ GameObject:
   - component: {fileID: 2086235046}
   - component: {fileID: 2086235045}
   - component: {fileID: 2086235048}
+  - component: {fileID: 2086235049}
   m_Layer: 5
   m_Name: Credits Button
   m_TagString: Untagged
@@ -1643,3 +1704,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570e3ce0f41746b59987ce4e5eac20d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2086235049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086235043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.19607843}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1

@@ -7,11 +7,12 @@ namespace DeadTired.Interactables
     {
         public UnityEvent OnLeverPulled;
         protected bool leverPulled;
+        protected bool oneShot;
 
 
         public virtual void OnPlayerInteract()
         {
-            if (leverPulled) return;
+            if (leverPulled && !oneShot) return;
             if (!IsPlayerInZone || !IsPlayerInCorrectState) return;
             OnLeverPulled?.Invoke();
             leverPulled = true;
@@ -24,14 +25,14 @@ namespace DeadTired.Interactables
 
         protected override void OnPlayerEnterTriggerZone(Collider other)
         {
-            if (leverPulled) return;
+            if (leverPulled && !oneShot) return;
             base.OnPlayerEnterTriggerZone(other);
             ConfigureUI(true);
         }
 
         protected override void OnPlayerExitTriggerZone(Collider other)
         {
-            if (leverPulled) return;
+            if (leverPulled && !oneShot) return;
             base.OnPlayerExitTriggerZone(other);
             ConfigureUI(false);
         }

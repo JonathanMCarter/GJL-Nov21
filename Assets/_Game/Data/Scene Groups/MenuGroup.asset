@@ -15,6 +15,7 @@ MonoBehaviour:
   scenes:
   - Managers
   - MenuScene
+  - Menu-Env
   - Menu UI
   - CreditsUI
   - QuitConfirm

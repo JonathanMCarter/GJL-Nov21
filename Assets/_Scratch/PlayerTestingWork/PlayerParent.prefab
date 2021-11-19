@@ -285,10 +285,12 @@ MonoBehaviour:
     constantValue: 0
     variable: {fileID: 11400000, guid: a31e795d2b3715f4eb562577ad045bf2, type: 2}
   currentState: 1
-  returnSpeed: 0.5
   playerObject: {fileID: 1471731399327678214}
   currentDistanceFromAnchor: 0
-  timeTillReturn: 0
+  timeTillReturn:
+    useConstant: 1
+    constantValue: 0
+    variable: {fileID: 0}
   anchorPrefab: {fileID: 0}
 --- !u!1 &1471731398727790133
 GameObject:
@@ -448,7 +450,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4
+  m_Radius: 0.6
   m_Height: 1.9422252
   m_Direction: 1
   m_Center: {x: 0, y: -0.029444575, z: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6673458145263025113}
   - component: {fileID: 5751132272251744155}
   - component: {fileID: 1470507507507815342}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sokaban Static Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
