@@ -1,13 +1,13 @@
 {
   "dependencies": {
     "com.cartergames.tools.jtools": {
-      "version": "https://github.com/JonathanMCarter/com.cartergames.tools.jtools.git#0.1.17",
+      "version": "https://github.com/JonathanMCarter/com.cartergames.tools.jtools.git#0.1.15",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.textmeshpro": "2.0.0"
       },
-      "hash": "5b84d632c05bd8536274225628b7c48ce7aa65fc"
+      "hash": "b7d5906296e5ff2aa63d2adab9697f750a2050b8"
     },
     "com.coffee.upm-git-extension": {
       "version": "https://github.com/mob-sakai/UpmGitExtension.git",
@@ -56,13 +56,6 @@
       "source": "builtin",
       "dependencies": {}
     },
-    "com.unity.cinemachine": {
-      "version": "2.6.11",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.collab-proxy": {
       "version": "1.13.5",
       "depth": 0,
@@ -100,6 +93,13 @@
     },
     "com.unity.ide.vscode": {
       "version": "1.2.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.inputsystem": {
+      "version": "1.0.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
