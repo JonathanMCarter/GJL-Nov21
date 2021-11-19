@@ -10,13 +10,11 @@ namespace DeadTired.UI
 
         public void OnMultiSceneAwake()
         {
-            levelLoad = SceneElly.GetComponentFromScene<MenuSceneGroupChange>("Menu");
+            levelLoad = SceneElly.GetComponentFromScene<MenuSceneGroupChange>("MenuScene");
         }
 
         public void PlayGame()
         {
-            AkSoundEngine.PostEvent("PlayButton", gameObject);
-            levelLoad.LevelSelected = Levels.Level1;
             levelLoad.LoadSceneGroup();
         }
     }

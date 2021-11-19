@@ -48,12 +48,15 @@ namespace DeadTired.Sokoban
         public virtual void OnPlayerInteract()
         {
             if (!interactionsManager.HasInteraction(GetInteractable()) || !IsPlayerInZone) return;
+            
+            // Should fix the block from being moved before the tween has finished xD
+            if (!triggerVolume.enabled) return;
+            
             var _newTile = EvaluateDirection();
 
             if (_newTile == null) return;
             _newTile.SetBlockToTile(this);
             triggerVolume.enabled = false;
-            
             
             var _tween = iTween.Hash
             (
@@ -67,7 +70,6 @@ namespace DeadTired.Sokoban
             iTween.MoveTo(gameObject, _tween);
             tileOn = sokobanManager.GetTileOn(BlockID);
             ConfigureUI(false);
-            AkSoundEngine.PostEvent("Move_Box", gameObject);
         }
 
 

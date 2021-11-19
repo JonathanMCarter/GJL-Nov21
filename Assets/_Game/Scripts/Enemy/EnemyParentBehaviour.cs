@@ -28,21 +28,17 @@ namespace DeadTired
 
         public void SpawnEnemies()
         {
-             
             for (int i = 0; i < enemyCount; i++)
             {
                 Debug.Log("MAKE AN ENEMY");
-              
             }
         }
 
         public void DisableEnemies()
         {
-            AkSoundEngine.PostEvent("Stop_Ghost", gameObject);
             //when the user goes back into their body we need to diable the enemies
             foreach (var enemyObject in enemyObjects)
             {
-                
                 //disable thier nav agents
                 grabbedBehaviour = enemyObject.GetComponent<EnemyBehaviour>();
                 grabbedBehaviour.DeactivateEnemy();
@@ -54,7 +50,6 @@ namespace DeadTired
 
         public void EnableEnemies()
         {
-             
             
             foreach (var enemyObject in enemyObjects)
             {
@@ -62,8 +57,6 @@ namespace DeadTired
                 enemyObject.transform.position = GenerateEnemyPosition();
                 grabbedBehaviour = enemyObject.GetComponent<EnemyBehaviour>();
                 grabbedBehaviour.ActivateEnemy(playerObject);
-
-                AkSoundEngine.PostEvent("Play_Ghost", enemyObject);
             }
         }
 
@@ -90,7 +83,7 @@ namespace DeadTired
                     GameObject newEnemy = Instantiate(enemyPrefab, HidingSpot.position, enemyPool.transform.rotation, enemyPool.transform);
 
                     enemyObjects.Add(newEnemy);
-                    
+
                     count++;
                 }
                 
