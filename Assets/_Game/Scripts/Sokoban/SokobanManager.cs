@@ -9,6 +9,7 @@ namespace DeadTired.Sokoban
 {
     public class SokobanManager : MonoBehaviour
     {
+        [SerializeField] private string sceneID;
         [SerializeField] private string managerID;
         [SerializeField] private List<SokobanTile> tiles;
         [SerializeField] private int gridColumnCount = 6;
@@ -40,7 +41,7 @@ namespace DeadTired.Sokoban
 
         private void Awake()
         {
-            tiles = SceneElly.GetComponentsFromScene<SokobanTile>("Level2-Sokoban-1");
+            tiles = SceneElly.GetComponentsFromScene<SokobanTile>(sceneID);
         }
 
 

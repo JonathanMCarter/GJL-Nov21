@@ -77,7 +77,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_eaf39feccb564d9fa3a29c585bcdcc0a: 1
-    - Vector1_f72a4b1de19b48a4a98c967caec5c3a6: 0.23
+    - Vector1_f72a4b1de19b48a4a98c967caec5c3a6: 0.1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -97,7 +97,7 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Size: 1.5
+    - _Size: 0.5
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

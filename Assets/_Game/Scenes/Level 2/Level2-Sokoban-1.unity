@@ -477,6 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02da53c6c8f344529b205c62a46045e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-1
   managerID: Sokoban1
   tiles: []
   gridColumnCount: 6
