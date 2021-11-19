@@ -7,6 +7,7 @@ namespace DeadTired.Sokoban
 {
     public class SokobanTile : MonoBehaviour
     {
+        [SerializeField] private string sceneID;
         [SerializeField] private List<SokobanTile> neighbours;
         [SerializeField] private SokobanDirectionalData directionalData;
         protected SokobanManager sokobanManager;
@@ -27,7 +28,7 @@ namespace DeadTired.Sokoban
         
         private void Start()
         {
-            sokobanManager = SceneElly.GetComponentFromScene<SokobanManager>("Level2-Sokoban-1");
+            sokobanManager = SceneElly.GetComponentFromScene<SokobanManager>(sceneID);
             neighbours = sokobanManager.GetNeighbours(this);
             cachedBlockOnTile = IsOccupied
                 ? GetComponentInChildren<SokobanBlock>()
