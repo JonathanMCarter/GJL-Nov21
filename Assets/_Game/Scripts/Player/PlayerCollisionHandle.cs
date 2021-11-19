@@ -18,7 +18,7 @@ namespace DeadTired
         {
             if(collision.gameObject.tag == "Enemy")
             {
-                parentPlayerBehaviour.playerHit();
+                parentPlayerBehaviour.PlayerHit();
             }
         }
     }

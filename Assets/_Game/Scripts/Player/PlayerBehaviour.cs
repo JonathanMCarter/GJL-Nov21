@@ -1,116 +1,129 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using DeadTired.Interactables;
+using DependencyLibrary;
+using JTools;
 using MultiScene.Core;
 using UnityEngine;
+using SceneElly = MultiScene.Core.SceneElly;
 
 namespace DeadTired
 {
     public class PlayerBehaviour : MonoBehaviour, IMultiSceneAwake
     {
-        public enum State {ghost, body, isReturning};
+        // Cached user input strings
+        private readonly string PlayerInteractInput = "Fire1";
+        private readonly string PlayerStateSwitchInput = "Jump";
         
-        //as the game changes depending on the player state we might want to store this somewhere else...but this works for now
-        public State currentState = State.body; //start the player in their body
+        // Cached user layer masks
+        private int PlayerBodyLayer;
+        private int PlayerGhostLayer;
+        
+        // Script references
+        private GlobalVolumeManager volumeManager;
+        private SwitchParticleBehaviour switchParticle;
+        private SpiritLineBehaviour spiritLineBehaviour;
+        private EnemyParentBehaviour enemyParentBehaviour;
+        private InteractionsManager interactionsManager;
 
-        [Header("Player Settings")]
-        [SerializeField]
-        private GameObject playerAnchor; // the players body
-        public float maxDistanceFromAnchor =  5f;
-        private float minDistanceFromAnchor = 0.2f;
-
+        [SerializeField] private BoolReference isPlayerGhost;
+        [SerializeField] private MinMax distanceFromAnchor;
+        [SerializeField] private FloatReference maxGhostTime;
+        [SerializeField] private FloatReference returnSpeedAdjustment;
+        
+        // The state the player is in
+        public PlayerState currentState = PlayerState.Body; //start the player in their body
+        
         // Movement speed in units per second.
-        public float returnSpeed = .5F;
         public GameObject playerObject; // want to make this automatically grab the playerobject
-
-        public float maxGhostTimeSeconds = 60f;
-
-        public string interactInput = "Fire1";
-        public string changeStateInput = "Jump";
-
-        public string playerBodyLayer = "PlayerBody";
-        public string playerGhostLayer = "PlayerGhost";
-
+        
         [Header("Values to Watch")]
-        [SerializeField]
-        private float currentDistanceFromAnchor;
-        [SerializeField]
-        private float timeTillReturn; //The player has a limited time as a ghost, this is that remaining time
-
-
-        [Header("Other scripts")]
-        public GlobalVolumeManager globalVolumeManager; 
-        //want to add some camera effects when as a ghost
-
-        public SwitchParticleBehaviour switchParticle;
-        public SpiritLineBehaviour sprirtLine;
-        public EnemyParentBehaviour enemyParentBehaviour;
-
+        [SerializeField] private float currentDistanceFromAnchor;
+        [SerializeField] private float timeTillReturn; //The player has a limited time as a ghost, this is that remaining time
+        
         // Time when the movement back to body started.
         private float startTime;
         private float journeyLength;
-        public GameObject anchor;
+        private Coroutine returnCo;
+        
+        
+        [SerializeField] private GameObject anchorPrefab;
+        private GameObject cachedAnchor;
+        private Vector3 cachedAnchorPosition;
+        private bool hasCachedTransform;
 
-        private InteractionsManager cachedInteractionsManager;
+
+        public static Action<bool> OnPlayerStateChanged;
+        public static Action OnPlayerKilled;
+
+
+        public float MaxDistanceFromAnchor => distanceFromAnchor.max;
+        public Vector3 PlayerAnchorPosition
+        {
+            get
+            {
+                if (hasCachedTransform)
+                    return cachedAnchorPosition;
+
+                cachedAnchorPosition = cachedAnchor.transform.position;
+                return cachedAnchorPosition;
+            }
+        }
+
+
+        private void Awake()
+        {
+            PlayerBodyLayer = LayerMask.NameToLayer("PlayerBody");
+            PlayerGhostLayer = LayerMask.NameToLayer("PlayerGhost");
+            
+            //have it set in the physics settings so items on the player ghost layer cant interact with the anchor
+            playerObject.layer = PlayerBodyLayer;
+        }
+
 
         // Gets called when all the scenes for each level are loaded...
         public void OnMultiSceneAwake()
         {
             // Gets the interaction manager no matter which scene it is in...
-            cachedInteractionsManager = SceneElly.GetComponentFromAllScenes<InteractionsManager>();
+            interactionsManager = SceneElly.GetComponentFromAllScenes<InteractionsManager>();
             enemyParentBehaviour = SceneElly.GetComponentFromAllScenes<EnemyParentBehaviour>();
-            sprirtLine = SceneElly.GetComponentFromAllScenes<SpiritLineBehaviour>();
+            spiritLineBehaviour = SceneElly.GetComponentFromAllScenes<SpiritLineBehaviour>();
             switchParticle = SceneElly.GetComponentFromAllScenes<SwitchParticleBehaviour>();
-            globalVolumeManager = SceneElly.GetComponentFromAllScenes<GlobalVolumeManager>();
+            volumeManager = SceneElly.GetComponentFromAllScenes<GlobalVolumeManager>();
 
             enemyParentBehaviour.playerObject = playerObject.transform;
-            globalVolumeManager.setBodyVolume();
+            volumeManager.setBodyVolume();
         }
 
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            //have it set in the physics settings so items on the player ghost layer cant interact with the anchor
-            playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
-        }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
-            if(currentState == State.isReturning)
+            if (Input.GetButtonDown(PlayerStateSwitchInput))
             {
-                movePlayer();
+                if (currentState.Equals(PlayerState.Body))
+                    DropAnchor();
+                else
+                    ReturnPlayerToBody();
+                
+                OnPlayerStateChanged?.Invoke(isPlayerGhost.Value);
             }
-            else
+            
+            if (Input.GetButtonDown(PlayerInteractInput))
             {
-               
-                if(Input.GetButtonDown(changeStateInput))
-                {
-                    if(currentState == State.body)
-                    {
-                        //GOING GHOST!!
-                        DropAnchor();
-                    }
-                    else
-                    {
-                        //BACK TO NORMAL
-                        returnPlayerToBody();
-                    }
-                }
-
-                if(Input.GetButtonDown(interactInput))
-                {
-                    // Calls the interaction manager and tries to make an interaction if possible...
-                    cachedInteractionsManager.TryInteract();
-                }
-
-                //if a ghost keep checkign the distance
-                if(currentState == State.ghost)
-                {
-                    currentDistanceFromAnchor = Vector3.Distance(anchor.transform.position, playerObject.transform.position);
-                } 
+                // Calls the interaction manager and tries to make an interaction if possible...
+                interactionsManager.TryInteract();
             }
+            
+            if (currentState.Equals(PlayerState.Returning))
+                MovePlayer();
+        }
+
+
+        private void FixedUpdate()
+        {
+            //if a ghost keep checking the distance
+            if (currentState != PlayerState.Ghost) return;
+            currentDistanceFromAnchor = Vector3.Distance(anchorPrefab.transform.position, playerObject.transform.position);
         }
 
 
@@ -120,83 +133,93 @@ namespace DeadTired
             //AkSoundEngine.PostEvent("Normal_breath", gameObject);
 
             //place the anchor prefab where the player is currently
-            currentState = State.ghost;
-            playerObject.layer = LayerMask.NameToLayer(playerGhostLayer);
-
-            anchor = Instantiate(playerAnchor, playerObject.transform.position, playerObject.transform.rotation); //pooling this somewhere instead of instantiating might be better??
-
+            currentState = PlayerState.Ghost;
+            playerObject.layer = PlayerGhostLayer;
+            
+            // Pooled as we only really need 1 ever....
+            if (cachedAnchor == null)
+            {
+                cachedAnchor = Instantiate(anchorPrefab, playerObject.transform.position, playerObject.transform.rotation);
+                hasCachedTransform = false;
+            }
+            else
+            {
+                cachedAnchor.transform.SetPositionAndRotation(playerObject.transform.position, playerObject.transform.rotation);
+                cachedAnchor.SetActive(true);
+                hasCachedTransform = false;
+            }
+            
             // some fancy particles so it looks nice
-            switchParticle.emitParticle(anchor.transform.position);
-            sprirtLine.activateSpiritLine(playerObject.transform, anchor.transform);
-
+            switchParticle.emitParticle(PlayerAnchorPosition);
+            spiritLineBehaviour.activateSpiritLine(playerObject.transform, cachedAnchor.transform);
+            
             //changes the camera to look ghostie
-            globalVolumeManager.setGhostvolume();
+            volumeManager.setGhostvolume();
 
             //plop the enemies about the place
             enemyParentBehaviour.EnableEnemies();
         }
 
+        
         //return player
-        private void returnPlayerToBody()
+        private void ReturnPlayerToBody()
         {
             //AkSoundEngine.PostEvent("Backto_body", gameObject);
 
             startTime = Time.time;
-
             journeyLength = currentDistanceFromAnchor;
-
+            
             //move the player back to position of the body   
-            currentState = State.isReturning;
+            currentState = PlayerState.Returning;
 
-            switchParticle.emitParticle(anchor.transform.position);
+            // Coroutine move player back to body, rather than in update...
+            
+            switchParticle.emitParticle(PlayerAnchorPosition);
 
             //hide and deactivate the enemies about the place
             enemyParentBehaviour.DisableEnemies();
         }
 
-        private void movePlayer()
+
+        private void MovePlayer()
         {
             // Distance moved equals elapsed time times speed..
-            float distCovered = (Time.time - startTime) * returnSpeed;
-
-            float fractionOfJourney = distCovered / journeyLength;
-
-            playerObject.transform.position = Vector3.Lerp(playerObject.transform.position, anchor.transform.position, fractionOfJourney);
+            var _distCovered = (Time.time - startTime) * 5;
+            var _fractionOfJourney = _distCovered / journeyLength;
+            var _playerPos = playerObject.transform.position;
             
-            currentDistanceFromAnchor = Vector3.Distance(anchor.transform.position, playerObject.transform.position);
+            playerObject.transform.position = Vector3.Lerp(_playerPos, PlayerAnchorPosition, (_fractionOfJourney * returnSpeedAdjustment) * Time.deltaTime);
+            currentDistanceFromAnchor = Vector3.Distance(PlayerAnchorPosition, _playerPos);
 
-            if(currentDistanceFromAnchor <= minDistanceFromAnchor)
-            {
+            if (currentDistanceFromAnchor > distanceFromAnchor.min) return;
+            
+            volumeManager.setBodyVolume();
+            spiritLineBehaviour.deactiveSpiritLine();
 
-                globalVolumeManager.setBodyVolume();
+            // destroy the anchor we placed
+            cachedAnchor.SetActive(false);
 
-                sprirtLine.deactiveSpiritLine();
-
-                // destroy the anchor we placed
-                Destroy(anchor);
-
-                currentState = State.body;
-
-                playerObject.layer = LayerMask.NameToLayer(playerBodyLayer);
-
-            }
-        
-        
+            currentState = PlayerState.Body;
+            playerObject.layer = PlayerBodyLayer;
         }
+        
 
+        
         // call this from other scripts!!
-        public void playerHit()
+        public void PlayerHit()
         {
-            if(currentState == State.body)
+            if (currentState == PlayerState.Body)
             {
                 //deaded
+                OnPlayerKilled?.Invoke();
             }
             else
             {
                 //BACK TO NORMAL
-                returnPlayerToBody();
-
+                ReturnPlayerToBody();
+            
                 //then deaded
+                OnPlayerKilled?.Invoke();
             }
         }
 

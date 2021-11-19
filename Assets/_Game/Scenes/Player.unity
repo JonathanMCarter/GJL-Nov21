@@ -352,11 +352,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1471731398071488717, guid: 6d7df51415a0b3d4296c59daba169588, type: 3}
+      propertyPath: anchorPrefab
+      value: 
+      objectReference: {fileID: 4051389722103881825, guid: 4f1c0bfe67ffac349aabd8e8329a2654, type: 3}
+    - target: {fileID: 1471731398071488717, guid: 6d7df51415a0b3d4296c59daba169588, type: 3}
       propertyPath: maxGhostTimeSeconds
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1471731398071488717, guid: 6d7df51415a0b3d4296c59daba169588, type: 3}
       propertyPath: maxDistanceFromAnchor
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471731398071488717, guid: 6d7df51415a0b3d4296c59daba169588, type: 3}
+      propertyPath: distanceFromAnchor.max
       value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
