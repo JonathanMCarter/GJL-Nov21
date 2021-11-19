@@ -89,4 +89,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Game/Scenes/Menu/Menu-Env.unity
     guid: 46bb3baeef842064b9555a35c16859a6
+  - enabled: 1
+    path: Assets/_Game/Scenes/Intro-Dial.unity
+    guid: 7f76b921387a15d478f87e771bca5cf5
+  - enabled: 1
+    path: Assets/_Game/Scenes/End-Dial.unity
+    guid: 304997a7ecf02f848952ed8196fe26c6
   m_configObjects: {}
