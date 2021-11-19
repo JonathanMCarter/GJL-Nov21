@@ -5474,7 +5474,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2099194025}
-        m_TargetAssemblyTypeName: MultiScene.Core.BaseMultiSceneLoader, Assembly-CSharp
+        m_TargetAssemblyTypeName: DeadTired.Scenes.SceneGroupChangeWithFade, Assembly-CSharp
         m_MethodName: LoadSceneGroup
         m_Mode: 1
         m_Arguments:
@@ -5650,7 +5650,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099194024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4dd75d42a3c7b448a15e3ae2d119090, type: 3}
+  m_Script: {fileID: 11500000, guid: da5b264c0dde94a419bac09e589b7e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loadGroup: {fileID: 11400000, guid: 694a7a0043da4f9459ef13598ec179cc, type: 2}
