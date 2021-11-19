@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5330242619941123873}
   - component: {fileID: 5330242619941123878}
   - component: {fileID: 5330242619941123879}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left Door Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 5330242620108569312}
   - component: {fileID: 5330242620108569315}
   - component: {fileID: 5330242620108569314}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Door No Pillars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 5330242620739508192}
   - component: {fileID: 5330242620739508193}
   - component: {fileID: 5330242620739508198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canvas (World) - UI Prompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 5330242621558427710}
   - component: {fileID: 5330242621558427704}
   - component: {fileID: 5330242621558427705}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Prompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5330242621941603264}
   - component: {fileID: 5330242621941603267}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Door Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,6 +449,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8607392776104831022, guid: 3504b918b2029ce478d5c732b13104b9, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8068073526183931155, guid: 3504b918b2029ce478d5c732b13104b9, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -5370195936595600342, guid: 3504b918b2029ce478d5c732b13104b9, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -1950733119399844177, guid: 3504b918b2029ce478d5c732b13104b9, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -524,6 +536,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3504b918b2029ce478d5c732b13104b9, type: 3}
       propertyPath: m_Name
       value: OfficeDoor2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3504b918b2029ce478d5c732b13104b9, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3669516957988516521, guid: 3504b918b2029ce478d5c732b13104b9, type: 3}
       propertyPath: m_LocalScale.x
