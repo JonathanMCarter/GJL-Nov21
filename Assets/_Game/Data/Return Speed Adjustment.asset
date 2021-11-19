@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd6af33a44147d2ac1512e111b09004, type: 3}
+  m_Name: Return Speed Adjustment
+  m_EditorClassIdentifier: 
+  <DevDescription>k__BackingField: A speed adjustment to the returning so it is fast
+    enough on builds
+  <Value>k__BackingField: 300
+  <DefaultValue>k__BackingField: 300
