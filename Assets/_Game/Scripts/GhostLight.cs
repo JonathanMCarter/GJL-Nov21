@@ -1,20 +1,33 @@
-using System;
-using DependencyLibrary;
-using MultiScene.Core;
 using UnityEngine;
 
 namespace DeadTired.GhostMode
 {
     public class GhostLight : MonoBehaviour
     {
-        [SerializeField] private BoolReference ghostState;
-        private GameObject ghostEffects;
+        [SerializeField] private GameObject ghostEffects;
+
+
+        private void OnEnable() => PlayerBehaviour.OnPlayerStateChanged += OnPlayerGhost;
+        private void OnDisable() => PlayerBehaviour.OnPlayerStateChanged -= OnPlayerGhost;
+
+
+        private void OnPlayerGhost(bool isGhost)
+        {
+            if (isGhost)
+                EnableGhostEffects();
+            else
+                DisableGhostEffects();
+        }
         
 
-        private void Awake()
+        private void EnableGhostEffects()
         {
-            if (transform.childCount <= 0) return;
-            ghostEffects = transform.GetChild(0).gameObject;
+            ghostEffects.SetActive(true);
+        }
+
+        private void DisableGhostEffects()
+        {
+            ghostEffects.SetActive(false);
         }
     }
 }

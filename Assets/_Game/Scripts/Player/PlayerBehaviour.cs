@@ -106,6 +106,7 @@ namespace DeadTired
                 else
                     ReturnPlayerToBody();
                 
+                isPlayerGhost.SetValue(currentState.Equals(PlayerState.Ghost));
                 OnPlayerStateChanged?.Invoke(isPlayerGhost.Value);
             }
             
