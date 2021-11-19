@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0386dfc257045e7913ec90f8423f7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadGroup: {fileID: 11400000, guid: 4cc4893eb8c63084c9906527637593e3, type: 2}
+  loadGroup: {fileID: 11400000, guid: ada534fce5a0fe14ca8286f35d1f6fe6, type: 2}
 --- !u!4 &480162905
 Transform:
   m_ObjectHideFlags: 0
