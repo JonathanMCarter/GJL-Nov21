@@ -7,22 +7,19 @@ namespace DeadTired
 {
     public class PlayerMovementScript : MonoBehaviour
     {
-
-        [SerializeField] 
-        float movementSpeed = 4f;
+        [SerializeField] private float movementSpeed = 4f;
 
         public Transform playerObject;
-
-        public float nextDistance; 
-
+        public float nextDistance;
         private PlayerBehaviour playerBehaviour;
-
+        
         Vector3 forward, right, nextPosition; // differes from the world axis so we need to specifiy ourself
 
 
         [SerializeField] private Vector3Reference facing;
         
-        void Start()
+        
+        private void Start()
         {
             forward = Camera.main.transform.forward;
             forward.y = 0f;
@@ -35,13 +32,16 @@ namespace DeadTired
             playerBehaviour = gameObject.GetComponent<PlayerBehaviour>();
         }
 
+        
+        
         // Update is called once per frame
         void Update()
         {
-            if(Input.anyKey)
+            if (Input.GetAxisRaw("Horizontal") > .1f || Input.GetAxisRaw("Vertical") > .1f || Input.GetAxisRaw("Horizontal") < -.1f|| Input.GetAxisRaw("Vertical") < -.1f)
                 Move();
-
         }
+        
+        
 
         //maybe move this somewhere else for cleanliness???
         void Move()
