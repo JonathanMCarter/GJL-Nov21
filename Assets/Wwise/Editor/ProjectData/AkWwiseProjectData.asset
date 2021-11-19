@@ -1,0 +1,646 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f63fc3b0d454f40ae3b646999aee8b, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 5ed4ac30770614478ec665c7ad0866f6
+    ParentPath: Virtual Acoustics/Default Work Unit
+    guid: 5ed4ac30770614478ec665c7ad0866f6
+    GuidInternal: 
+    m_lastTime: -8585646049534775808
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 834486fe3000d942a95e6e8f3e0c8aa2
+    ParentPath: Master-Mixer Hierarchy/Default Work Unit
+    guid: 834486fe3000d942a95e6e8f3e0c8aa2
+    GuidInternal: 
+    m_lastTime: -8585643161094775808
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 834486fe3000d942a95e6e8f3e0c8aa2
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
+    - name: Music & Sound Scapes
+      guid: 5bfd59aac7b74c49887bb4c9acf356ea
+      id: 2697438318
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 834486fe3000d942a95e6e8f3e0c8aa2
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music & Sound Scapes
+        ObjectType: 2
+        guid: 5bfd59aac7b74c49887bb4c9acf356ea
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Music & Sound
+        Scapes
+    - name: SFX
+      guid: 3b092adc7196b7459950cb4c55907c9d
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 834486fe3000d942a95e6e8f3e0c8aa2
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 3b092adc7196b7459950cb4c55907c9d
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/SFX
+  BankWwu:
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 1cb27a857f6e2d4da662cda6a0480074
+    ParentPath: SoundBanks/Default Work Unit
+    guid: 1cb27a857f6e2d4da662cda6a0480074
+    GuidInternal: 
+    m_lastTime: -8585642628054775808
+    List:
+    - name: New_Game
+      guid: 318a9d2ddc196847b6448532e5e3f938
+      id: 477670102
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1cb27a857f6e2d4da662cda6a0480074
+      - ElementName: New_Game
+        ObjectType: 7
+        guid: 318a9d2ddc196847b6448532e5e3f938
+      Path: SoundBanks/Default Work Unit/New_Game
+  EventWwu:
+  - PhysicalPath: Events/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 12dc4efafa13e646abb1ec0e0128b47e
+    ParentPath: Events/Default Work Unit
+    guid: 12dc4efafa13e646abb1ec0e0128b47e
+    GuidInternal: 
+    m_lastTime: -8585642628054775808
+    List:
+    - name: Backto_body
+      guid: 5b2cd08616a5cc40b01a05cbeac8b19e
+      id: 209341850
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Backto_body
+        ObjectType: 3
+        guid: 5b2cd08616a5cc40b01a05cbeac8b19e
+      Path: Events/Default Work Unit/Backto_body
+      maxAttenuation: 0
+      maxDuration: 3.044566
+      minDuration: 1.5787
+    - name: Closed_Door
+      guid: 547c594220a6144fbef619284f2d0309
+      id: 484286148
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Closed_Door
+        ObjectType: 3
+        guid: 547c594220a6144fbef619284f2d0309
+      Path: Events/Default Work Unit/Closed_Door
+      maxAttenuation: 0
+      maxDuration: 1.505709
+      minDuration: 1.505709
+    - name: Death_Breath
+      guid: db765cb967fadb49b062718bc0bdea95
+      id: 1601785938
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Death_Breath
+        ObjectType: 3
+        guid: db765cb967fadb49b062718bc0bdea95
+      Path: Events/Default Work Unit/Death_Breath
+      maxAttenuation: 0
+      maxDuration: Infinity
+      minDuration: 1.674667
+    - name: Gnomes
+      guid: 8c6d26b188333d499296435ead10d84b
+      id: 1265364722
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Gnomes
+        ObjectType: 3
+        guid: 8c6d26b188333d499296435ead10d84b
+      Path: Events/Default Work Unit/Gnomes
+      maxAttenuation: 8
+      maxDuration: 2.823515
+      minDuration: 2.823515
+    - name: Hurt
+      guid: 5ef3749df38b204cb23f568945dc3884
+      id: 3193947170
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Hurt
+        ObjectType: 3
+        guid: 5ef3749df38b204cb23f568945dc3884
+      Path: Events/Default Work Unit/Hurt
+      maxAttenuation: 0
+      maxDuration: 0.812156
+      minDuration: 0.704958
+    - name: LightSwitch
+      guid: 313f6bc9c3165c40bb48029393bcd17a
+      id: 1504742439
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: LightSwitch
+        ObjectType: 3
+        guid: 313f6bc9c3165c40bb48029393bcd17a
+      Path: Events/Default Work Unit/LightSwitch
+      maxAttenuation: 0
+      maxDuration: 0.726243
+      minDuration: 0.655662
+    - name: Lockoff
+      guid: 6d1d42e3143c4c429f6bbf35e8130500
+      id: 444190383
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Lockoff
+        ObjectType: 3
+        guid: 6d1d42e3143c4c429f6bbf35e8130500
+      Path: Events/Default Work Unit/Lockoff
+      maxAttenuation: 0
+      maxDuration: 0.661769
+      minDuration: 0.661769
+    - name: MenuMusic
+      guid: 36e00677b5c78b45a41b8c65f93b3a9f
+      id: 679636833
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: MenuMusic
+        ObjectType: 3
+        guid: 36e00677b5c78b45a41b8c65f93b3a9f
+      Path: Events/Default Work Unit/MenuMusic
+      maxAttenuation: 0
+      maxDuration: 11.294127
+      minDuration: 11.294127
+    - name: Move_Box
+      guid: 10a96f26625242488cfc8e9b8610c816
+      id: 1954644116
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Move_Box
+        ObjectType: 3
+        guid: 10a96f26625242488cfc8e9b8610c816
+      Path: Events/Default Work Unit/Move_Box
+      maxAttenuation: 0
+      maxDuration: 0.626842
+      minDuration: 0.54981
+    - name: Normal_breath
+      guid: 83c20de02bf5234b9276d72477ebbc3d
+      id: 4163868301
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Normal_breath
+        ObjectType: 3
+        guid: 83c20de02bf5234b9276d72477ebbc3d
+      Path: Events/Default Work Unit/Normal_breath
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Open_Door
+      guid: 41ad84e6b8e1084baee93ca67b719fd6
+      id: 2934549620
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Open_Door
+        ObjectType: 3
+        guid: 41ad84e6b8e1084baee93ca67b719fd6
+      Path: Events/Default Work Unit/Open_Door
+      maxAttenuation: 0
+      maxDuration: 3.428261
+      minDuration: 1.004022
+    - name: OrbPickup
+      guid: 57198ba94a310e41b64f23d0a48d4481
+      id: 3062278624
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: OrbPickup
+        ObjectType: 3
+        guid: 57198ba94a310e41b64f23d0a48d4481
+      Path: Events/Default Work Unit/OrbPickup
+      maxAttenuation: 10
+      maxDuration: 2.248199
+      minDuration: 2.000605
+    - name: Panic_Breath
+      guid: 5cd8fbcc4e0a9c429004e9bf5a8d97eb
+      id: 2330720011
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Panic_Breath
+        ObjectType: 3
+        guid: 5cd8fbcc4e0a9c429004e9bf5a8d97eb
+      Path: Events/Default Work Unit/Panic_Breath
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Ghost
+      guid: 371e8a9358843947a12bffb686c84447
+      id: 963023327
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Play_Ghost
+        ObjectType: 3
+        guid: 371e8a9358843947a12bffb686c84447
+      Path: Events/Default Work Unit/Play_Ghost
+      maxAttenuation: 12
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Music
+      guid: 05fc43ba0b15234cb356e42ca1d8cee9
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: 05fc43ba0b15234cb356e42ca1d8cee9
+      Path: Events/Default Work Unit/Play_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: PlayButton
+      guid: a7bdd55b86fedd49a1c21ac1a55386b7
+      id: 1843531235
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: PlayButton
+        ObjectType: 3
+        guid: a7bdd55b86fedd49a1c21ac1a55386b7
+      Path: Events/Default Work Unit/PlayButton
+      maxAttenuation: 0
+      maxDuration: 0.544573
+      minDuration: 0.544573
+    - name: PlayOrbz
+      guid: 1b0bf8585241a34d929c9bcef129047f
+      id: 1380233920
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: PlayOrbz
+        ObjectType: 3
+        guid: 1b0bf8585241a34d929c9bcef129047f
+      Path: Events/Default Work Unit/PlayOrbz
+      maxAttenuation: 10
+      maxDuration: -1
+      minDuration: -1
+    - name: QuitButton
+      guid: a83183de534aa14aa2dccef05f3be4ed
+      id: 2559930772
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: QuitButton
+        ObjectType: 3
+        guid: a83183de534aa14aa2dccef05f3be4ed
+      Path: Events/Default Work Unit/QuitButton
+      maxAttenuation: 0
+      maxDuration: 0.750594
+      minDuration: 0.750594
+    - name: Stop_Ghost
+      guid: edc4c7277779764badd45647fe459224
+      id: 3768462973
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Stop_Ghost
+        ObjectType: 3
+        guid: edc4c7277779764badd45647fe459224
+      Path: Events/Default Work Unit/Stop_Ghost
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Music
+      guid: 958ba132e8db264b88aacae6756a2a7d
+      id: 2837384057
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Stop_Music
+        ObjectType: 3
+        guid: 958ba132e8db264b88aacae6756a2a7d
+      Path: Events/Default Work Unit/Stop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Unlocked
+      guid: 4862d4bfa30ca34fb248eff82d315ce2
+      id: 2798721810
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Unlocked
+        ObjectType: 3
+        guid: 4862d4bfa30ca34fb248eff82d315ce2
+      Path: Events/Default Work Unit/Unlocked
+      maxAttenuation: 0
+      maxDuration: 3.628261
+      minDuration: 1.204022
+  RtpcWwu:
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 915aa470c438394ca40d1a7f0d3209b3
+    ParentPath: Game Parameters/Default Work Unit
+    guid: 915aa470c438394ca40d1a7f0d3209b3
+    GuidInternal: 
+    m_lastTime: -8585643102124775808
+    List:
+    - name: Distance
+      guid: 3943861475edbe40a7bb6896fef4f0d5
+      id: 1240670792
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 915aa470c438394ca40d1a7f0d3209b3
+      - ElementName: Distance
+        ObjectType: 13
+        guid: 3943861475edbe40a7bb6896fef4f0d5
+      Path: Game Parameters/Default Work Unit/Distance
+    - name: SIDECHAIN
+      guid: 4c1cc4e4ab787a469f14d619de5b8e0e
+      id: 1883033791
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 915aa470c438394ca40d1a7f0d3209b3
+      - ElementName: SIDECHAIN
+        ObjectType: 13
+        guid: 4c1cc4e4ab787a469f14d619de5b8e0e
+      Path: Game Parameters/Default Work Unit/SIDECHAIN
+  StateWwu:
+  - PhysicalPath: States/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 0cb5fcdd6ee776429ca3ee2efd0294ff
+    ParentPath: States/Default Work Unit
+    guid: 0cb5fcdd6ee776429ca3ee2efd0294ff
+    GuidInternal: 
+    m_lastTime: -8585643161094775808
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: a889230bda049b4189d1d5d644d69b7a
+    ParentPath: Switches/Default Work Unit
+    guid: a889230bda049b4189d1d5d644d69b7a
+    GuidInternal: 
+    m_lastTime: -8585645771784775808
+    List:
+    - name: Switch_breaths
+      guid: c76e1a32d0601f478094cf57d0258c00
+      id: 4109157345
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a889230bda049b4189d1d5d644d69b7a
+      - ElementName: Switch_breaths
+        ObjectType: 11
+        guid: c76e1a32d0601f478094cf57d0258c00
+      Path: Switches/Default Work Unit/Switch_breaths
+      values:
+      - name: Death_breath
+        guid: 4b6bed6fd1214d4a99dc2f9a3d61342c
+        id: 1601785938
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: a889230bda049b4189d1d5d644d69b7a
+        - ElementName: Switch_breaths
+          ObjectType: 11
+          guid: c76e1a32d0601f478094cf57d0258c00
+        - ElementName: Death_breath
+          ObjectType: 10
+          guid: 4b6bed6fd1214d4a99dc2f9a3d61342c
+      - name: Normal_breath
+        guid: 0e78a8932b8bb74aab16a93b82faa461
+        id: 4163868301
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: a889230bda049b4189d1d5d644d69b7a
+        - ElementName: Switch_breaths
+          ObjectType: 11
+          guid: c76e1a32d0601f478094cf57d0258c00
+        - ElementName: Normal_breath
+          ObjectType: 10
+          guid: 0e78a8932b8bb74aab16a93b82faa461
+      - name: Panic_breath
+        guid: 40b8cb5c1ce89c47a74602d85a6c9723
+        id: 2330720011
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: a889230bda049b4189d1d5d644d69b7a
+        - ElementName: Switch_breaths
+          ObjectType: 11
+          guid: c76e1a32d0601f478094cf57d0258c00
+        - ElementName: Panic_breath
+          ObjectType: 10
+          guid: 40b8cb5c1ce89c47a74602d85a6c9723
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: ceab621203d84f459daaeb7dd7c4563d
+    ParentPath: Triggers/Default Work Unit
+    guid: ceab621203d84f459daaeb7dd7c4563d
+    GuidInternal: 
+    m_lastTime: -8585646049534775808
+    List: []
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 01000000020000000300000005000000060000001c0000001d0000001e0000001f000000200000002100000022000000240000002600000027000000
+  AutoSyncSelection: 0
+  autoPopulateEnabled: 1
+  currentDataSource: 0
+  CurrentPluginConfig: 

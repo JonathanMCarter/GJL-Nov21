@@ -18,7 +18,11 @@ namespace DeadTired.UI
 
         public void OpenPanel(string id)
         {
+            
             allPanels.FirstOrDefault(t => t.PanelID.Equals(id))?.OpenPanel();
+        }
+        public void Playbutton(){
+            AkSoundEngine.PostEvent("PlayButton", gameObject);
         }
     }
 }

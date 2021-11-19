@@ -70,11 +70,14 @@ namespace DeadTired.Sokoban
             iTween.MoveTo(gameObject, _tween);
             tileOn = sokobanManager.GetTileOn(BlockID);
             ConfigureUI(false);
+            AkSoundEngine.PostEvent("Move_Box", gameObject);
+            
         }
 
 
         public void OnBlockMoveComplete()
         {
+            
             triggerVolume.enabled = true;
             base.OnPlayerExitTriggerZone(triggerVolume);
         }

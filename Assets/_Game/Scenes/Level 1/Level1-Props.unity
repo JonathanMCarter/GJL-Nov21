@@ -1002,6 +1002,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 2f992570c5afdeb4c8d5415577e856a0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9998206
+      objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 2f992570c5afdeb4c8d5415577e856a0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.018944427
+      objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 2f992570c5afdeb4c8d5415577e856a0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 2f992570c5afdeb4c8d5415577e856a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -2.171
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2f992570c5afdeb4c8d5415577e856a0, type: 3}
       propertyPath: m_Name
       value: gnome_hero_rig_export
@@ -1791,6 +1807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1711646387}
+  - component: {fileID: 1711646388}
   m_Layer: 0
   m_Name: Oh Gnomes! Room
   m_TagString: Untagged
@@ -1816,6 +1833,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1711646388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711646386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3015b76db1ef249638437afccff58faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1714236386
 PrefabInstance:
   m_ObjectHideFlags: 0
