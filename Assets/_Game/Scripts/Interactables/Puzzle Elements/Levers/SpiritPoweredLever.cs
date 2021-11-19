@@ -1,4 +1,5 @@
-﻿using DeadTired.UI;
+﻿using System;
+using DeadTired.UI;
 using DependencyLibrary;
 using JTools;
 using UnityEngine;
@@ -15,6 +16,8 @@ namespace DeadTired.Interactables
         [SerializeField, ReadOnly] private bool isPulled;
 
         private Image promptImage;
+
+        public Action OnSpiritAdded;
 
 
         protected override void Awake()
@@ -34,6 +37,7 @@ namespace DeadTired.Interactables
                 PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
                 isPowered = true;
                 promptImage.sprite = isPowered ? normalSprite : needOrbSprite;
+                OnSpiritAdded?.Invoke();
                 return;
             }
 
