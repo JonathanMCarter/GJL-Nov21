@@ -43,7 +43,6 @@ namespace DeadTired.Interactables
 
             if (!isPowered) return;
             base.OnPlayerInteract();
-            AkSoundEngine.PostEvent("Lockoff", gameObject);
             isPulled = true;
         }
     }
