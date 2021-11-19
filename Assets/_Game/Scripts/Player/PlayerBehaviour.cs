@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DeadTired.Interactables;
 using DependencyLibrary;
 using JTools;
@@ -38,14 +39,14 @@ namespace DeadTired
         
         [Header("Values to Watch")]
         [SerializeField] private float currentDistanceFromAnchor;
-        [SerializeField] private float timeTillReturn; //The player has a limited time as a ghost, this is that remaining time
+        [SerializeField] private FloatReference timeTillReturn; //The player has a limited time as a ghost, this is that remaining time
+        private Coroutine returnAfterTimerCo;
         
         // Time when the movement back to body started.
         private float startTime;
         private float journeyLength;
-        private Coroutine returnCo;
-        
-        
+
+
         [SerializeField] private GameObject anchorPrefab;
         private GameObject cachedAnchor;
         private Vector3 cachedAnchorPosition;
@@ -113,9 +114,9 @@ namespace DeadTired
                 // Calls the interaction manager and tries to make an interaction if possible...
                 interactionsManager.TryInteract();
             }
-            
-            if (currentState.Equals(PlayerState.Returning))
-                MovePlayer();
+
+            if (!currentState.Equals(PlayerState.Returning)) return;
+            MovePlayer();
         }
 
 
@@ -158,6 +159,12 @@ namespace DeadTired
 
             //plop the enemies about the place
             enemyParentBehaviour.EnableEnemies();
+            
+            // start countdown to return
+            if (returnAfterTimerCo != null)
+                StopCoroutine(returnAfterTimerCo);
+
+            returnAfterTimerCo = StartCoroutine(PlayerReturnCountDownCo());
         }
 
         
@@ -165,22 +172,23 @@ namespace DeadTired
         private void ReturnPlayerToBody()
         {
             //AkSoundEngine.PostEvent("Backto_body", gameObject);
+            
+            // Stops the return countdown
+            if (returnAfterTimerCo != null)
+                StopCoroutine(returnAfterTimerCo);
 
             startTime = Time.time;
             journeyLength = currentDistanceFromAnchor;
             
             //move the player back to position of the body   
             currentState = PlayerState.Returning;
-
-            // Coroutine move player back to body, rather than in update...
-            
             switchParticle.emitParticle(PlayerAnchorPosition);
 
             //hide and deactivate the enemies about the place
             enemyParentBehaviour.DisableEnemies();
         }
 
-
+        
         private void MovePlayer()
         {
             // Distance moved equals elapsed time times speed..
@@ -223,5 +231,18 @@ namespace DeadTired
             }
         }
 
+
+        private IEnumerator PlayerReturnCountDownCo()
+        {
+            timeTillReturn.SetValue(maxGhostTime);
+
+            while (timeTillReturn.Value > 0)
+            {
+                timeTillReturn.variable.IncrementValue(-Time.deltaTime);
+                yield return null;
+            }
+            
+            ReturnPlayerToBody();
+        }
     }
 }
