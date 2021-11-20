@@ -4,5 +4,95 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Game/Scenes/Managers.unity
+    guid: f0095ba3f799db44cb1f41cf0a1342c5
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 1/Level1-Env.unity
+    guid: 456cfe16f1b670b4d925ccbc76d82c66
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 1/Level1-Interactables.unity
+    guid: c9e02ccb573f64e48bf971a7700395cd
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 1/Level1-Props.unity
+    guid: 79b377022b59df241a77e9921d36827b
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 1/Level1-Enemies.unity
+    guid: fed4598180ac85142a7134f8cafccda9
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 2/Level2-Env.unity
+    guid: ed2c4482b7e528f4e8442040d085ba92
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 2/Level2-Interactables.unity
+    guid: 0804df6bce2319847907ccbd443a9dea
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 2/Level2-Sokoban-1.unity
+    guid: 02374cee22646614fbc662e62f6c5859
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 2/Level2-Sokoban-2.unity
+    guid: a96ac9e98a21f134aa045c2cf53e718f
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 2/Level2-Props.unity
+    guid: 5f7afa661bbae534180f1bc450626ff8
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 2/Level2-Enemies.unity
+    guid: 79ebe214db4f0734f8e2a8e66c84c784
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 3/Level3-Env.unity
+    guid: 92f3453adc1f0084bab57312fa43b20e
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 3/Level3-Routes.unity
+    guid: 4c3fd2954102fa449a6b35cf98a989e6
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 3/Level3-Props.unity
+    guid: a1964bd57ce13d94c8d5225250779bf7
+  - enabled: 1
+    path: Assets/_Game/Scenes/Level 3/Level3-Enemies.unity
+    guid: d4680e8b19004b34d906b27ce85c28c3
+  - enabled: 1
+    path: Assets/_Game/Scenes/Menu/MenuScene.unity
+    guid: b139a5d5b9946ec43b9a65aec4bdccba
+  - enabled: 1
+    path: Assets/_Game/Scenes/Menu/Menu UI.unity
+    guid: 88f46b1ebbb09c5448337636e0ceadcc
+  - enabled: 1
+    path: Assets/_Game/Scenes/Menu/How To Play UI.unity
+    guid: cf3356a172df7394d9a094b06e609626
+  - enabled: 1
+    path: Assets/_Game/Scenes/Menu/CreditsUI.unity
+    guid: fab1793a3a435f9459a9587c488da59a
+  - enabled: 1
+    path: Assets/_Game/Scenes/Menu/QuitConfirm.unity
+    guid: d77a435312dbbc84e975d39e50238f7c
+  - enabled: 1
+    path: Assets/_Game/Scenes/Menu/Death.unity
+    guid: dc594b8c4ef47584e81ff2e929b5be64
+  - enabled: 1
+    path: Assets/_Game/Scenes/Menu/Win.unity
+    guid: 1f12c0d9ae1fb1c4ea716cea228c9570
+  - enabled: 1
+    path: Assets/_Game/Scenes/Player.unity
+    guid: 1d6053f8ad3f3d041941cee084d7f0d7
+  - enabled: 1
+    path: Assets/_Game/Scenes/Player UI.unity
+    guid: 6a76a912b9c01f5409925175833738ef
+  - enabled: 1
+    path: Assets/_Game/Scenes/PauseGame.unity
+    guid: 3cc1b9f353eac0048872d6898f9c8763
+  - enabled: 1
+    path: Assets/_Game/Scenes/Menu/BuildInformation.unity
+    guid: b9c0a41c77b3df64a8302a4d18ddccdd
+  - enabled: 1
+    path: Assets/_Game/Scenes/GhostLighting.unity
+    guid: 05fc8822320d5304689f8970d4fb05f2
+  - enabled: 1
+    path: Assets/_Game/Scenes/Menu/Menu-Env.unity
+    guid: 46bb3baeef842064b9555a35c16859a6
+  - enabled: 1
+    path: Assets/_Game/Scenes/Intro-Dial.unity
+    guid: 7f76b921387a15d478f87e771bca5cf5
+  - enabled: 1
+    path: Assets/_Game/Scenes/End-Dial.unity
+    guid: 304997a7ecf02f848952ed8196fe26c6
   m_configObjects: {}

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>/Users/dillannhoyos/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/WwiseProjects/Dead Tired/</ProjectRoot>
+		<SourceFilesRoot>/Users/dillannhoyos/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/WwiseProjects/Dead Tired/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/dillannhoyos/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/WwiseProjects/Dead Tired/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/dillannhoyos/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/Dillan hoyos/UNITY/HACKATHONS/GJL-Nov21/Assets/StreamingAssets/Audio/GeneratedSoundBanks</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="477670102" Language="SFX" Hash="1088286785">
+			<ObjectPath>\SoundBanks\Default Work Unit\New_Game</ObjectPath>
+			<ShortName>New_Game</ShortName>
+			<Path>New_Game.bnk</Path>
+			<IncludedEvents>
+				<Event Id="209341850" Name="Backto_body" ObjectPath="\Events\Default Work Unit\Backto_body" DurationType="OneShot" DurationMin="1.578700" DurationMax="3.044566">
+					<IncludedMemoryFiles>
+						<File Id="981438223" Language="SFX">
+							<ShortName>ESM_Vocal_Breath_Human_AI_Breathing_1_Male_Computer_Voice_Inhale_Exhale.wav</ShortName>
+							<Path>SFX/ESM_Vocal_Breath_Human_AI_Breathing_1_Male_Computer_Voice_Inhale_Exhale_85938176.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="484286148" Name="Closed_Door" ObjectPath="\Events\Default Work Unit\Closed_Door" DurationType="OneShot" DurationMin="1.505709" DurationMax="1.505709">
+					<IncludedMemoryFiles>
+						<File Id="237221507" Language="SFX">
+							<ShortName>BRS_Door_Handle_Old_Squeaky_Mvs_5.wav</ShortName>
+							<Path>SFX/BRS_Door_Handle_Old_Squeaky_Mvs_5_24526BD0.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1601785938" Name="Death_Breath" ObjectPath="\Events\Default Work Unit\Death_Breath" DurationType="Mixed" DurationMin="1.674667" DurationMax="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="796941866" Language="SFX">
+							<ShortName>HumanBreathDying_S08HO.136.wav</ShortName>
+							<Path>SFX/HumanBreathDying_S08HO.136_10C4C929.wem</Path>
+						</File>
+						<File Id="991719472" Language="SFX">
+							<ShortName>GasMaskBreathePanic_ZA01.31.wav</ShortName>
+							<Path>SFX/GasMaskBreathePanic_ZA01.31_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1056662003" Language="SFX">
+							<ShortName>GasMaskBreathe_ZA01.315.wav</ShortName>
+							<Path>SFX/GasMaskBreathe_ZA01.315_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{93A8780E-8B2B-4AB7-AB16-A93B82FAA461}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{93A8780E-8B2B-4AB7-AB16-A93B82FAA461}">
+							<Media>
+								<File Id="1056662003"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{5CCBB840-E81C-479C-A746-02D85A6C9723}">
+							<Media>
+								<File Id="991719472"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{6FED6B4B-21D1-4A4D-99DC-2F9A3D61342C}">
+							<Media>
+								<File Id="796941866"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="1601785938" Name="Death_breath" ObjectPath="\Switches\Default Work Unit\Switch_breaths\Death_breath"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1265364722" Name="Gnomes" ObjectPath="\Events\Default Work Unit\Gnomes" MaxAttenuation="8.000000" DurationType="OneShot" DurationMin="2.823515" DurationMax="2.823515">
+					<IncludedMemoryFiles>
+						<File Id="107238317" Language="SFX">
+							<ShortName>TribalRecording04_85.wav</ShortName>
+							<Path>SFX/TribalRecording04_85_9D34227A.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3753593413" Name="Hover" ObjectPath="\Events\Default Work Unit\Hover" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="855580713" Language="SFX">
+							<ShortName>ESM_One_Shot_Vocal_Wraith_Monster_Aura_Spirit_Fairy_Ghost_Creature.wav</ShortName>
+							<Path>SFX/ESM_One_Shot_Vocal_Wraith_Monster_Aura_Spirit_Fairy_Ghost_Creature_FCB8F089.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3193947170" Name="Hurt" ObjectPath="\Events\Default Work Unit\Hurt" DurationType="OneShot" DurationMin="0.704958" DurationMax="0.812156">
+					<IncludedMemoryFiles>
+						<File Id="506195151" Language="SFX">
+							<ShortName>ESM_Wizard_Pain_Vocal_Hurt_Male_Voice_Old_Man.wav</ShortName>
+							<Path>SFX/ESM_Wizard_Pain_Vocal_Hurt_Male_Voice_Old_Man_10C4C929.wem</Path>
+						</File>
+						<File Id="727507486" Language="SFX">
+							<ShortName>ESM_High_Elf_Vocal_Pain_Vocal_Hurt_Male_Voice.wav</ShortName>
+							<Path>SFX/ESM_High_Elf_Vocal_Pain_Vocal_Hurt_Male_Voice_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1504742439" Name="LightSwitch" ObjectPath="\Events\Default Work Unit\LightSwitch" DurationType="OneShot" DurationMin="0.655662" DurationMax="0.726243">
+					<IncludedMemoryFiles>
+						<File Id="97153603" Language="SFX">
+							<ShortName>ESM_Mobile_Game_One_Shot_UI_Alien_Chatter_Box_2.wav</ShortName>
+							<Path>SFX/ESM_Mobile_Game_One_Shot_UI_Alien_Chatter_Box_2_23A88B45.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="444190383" Name="Lockoff" ObjectPath="\Events\Default Work Unit\Lockoff" DurationType="OneShot" DurationMin="0.661769" DurationMax="0.661769">
+					<IncludedMemoryFiles>
+						<File Id="2675739" Language="SFX">
+							<ShortName>BRS_Switch_Light_Sml_On-Off_Fst3.wav</ShortName>
+							<Path>SFX/BRS_Switch_Light_Sml_On-Off_Fst3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="679636833" Name="MenuMusic" ObjectPath="\Events\Default Work Unit\MenuMusic" DurationType="OneShot" DurationMin="11.294127" DurationMax="11.294127">
+					<IncludedMemoryFiles>
+						<File Id="653429322" Language="SFX">
+							<ShortName>HTF_Arp_85_Spooky_Music_Em.wav</ShortName>
+							<Path>SFX/HTF_Arp_85_Spooky_Music_Em_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1954644116" Name="Move_Box" ObjectPath="\Events\Default Work Unit\Move_Box" DurationType="OneShot" DurationMin="0.549810" DurationMax="0.626842">
+					<IncludedMemoryFiles>
+						<File Id="738651849" Language="SFX">
+							<ShortName>BRS_Foley_Box_Hit_Xmas_Present_Moves_1.wav</ShortName>
+							<Path>SFX/BRS_Foley_Box_Hit_Xmas_Present_Moves_1_383E5C30.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4163868301" Name="Normal_breath" ObjectPath="\Events\Default Work Unit\Normal_breath" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="305594443" Language="SFX">
+							<ShortName>ESM_LFE_Heart_Beat_Loop_-_Medium_-_Fast_Bass_Medical_Horror_Scary_Suspense.wav</ShortName>
+							<Path>SFX/ESM_LFE_Heart_Beat_Loop_-_Medium_-_Fast_Bass_Medical_Horror_Scary_Suspense_85FD5D71.wem</Path>
+						</File>
+						<File Id="557967590" Language="SFX">
+							<ShortName>spirit world.wav</ShortName>
+							<Path>SFX/spirit world_10C4C929.wem</Path>
+						</File>
+						<File Id="645359806" Language="SFX">
+							<ShortName>ESM_29_God_Shrine_minimal_Ambience_Nature_Game_Background_Atmosphere_World_Fantasy_Sci_fi_Ancient_Loopwav.wav</ShortName>
+							<Path>SFX/ESM_29_God_Shrine_minimal_Ambience_Nature_Game_Background_Atmosphere_World_Fantasy_Sci_fi_Ancient_Loopwav_10C4C929.wem</Path>
+						</File>
+						<File Id="796941866" Language="SFX">
+							<ShortName>HumanBreathDying_S08HO.136.wav</ShortName>
+							<Path>SFX/HumanBreathDying_S08HO.136_10C4C929.wem</Path>
+						</File>
+						<File Id="985313020" Language="SFX">
+							<ShortName>HT_01_FX_Clock.wav</ShortName>
+							<Path>SFX/HT_01_FX_Clock_D79FB2B7.wem</Path>
+						</File>
+						<File Id="991719472" Language="SFX">
+							<ShortName>GasMaskBreathePanic_ZA01.31.wav</ShortName>
+							<Path>SFX/GasMaskBreathePanic_ZA01.31_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1056662003" Language="SFX">
+							<ShortName>GasMaskBreathe_ZA01.315.wav</ShortName>
+							<Path>SFX/GasMaskBreathe_ZA01.315_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="4163868301" Name="Normal_breath" ObjectPath="\Switches\Default Work Unit\Switch_breaths\Normal_breath"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="2934549620" Name="Open_Door" ObjectPath="\Events\Default Work Unit\Open_Door" DurationType="OneShot" DurationMin="1.004022" DurationMax="3.428261">
+					<IncludedMemoryFiles>
+						<File Id="444278659" Language="SFX">
+							<ShortName>BRS_Door_File_Cabinet_Lrg_O-C_3.wav</ShortName>
+							<Path>SFX/BRS_Door_File_Cabinet_Lrg_O-C_3_94B07DC3.wem</Path>
+						</File>
+						<File Id="684018231" Language="SFX">
+							<ShortName>SafeDoorOpen_S011OF.56.wav</ShortName>
+							<Path>SFX/SafeDoorOpen_S011OF.56_10C4C929.wem</Path>
+						</File>
+						<File Id="719812763" Language="SFX">
+							<ShortName>DoorOpen_BW.61267.wav</ShortName>
+							<Path>SFX/DoorOpen_BW.61267_BB60F0E5.wem</Path>
+						</File>
+						<File Id="907775865" Language="SFX">
+							<ShortName>BRS_Door_Locker_PK2_O-C_Squeaky_5_Far.wav</ShortName>
+							<Path>SFX/BRS_Door_Locker_PK2_O-C_Squeaky_5_Far_BF01F591.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3062278624" Name="OrbPickup" ObjectPath="\Events\Default Work Unit\OrbPickup" MaxAttenuation="10.000000" DurationType="OneShot" DurationMin="2.000605" DurationMax="2.248199">
+					<IncludedMemoryFiles>
+						<File Id="423914452" Language="SFX">
+							<ShortName>ESM_Ambient_Game_Score_Subtle_Orb_Grab_1_PickUp_Points_Bonus_Arcade.wav</ShortName>
+							<Path>SFX/ESM_Ambient_Game_Score_Subtle_Orb_Grab_1_PickUp_Points_Bonus_Arcade_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2330720011" Name="Panic_Breath" ObjectPath="\Events\Default Work Unit\Panic_Breath" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="2330720011" Name="Panic_breath" ObjectPath="\Switches\Default Work Unit\Switch_breaths\Panic_breath"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="963023327" Name="Play_Ghost" ObjectPath="\Events\Default Work Unit\Play_Ghost" MaxAttenuation="12.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1064392395" Language="SFX">
+							<ShortName>GhostHover_SEU03.6.wav</ShortName>
+							<Path>SFX/GhostHover_SEU03.6_D5FC2659.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="802824098" Language="SFX">
+							<ShortName>Luig.wav</ShortName>
+							<Path>SFX/Luig_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1843531235" Name="PlayButton" ObjectPath="\Events\Default Work Unit\PlayButton" DurationType="OneShot" DurationMin="0.544573" DurationMax="0.544573">
+					<IncludedMemoryFiles>
+						<File Id="156096736" Language="SFX">
+							<ShortName>ESM_One_Shot_FX_Interface_Button_Clean_11_Short_Confirmed_Menu_Pressed_C#.wav</ShortName>
+							<Path>SFX/ESM_One_Shot_FX_Interface_Button_Clean_11_Short_Confirmed_Menu_Pressed_C#_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1380233920" Name="PlayOrbz" ObjectPath="\Events\Default Work Unit\PlayOrbz" MaxAttenuation="10.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="615677884" Language="SFX">
+							<ShortName>ESM_Alien_Game_Loop_Ambiance_29_Glitchy_SciFi_Soundscapes_Mothership_Machinery_Fm.wav</ShortName>
+							<Path>SFX/ESM_Alien_Game_Loop_Ambiance_29_Glitchy_SciFi_Soundscapes_Mothership_Machinery_Fm_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1037908173" Language="SFX">
+							<ShortName>LQDS1_02_Spooky_Strings_Dry_140_A#.wav</ShortName>
+							<Path>SFX/LQDS1_02_Spooky_Strings_Dry_140_A#_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2559930772" Name="QuitButton" ObjectPath="\Events\Default Work Unit\QuitButton" DurationType="OneShot" DurationMin="0.750594" DurationMax="0.750594">
+					<IncludedMemoryFiles>
+						<File Id="349225553" Language="SFX">
+							<ShortName>ESM_One_Shot_FX_Notification_UI_Various_24_Short_Alert_Menu_System_Cm.wav</ShortName>
+							<Path>SFX/ESM_One_Shot_FX_Notification_UI_Various_24_Short_Alert_Menu_System_Cm_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2745383121" Name="StartDialogue" ObjectPath="\Events\Default Work Unit\StartDialogue" DurationType="OneShot" DurationMin="1.249217" DurationMax="1.446815">
+					<IncludedMemoryFiles>
+						<File Id="531399270" Language="SFX">
+							<ShortName>FF_WP_foley_typing_computer_speedy.wav</ShortName>
+							<Path>SFX/FF_WP_foley_typing_computer_speedy_89D27E34.wem</Path>
+						</File>
+						<File Id="651017782" Language="SFX">
+							<ShortName>FF_WP_foley_typing_computer_speedy.wav</ShortName>
+							<Path>SFX/FF_WP_foley_typing_computer_speedy_A0D13369.wem</Path>
+						</File>
+						<File Id="927601896" Language="SFX">
+							<ShortName>FF_WP_foley_typing_computer_speedy.wav</ShortName>
+							<Path>SFX/FF_WP_foley_typing_computer_speedy_6A4936C1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3768462973" Name="Stop_Ghost" ObjectPath="\Events\Default Work Unit\Stop_Ghost" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2753192461" Name="StopHover" ObjectPath="\Events\Default Work Unit\StopHover" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2798721810" Name="Unlocked" ObjectPath="\Events\Default Work Unit\Unlocked" DurationType="OneShot" DurationMin="1.204022" DurationMax="3.628261">
+					<IncludedMemoryFiles>
+						<File Id="119723664" Language="SFX">
+							<ShortName>ting.wav</ShortName>
+							<Path>SFX/ting_0621BE1E.wem</Path>
+						</File>
+						<File Id="444278659" Language="SFX">
+							<ShortName>BRS_Door_File_Cabinet_Lrg_O-C_3.wav</ShortName>
+							<Path>SFX/BRS_Door_File_Cabinet_Lrg_O-C_3_94B07DC3.wem</Path>
+						</File>
+						<File Id="684018231" Language="SFX">
+							<ShortName>SafeDoorOpen_S011OF.56.wav</ShortName>
+							<Path>SFX/SafeDoorOpen_S011OF.56_10C4C929.wem</Path>
+						</File>
+						<File Id="719812763" Language="SFX">
+							<ShortName>DoorOpen_BW.61267.wav</ShortName>
+							<Path>SFX/DoorOpen_BW.61267_BB60F0E5.wem</Path>
+						</File>
+						<File Id="907775865" Language="SFX">
+							<ShortName>BRS_Door_Locker_PK2_O-C_Squeaky_5_Far.wav</ShortName>
+							<Path>SFX/BRS_Door_Locker_PK2_O-C_Squeaky_5_Far_BF01F591.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="1240670792" Name="Distance" ObjectPath="\Game Parameters\Default Work Unit\Distance"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="1601785938" Name="Death_breath" ObjectPath="\Switches\Default Work Unit\Switch_breaths\Death_breath" GUID="{6FED6B4B-21D1-4A4D-99DC-2F9A3D61342C}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="2330720011" Name="Panic_breath" ObjectPath="\Switches\Default Work Unit\Switch_breaths\Panic_breath" GUID="{5CCBB840-E81C-479C-A746-02D85A6C9723}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="4109157345" Name="Switch_breaths" ObjectPath="\Switches\Default Work Unit\Switch_breaths" GUID="{321A6EC7-60D0-471F-8094-CF57D0258C00}">
+					<Switches>
+						<Switch Id="4163868301" Name="Normal_breath" ObjectPath="\Switches\Default Work Unit\Switch_breaths\Normal_breath" GUID="{93A8780E-8B2B-4AB7-AB16-A93B82FAA461}"/>
+						<Switch Id="2330720011" Name="Panic_breath" ObjectPath="\Switches\Default Work Unit\Switch_breaths\Panic_breath" GUID="{5CCBB840-E81C-479C-A746-02D85A6C9723}"/>
+						<Switch Id="1601785938" Name="Death_breath" ObjectPath="\Switches\Default Work Unit\Switch_breaths\Death_breath" GUID="{6FED6B4B-21D1-4A4D-99DC-2F9A3D61342C}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="4163868301" Name="Normal_breath" ObjectPath="\Switches\Default Work Unit\Switch_breaths\Normal_breath" GUID="{93A8780E-8B2B-4AB7-AB16-A93B82FAA461}">
+					<Switches/>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2917215229">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="1883033791" Name="SIDECHAIN" ObjectPath="\Game Parameters\Default Work Unit\SIDECHAIN"/>
+			</GameParameters>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

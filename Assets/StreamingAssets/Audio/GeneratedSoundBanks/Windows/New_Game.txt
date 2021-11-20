@@ -1,0 +1,78 @@
+Event	ID	Name			Wwise Object Path	Notes
+	209341850	Backto_body			\Default Work Unit\Backto_body	
+	444190383	Lockoff			\Default Work Unit\Lockoff	
+	484286148	Closed_Door			\Default Work Unit\Closed_Door	
+	679636833	MenuMusic			\Default Work Unit\MenuMusic	
+	963023327	Play_Ghost			\Default Work Unit\Play_Ghost	
+	1265364722	Gnomes			\Default Work Unit\Gnomes	
+	1380233920	PlayOrbz			\Default Work Unit\PlayOrbz	
+	1504742439	LightSwitch			\Default Work Unit\LightSwitch	
+	1601785938	Death_Breath			\Default Work Unit\Death_Breath	
+	1843531235	PlayButton			\Default Work Unit\PlayButton	
+	1954644116	Move_Box			\Default Work Unit\Move_Box	
+	2330720011	Panic_Breath			\Default Work Unit\Panic_Breath	
+	2559930772	QuitButton			\Default Work Unit\QuitButton	
+	2745383121	StartDialogue			\Default Work Unit\StartDialogue	
+	2753192461	StopHover			\Default Work Unit\StopHover	
+	2798721810	Unlocked			\Default Work Unit\Unlocked	
+	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+	2934549620	Open_Door			\Default Work Unit\Open_Door	
+	3062278624	OrbPickup			\Default Work Unit\OrbPickup	
+	3193947170	Hurt			\Default Work Unit\Hurt	
+	3753593413	Hover			\Default Work Unit\Hover	
+	3768462973	Stop_Ghost			\Default Work Unit\Stop_Ghost	
+	4163868301	Normal_breath			\Default Work Unit\Normal_breath	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	4109157345	Switch_breaths			\Default Work Unit\Switch_breaths	
+
+Switch	ID	Name	Switch Group			Notes
+	1601785938	Death_breath	Switch_breaths			
+	2330720011	Panic_breath	Switch_breaths			
+	4163868301	Normal_breath	Switch_breaths			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1240670792	Distance			\Default Work Unit\Distance	
+
+Modulator Time	ID	Name			Wwise Object Path	Notes
+	406382545	60 seconds			\Default Work Unit\60 seconds	
+	519277149	60 seconds (Custom)				
+
+Effect plug-ins	ID	Name	Type				Notes
+	20595369	Ghostmetter (Custom)	Wwise Meter			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	2675739	BRS_Switch_Light_Sml_On-Off_Fst3	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\BRS_Switch_Light_Sml_On-Off_Fst3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door & Levers\Lever Pull\BRS_Switch_Light_Sml_On-Off_Fst3		116800
+	97153603	Activate LIght	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ESM_Mobile_Game_One_Shot_UI_Alien_Chatter_Box_2_23A88B45.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door & Levers\Activate LIght		110672
+	107238317	Gnomes	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\TribalRecording04_85_9D34227A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambients\Gnomes		498132
+	119723664	Unlocked	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ting_0621BE1E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door & Levers\Unlocked		108880
+	156096736	Play	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ESM_One_Shot_FX_Interface_Button_Clean_11_Short_Confirmed_Menu_Pressed_C#_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI Sounds\Play		104620
+	237221507	BRS_Door_Handle_Old_Squeaky_Mvs_5	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\BRS_Door_Handle_Old_Squeaky_Mvs_5_24526BD0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door & Levers\BRS_Door_Handle_Old_Squeaky_Mvs_5		132868
+	305594443	ESM_LFE_Heart_Beat_Loop_-_Medium_-_Fast_Bass_Medical_Horror_Scary_Suspense	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ESM_LFE_Heart_Beat_Loop_-_Medium_-_Fast_Bass_Medical_Horror_Scary_Suspense_85FD5D71.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spirit And Breath\ESM_LFE_Heart_Beat_Loop_-_Medium_-_Fast_Bass_Medical_Horror_Scary_Suspense		1058960
+	349225553	Quit	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ESM_One_Shot_FX_Notification_UI_Various_24_Short_Alert_Menu_System_Cm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI Sounds\Quit		144176
+	423914452	Pickup Orb	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ESM_Ambient_Game_Score_Subtle_Orb_Grab_1_PickUp_Points_Bonus_Arcade_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Orbz and Lamps\Pickup Orb		407256
+	444278659	BRS_Door_File_Cabinet_Lrg_O-C_3	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\BRS_Door_File_Cabinet_Lrg_O-C_3_94B07DC3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door & Levers\Open Door\1\BRS_Door_File_Cabinet_Lrg_O-C_3		43628
+	506195151	Hurt	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ESM_Wizard_Pain_Vocal_Hurt_Male_Voice_Old_Man_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hurt\hur\Hurt		135416
+	531399270	FF_WP_foley_typing_computer_speedy_01	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\FF_WP_foley_typing_computer_speedy_89D27E34.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Dialogue\FF_WP_foley_typing_computer_speedy_01		220424
+	557967590	Spirit world stinger	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\spirit world_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spirit And Breath\Spirit world stinger		397460
+	615677884	Or2	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ESM_Alien_Game_Loop_Ambiance_29_Glitchy_SciFi_Soundscapes_Mothership_Machinery_Fm_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Orbz and Lamps\Or2		14592144
+	645359806	SpiritWorld	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ESM_29_God_Shrine_minimal_Ambience_Nature_Game_Background_Atmosphere_World_Fantasy_Sci_fi_Ancient_Loopwav_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spirit And Breath\SpiritWorld		12040572
+	651017782	FF_WP_foley_typing_computer_speedy	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\FF_WP_foley_typing_computer_speedy_A0D13369.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Dialogue\FF_WP_foley_typing_computer_speedy		255284
+	653429322	Menu	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\HTF_Arp_85_Spooky_Music_Em_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Menu Ui\Menu\Menu		1992348
+	684018231	SafeDoorOpen_S011OF_56	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\SafeDoorOpen_S011OF.56_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door & Levers\Open Door\1_02\SafeDoorOpen_S011OF_56		325696
+	719812763	DoorOpen_BW_61267	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\DoorOpen_BW.61267_BB60F0E5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door & Levers\Open Door\1_01\DoorOpen_BW_61267		176836
+	727507486	hurt2	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ESM_High_Elf_Vocal_Pain_Vocal_Hurt_Male_Voice_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hurt\hur\hurt2		155996
+	738651849	BRS_Foley_Box_Hit_Xmas_Present_Moves_1	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\BRS_Foley_Box_Hit_Xmas_Present_Moves_1_383E5C30.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door & Levers\Boxes\BRS_Foley_Box_Hit_Xmas_Present_Moves_1		52218
+	796941866	Death Breath	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\HumanBreathDying_S08HO.136_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spirit And Breath\Breath\Death Breath		321600
+	802824098	Luig	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\Luig_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MUSI\Songt\Luig		5421244
+	855580713	Move	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ESM_One_Shot_Vocal_Wraith_Monster_Aura_Spirit_Fairy_Ghost_Creature_FCB8F089.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Move		619336
+	907775865	BRS_Door_Locker_PK2_O-C_Squeaky_5_Far	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\BRS_Door_Locker_PK2_O-C_Squeaky_5_Far_BF01F591.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door & Levers\Open Door\1\BRS_Door_Locker_PK2_O-C_Squeaky_5_Far		604808
+	927601896	FF_WP_foley_typing_computer_speedy_02	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\FF_WP_foley_typing_computer_speedy_6A4936C1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Dialogue\FF_WP_foley_typing_computer_speedy_02		224564
+	981438223	Body breath Stinger	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\ESM_Vocal_Breath_Human_AI_Breathing_1_Male_Computer_Voice_Inhale_Exhale_85938176.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spirit And Breath\Body breath Stinger		476244
+	985313020	HT_01_FX_Clock	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\HT_01_FX_Clock_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spirit And Breath\HT_01_FX_Clock		564656
+	991719472	Panic breath	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\GasMaskBreathePanic_ZA01.31_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spirit And Breath\Breath\Panic breath		2114624
+	1037908173	Orb	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\LQDS1_02_Spooky_Strings_Dry_140_A#_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Orbz and Lamps\Orb		2419268
+	1056662003	Normal breathe	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\GasMaskBreathe_ZA01.315_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spirit And Breath\Breath\Normal breathe		5492800
+	1064392395	Ghost loop	Y:\Documents\WwiseProjects\Dead Tired\.cache\Windows\SFX\GhostHover_SEU03.6_D5FC2659.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghost Sounds\Ghost loop		1115396
+
