@@ -101,7 +101,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 1cb27a857f6e2d4da662cda6a0480074
     GuidInternal: 
-    m_lastTime: -8585642628054775808
+    m_lastTime: -8585641800644775808
     List:
     - name: New_Game
       guid: 318a9d2ddc196847b6448532e5e3f938
@@ -129,7 +129,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 12dc4efafa13e646abb1ec0e0128b47e
     GuidInternal: 
-    m_lastTime: -8585642628054775808
+    m_lastTime: -8585641800644775808
     List:
     - name: Backto_body
       guid: 5b2cd08616a5cc40b01a05cbeac8b19e
@@ -199,6 +199,23 @@ MonoBehaviour:
       maxAttenuation: 8
       maxDuration: 2.823515
       minDuration: 2.823515
+    - name: Hover
+      guid: fe9213526b620f4a926f082a11f01775
+      id: 3753593413
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: Hover
+        ObjectType: 3
+        guid: fe9213526b620f4a926f082a11f01775
+      Path: Events/Default Work Unit/Hover
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Hurt
       guid: 5ef3749df38b204cb23f568945dc3884
       id: 3193947170
@@ -437,6 +454,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.750594
       minDuration: 0.750594
+    - name: StartDialogue
+      guid: a7b694ab395ec249a3118219b14accca
+      id: 2745383121
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: StartDialogue
+        ObjectType: 3
+        guid: a7b694ab395ec249a3118219b14accca
+      Path: Events/Default Work Unit/StartDialogue
+      maxAttenuation: 0
+      maxDuration: 2.310884
+      minDuration: 2.310884
     - name: Stop_Ghost
       guid: edc4c7277779764badd45647fe459224
       id: 3768462973
@@ -468,6 +502,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 958ba132e8db264b88aacae6756a2a7d
       Path: Events/Default Work Unit/Stop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: StopHover
+      guid: 90800b08f3b2d64991a915d78f1ec82b
+      id: 2753192461
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 12dc4efafa13e646abb1ec0e0128b47e
+      - ElementName: StopHover
+        ObjectType: 3
+        guid: 90800b08f3b2d64991a915d78f1ec82b
+      Path: Events/Default Work Unit/StopHover
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -639,7 +690,7 @@ MonoBehaviour:
     m_lastTime: -8585646049534775808
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000020000000300000005000000060000001c0000001d0000001e0000001f000000200000002100000022000000240000002600000027000000
+  ExpandedWaapiItemIds: 0100000002000000030000000500000006000000070000001c0000001d0000001e0000001f000000200000002100000022000000240000002600000027000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

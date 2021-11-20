@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID CLOSED_DOOR = 484286148U;
         static const AkUniqueID DEATH_BREATH = 1601785938U;
         static const AkUniqueID GNOMES = 1265364722U;
+        static const AkUniqueID HOVER = 3753593413U;
         static const AkUniqueID HURT = 3193947170U;
         static const AkUniqueID LIGHTSWITCH = 1504742439U;
         static const AkUniqueID LOCKOFF = 444190383U;
@@ -31,8 +32,10 @@ namespace AK
         static const AkUniqueID PLAYBUTTON = 1843531235U;
         static const AkUniqueID PLAYORBZ = 1380233920U;
         static const AkUniqueID QUITBUTTON = 2559930772U;
+        static const AkUniqueID STARTDIALOGUE = 2745383121U;
         static const AkUniqueID STOP_GHOST = 3768462973U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
+        static const AkUniqueID STOPHOVER = 2753192461U;
         static const AkUniqueID UNLOCKED = 2798721810U;
     } // namespace EVENTS
 

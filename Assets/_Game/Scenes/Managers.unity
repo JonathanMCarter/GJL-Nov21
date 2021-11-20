@@ -327,7 +327,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &948747142
 GameObject:
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadOnAwake: 1
-  scenesToLoad: {fileID: 11400000, guid: dee692e7219cb3e45980adfe3862592c, type: 2}
+  scenesToLoad: {fileID: 11400000, guid: ada534fce5a0fe14ca8286f35d1f6fe6, type: 2}
   BeforeScenesLoaded:
     m_PersistentCalls:
       m_Calls: []
@@ -526,5 +526,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

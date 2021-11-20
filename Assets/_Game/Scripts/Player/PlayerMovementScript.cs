@@ -38,14 +38,20 @@ namespace DeadTired
         void Update()
         {
             if (Input.GetAxisRaw("Horizontal") > .1f || Input.GetAxisRaw("Vertical") > .1f || Input.GetAxisRaw("Horizontal") < -.1f|| Input.GetAxisRaw("Vertical") < -.1f)
-                Move();
+            
+            Move();
+                  
+            
+                
         }
         
         
 
         //maybe move this somewhere else for cleanliness???
         void Move()
-        {                            
+        {   
+            
+                                  
             nextPosition = playerObject.position;
 
             facing.SetValue(new Vector3(Input.GetAxis("Horizontal"), 0 , Input.GetAxis("Vertical")));
