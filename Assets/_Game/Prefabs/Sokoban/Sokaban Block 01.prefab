@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3970639366561462099}
   - component: {fileID: 4947280724324894907}
   - component: {fileID: 6407901571960627614}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4818,7 +4818,7 @@ GameObject:
   - component: {fileID: 5041395381051217400}
   - component: {fileID: 5041395381051217403}
   - component: {fileID: 5041395381051217380}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sokaban Block 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4920,6 +4920,7 @@ MonoBehaviour:
     constantValue: 0
     variable: {fileID: 11400000, guid: b22d3f446a99ffb4799dd2ffe0192dd1, type: 2}
   shouldPlayerBeGhost: 0
+  sceneID: 
   playerDirection:
     useConstant: 0
     constantValue: {x: 0, y: 0, z: 0}
@@ -4951,7 +4952,7 @@ GameObject:
   - component: {fileID: 5121386484149202699}
   - component: {fileID: 5121386484149202696}
   - component: {fileID: 5121386484149202695}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canvas (World) - UI Prompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5058,7 +5059,7 @@ GameObject:
   - component: {fileID: 5121386485221475187}
   - component: {fileID: 5121386485221475189}
   - component: {fileID: 5121386485221475186}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Prompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}

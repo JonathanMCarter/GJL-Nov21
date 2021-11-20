@@ -21,5 +21,4 @@ MonoBehaviour:
   - Level1-Props
   - Level1-Enemies
   - PauseGame
-  - Death
   - GhostLighting

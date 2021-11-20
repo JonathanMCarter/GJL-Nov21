@@ -1,7 +1,4 @@
-using System;
-using DeadTired.Death;
 using DeadTired.Scenes;
-using MultiScene.Core;
 using MultiScene.Extensions.DoNotDestroy;
 using UnityEngine;
 
