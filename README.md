@@ -4,9 +4,13 @@ Unity Version: 2020.3.21f1 LTS
 
 ### Team & Roles
 Jonathan Carter	- Programmer (Scene Management & Levels)
+<br>
 Alex Statham -	Programmer (Player & Enemies)	
+<br>
 Carson Bentley - 3D Artist	
+<br>
 Edward Amosh	- 3D Artist	
+<br>
 Dillan Hoyos	 -Sound Design
 
 ### Packages In Use
