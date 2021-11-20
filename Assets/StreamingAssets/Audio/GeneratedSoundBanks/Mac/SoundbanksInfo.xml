@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="477670102" Language="SFX" Hash="3800522616">
+		<SoundBank Id="477670102" Language="SFX" Hash="1088286785">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_Game</ObjectPath>
 			<ShortName>New_Game</ShortName>
 			<Path>New_Game.bnk</Path>
@@ -241,7 +241,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2745383121" Name="StartDialogue" ObjectPath="\Events\Default Work Unit\StartDialogue" DurationType="OneShot" DurationMin="1.249217" DurationMax="1.664507">
+				<Event Id="2745383121" Name="StartDialogue" ObjectPath="\Events\Default Work Unit\StartDialogue" DurationType="OneShot" DurationMin="1.249217" DurationMax="1.446815">
 					<IncludedMemoryFiles>
 						<File Id="531399270" Language="SFX">
 							<ShortName>FF_WP_foley_typing_computer_speedy.wav</ShortName>
@@ -249,11 +249,11 @@
 						</File>
 						<File Id="651017782" Language="SFX">
 							<ShortName>FF_WP_foley_typing_computer_speedy.wav</ShortName>
-							<Path>SFX/FF_WP_foley_typing_computer_speedy_5E0AFFE5.wem</Path>
+							<Path>SFX/FF_WP_foley_typing_computer_speedy_A0D13369.wem</Path>
 						</File>
 						<File Id="927601896" Language="SFX">
 							<ShortName>FF_WP_foley_typing_computer_speedy.wav</ShortName>
-							<Path>SFX/FF_WP_foley_typing_computer_speedy_FAE58E5A.wem</Path>
+							<Path>SFX/FF_WP_foley_typing_computer_speedy_6A4936C1.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -469,7 +469,7 @@ MonoBehaviour:
         guid: a7b694ab395ec249a3118219b14accca
       Path: Events/Default Work Unit/StartDialogue
       maxAttenuation: 0
-      maxDuration: 1.664507
+      maxDuration: 1.446815
       minDuration: 1.249217
     - name: Stop_Ghost
       guid: edc4c7277779764badd45647fe459224
