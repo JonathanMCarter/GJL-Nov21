@@ -8,7 +8,7 @@
   <CreateWwiseListener>false</CreateWwiseListener>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
-  <WwiseInstallationPathMac>/Volumes/Dillan hoyos/UNITY/Wwise/Wwise.app</WwiseInstallationPathMac>
+  <WwiseInstallationPathMac>/Applications/Wwise.app</WwiseInstallationPathMac>
   <WwiseInstallationPathWindows />
   <WwiseProjectPath>../../../../../../Users/dillannhoyos/Documents/WwiseProjects/Dead Tired/Dead Tired.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>

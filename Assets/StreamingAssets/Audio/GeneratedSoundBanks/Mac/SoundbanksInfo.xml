@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="477670102" Language="SFX" Hash="3060651480">
+		<SoundBank Id="477670102" Language="SFX" Hash="1088286785">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_Game</ObjectPath>
 			<ShortName>New_Game</ShortName>
 			<Path>New_Game.bnk</Path>
@@ -73,7 +73,15 @@
 					<IncludedMemoryFiles>
 						<File Id="107238317" Language="SFX">
 							<ShortName>TribalRecording04_85.wav</ShortName>
-							<Path>SFX/TribalRecording04_85_24196668.wem</Path>
+							<Path>SFX/TribalRecording04_85_9D34227A.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3753593413" Name="Hover" ObjectPath="\Events\Default Work Unit\Hover" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="855580713" Language="SFX">
+							<ShortName>ESM_One_Shot_Vocal_Wraith_Monster_Aura_Spirit_Fairy_Ghost_Creature.wav</ShortName>
+							<Path>SFX/ESM_One_Shot_Vocal_Wraith_Monster_Aura_Spirit_Fairy_Ghost_Creature_FCB8F089.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -93,7 +101,7 @@
 					<IncludedMemoryFiles>
 						<File Id="97153603" Language="SFX">
 							<ShortName>ESM_Mobile_Game_One_Shot_UI_Alien_Chatter_Box_2.wav</ShortName>
-							<Path>SFX/ESM_Mobile_Game_One_Shot_UI_Alien_Chatter_Box_2_E69856A9.wem</Path>
+							<Path>SFX/ESM_Mobile_Game_One_Shot_UI_Alien_Chatter_Box_2_23A88B45.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -233,8 +241,25 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2745383121" Name="StartDialogue" ObjectPath="\Events\Default Work Unit\StartDialogue" DurationType="OneShot" DurationMin="1.249217" DurationMax="1.446815">
+					<IncludedMemoryFiles>
+						<File Id="531399270" Language="SFX">
+							<ShortName>FF_WP_foley_typing_computer_speedy.wav</ShortName>
+							<Path>SFX/FF_WP_foley_typing_computer_speedy_89D27E34.wem</Path>
+						</File>
+						<File Id="651017782" Language="SFX">
+							<ShortName>FF_WP_foley_typing_computer_speedy.wav</ShortName>
+							<Path>SFX/FF_WP_foley_typing_computer_speedy_A0D13369.wem</Path>
+						</File>
+						<File Id="927601896" Language="SFX">
+							<ShortName>FF_WP_foley_typing_computer_speedy.wav</ShortName>
+							<Path>SFX/FF_WP_foley_typing_computer_speedy_6A4936C1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3768462973" Name="Stop_Ghost" ObjectPath="\Events\Default Work Unit\Stop_Ghost" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2753192461" Name="StopHover" ObjectPath="\Events\Default Work Unit\StopHover" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2798721810" Name="Unlocked" ObjectPath="\Events\Default Work Unit\Unlocked" DurationType="OneShot" DurationMin="1.204022" DurationMax="3.628261">
 					<IncludedMemoryFiles>
 						<File Id="119723664" Language="SFX">

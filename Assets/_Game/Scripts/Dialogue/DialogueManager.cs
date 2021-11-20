@@ -41,13 +41,21 @@ namespace DeadTired.Dialogue
 
         private void Update()
         {
-            if (Input.GetButtonDown("Fire1"))
-                ShowNextDialogue();
+            if (Input.GetButtonDown("Fire1")){
+                
+                 ShowNextDialogue();
+            }
+            
+            
+                
+                
         }
 
 
         private void ShowNextDialogue()
         {
+            
+           
             if (!canContinue) return; 
             
             if (HasFinishedFile)
@@ -58,12 +66,15 @@ namespace DeadTired.Dialogue
 
             if (dialCo == null)
             {
+                
                 dialCo = StartCoroutine(DialTextCo());
                 StartCoroutine(InputDelay());
                 dialPosition++;
             }
             else
             {
+                
+               
                 StopCoroutine(dialCo);
                 dialCo = null;
                 display.UpdateText(dialogue.collection[dialPosition - 1]);
@@ -82,6 +93,7 @@ namespace DeadTired.Dialogue
 
         private IEnumerator DialTextCo()
         {
+            AkSoundEngine.PostEvent("StartDialogue", gameObject);
             var _pos = 0;
             var _charArray = dialogue.collection[dialPosition];
 

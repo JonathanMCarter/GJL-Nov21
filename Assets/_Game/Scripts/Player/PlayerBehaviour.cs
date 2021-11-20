@@ -48,6 +48,7 @@ namespace DeadTired
 
 
         [SerializeField] private GameObject anchorPrefab;
+        [SerializeField] private GameObject ghostObject;
         private GameObject cachedAnchor;
         private Vector3 cachedAnchorPosition;
         private bool hasCachedTransform;
@@ -78,6 +79,8 @@ namespace DeadTired
             
             //have it set in the physics settings so items on the player ghost layer cant interact with the anchor
             playerObject.layer = PlayerBodyLayer;
+            
+            ghostObject.SetActive(false);
         }
 
 
@@ -150,6 +153,8 @@ namespace DeadTired
                 cachedAnchor.SetActive(true);
                 hasCachedTransform = false;
             }
+
+            ghostObject.SetActive(true);
             
             // some fancy particles so it looks nice
             switchParticle.emitParticle(PlayerAnchorPosition);
@@ -204,6 +209,7 @@ namespace DeadTired
             
             volumeManager.setBodyVolume();
             spiritLineBehaviour.deactiveSpiritLine();
+            ghostObject.SetActive(false);
 
             // destroy the anchor we placed
             cachedAnchor.SetActive(false);
@@ -217,19 +223,8 @@ namespace DeadTired
         // call this from other scripts!!
         public void PlayerHit()
         {
-            if (currentState == PlayerState.Body)
-            {
-                //deaded
-                OnPlayerKilled?.Invoke();
-            }
-            else
-            {
-                //BACK TO NORMAL
-                ReturnPlayerToBody();
-            
-                //then deaded
-                OnPlayerKilled?.Invoke();
-            }
+            if (currentState != PlayerState.Ghost) return;
+            OnPlayerKilled?.Invoke();
         }
 
 
