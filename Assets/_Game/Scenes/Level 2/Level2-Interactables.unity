@@ -189,37 +189,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 412071503229840840, guid: 878cf284b70863e43ae6d38fba8141b7, type: 3}
   m_PrefabInstance: {fileID: 360483495}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &619123198
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 619123199}
-  m_Layer: 0
-  m_Name: Sokoban Room 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &619123199
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619123198}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.509995, y: 2.5441804, z: -5.619371}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1889797185}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &676513852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -381,7 +350,7 @@ Transform:
   m_Children:
   - {fileID: 360483496}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1079069419
 GameObject:
@@ -503,7 +472,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1126443843
 GameObject:
@@ -534,7 +503,7 @@ Transform:
   m_Children:
   - {fileID: 1452690497}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211198321
 GameObject:
@@ -565,7 +534,7 @@ Transform:
   m_Children:
   - {fileID: 866753941}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316201829
 GameObject:
@@ -596,7 +565,7 @@ Transform:
   m_Children:
   - {fileID: 1510730656}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1452690493
 PrefabInstance:
@@ -766,7 +735,7 @@ Transform:
   m_Children:
   - {fileID: 676513853}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1510730655
 PrefabInstance:
@@ -833,143 +802,4 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 412071503229840840, guid: 878cf284b70863e43ae6d38fba8141b7, type: 3}
   m_PrefabInstance: {fileID: 1510730655}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1889797181
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 619123199}
-    m_Modifications:
-    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569313, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_Name
-      value: Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569313, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1889797183}
-    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPlayerInteract
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DeadTired.Interactables.LockedDoor, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-      propertyPath: OnDoorUnlocked.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
---- !u!1 &1889797182 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5330242620108569313, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-  m_PrefabInstance: {fileID: 1889797181}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1889797183 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5330242620108569314, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-  m_PrefabInstance: {fileID: 1889797181}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889797182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 710aab6b2e424862a2d0c3ab69e33e17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1889797184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889797182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb8b86a47aa4a54a75c0f885e2064ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: Sokoban1
-  sokobanManager: {fileID: 0}
-  OnPuzzleFinished:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1889797183}
-        m_TargetAssemblyTypeName: DeadTired.Interactables.LockedDoor, Assembly-CSharp
-        m_MethodName: UnlockDoor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!4 &1889797185 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5330242620108569312, guid: d825fd613a2a2f54ead7689a8ed0a8d6, type: 3}
-  m_PrefabInstance: {fileID: 1889797181}
   m_PrefabAsset: {fileID: 0}

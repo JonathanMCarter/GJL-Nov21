@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DeadTired.Scenes
 {
-    public class LevelEndZone : MonoBehaviour
+    public class LevelEndZone : MonoBehaviour, IMultiSceneAwake
     {
         private SceneGroupChangeWithFade sceneGroupChangeWithFade;
         private PlayerBehaviour player;
@@ -11,8 +11,14 @@ namespace DeadTired.Scenes
         private void Awake()
         {
             sceneGroupChangeWithFade = GetComponent<SceneGroupChangeWithFade>();
+        }
+
+
+        public void OnMultiSceneAwake()
+        {
             player = SceneElly.GetComponentFromAllScenes<PlayerBehaviour>();
         }
+        
 
         private void OnTriggerEnter(Collider other)
         {
