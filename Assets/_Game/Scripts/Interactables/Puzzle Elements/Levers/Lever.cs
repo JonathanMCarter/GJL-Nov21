@@ -5,9 +5,20 @@ namespace DeadTired.Interactables
 {
     public class Lever : BaseInteraction, IInteractable
     {
+        private static readonly int UseLever = Animator.StringToHash("UseLever");
+        
+        private Animator anim;
         public UnityEvent OnLeverPulled;
         protected bool leverPulled;
         protected bool oneShot;
+    
+
+
+        protected override void Awake()
+        {
+            base.Awake();
+            anim = GetComponentInChildren<Animator>();
+        }
 
 
         public virtual void OnPlayerInteract()
@@ -16,6 +27,7 @@ namespace DeadTired.Interactables
             if (!IsPlayerInZone || !IsPlayerInCorrectState) return;
             OnLeverPulled?.Invoke();
             leverPulled = true;
+            anim.SetTrigger(UseLever);
             ConfigureUI(false);
         }
 
