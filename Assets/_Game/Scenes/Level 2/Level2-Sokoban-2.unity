@@ -174,8 +174,8 @@ Transform:
   - {fileID: 1489244135}
   - {fileID: 1821253147}
   - {fileID: 1495495422}
-  - {fileID: 1059700583}
   - {fileID: 1560579556}
+  - {fileID: 1059700583}
   - {fileID: 1435308264}
   - {fileID: 1327921452}
   - {fileID: 820218689}
@@ -183,8 +183,8 @@ Transform:
   - {fileID: 1096325403}
   - {fileID: 474833606}
   - {fileID: 543769244}
-  - {fileID: 712902812}
   - {fileID: 1773688393}
+  - {fileID: 712902812}
   - {fileID: 1433480231}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -416,9 +417,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 40152525}
     m_Modifications:
+    - target: {fileID: 6430238952214629404, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
+      propertyPath: sceneID
+      value: Level2-Sokoban-2
+      objectReference: {fileID: 0}
     - target: {fileID: 6430238952214629407, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 6430238952214629407, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -512,6 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -786,6 +792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -1101,6 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -1215,6 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -1374,6 +1383,10 @@ PrefabInstance:
       propertyPath: blockID
       value: Block_02
       objectReference: {fileID: 0}
+    - target: {fileID: 5041395381051217403, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
+      propertyPath: sceneID
+      value: Level2-Sokoban-2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f67645fb3c8a7f4595db23c3f6344be, type: 3}
 --- !u!4 &567553160 stripped
@@ -1428,6 +1441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -1542,6 +1556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -1657,6 +1672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -1771,6 +1787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -1876,7 +1893,7 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 40152525}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &712902813
 MonoBehaviour:
@@ -1890,6 +1907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -1965,6 +1983,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 40152525}
     m_Modifications:
+    - target: {fileID: 6430238952214629404, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
+      propertyPath: sceneID
+      value: Level2-Sokoban-2
+      objectReference: {fileID: 0}
     - target: {fileID: 6430238952214629407, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -2076,6 +2098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -2190,6 +2213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -2464,6 +2488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -2578,6 +2603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -2693,6 +2719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -2841,6 +2868,10 @@ PrefabInstance:
       propertyPath: blockID
       value: Spirit_Ghost_03
       objectReference: {fileID: 0}
+    - target: {fileID: 3115187304851239816, guid: 34bbcc96bb3d9ec4f9b8cbf5a9f2735b, type: 3}
+      propertyPath: sceneID
+      value: Level2-Sokoban-2
+      objectReference: {fileID: 0}
     - target: {fileID: 7984315041148269475, guid: 34bbcc96bb3d9ec4f9b8cbf5a9f2735b, type: 3}
       propertyPath: m_Name
       value: Sokaban Spirit Block
@@ -2928,7 +2959,7 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 40152525}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1059700584
 MonoBehaviour:
@@ -2942,6 +2973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -3027,6 +3059,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 40152525}
     m_Modifications:
+    - target: {fileID: 6430238952214629404, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
+      propertyPath: sceneID
+      value: Level2-Sokoban-2
+      objectReference: {fileID: 0}
     - target: {fileID: 6430238952214629407, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -3189,6 +3225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -3303,6 +3340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -3426,6 +3464,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sokaban End Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 6697963747189513900, guid: b3c876dffa2a9b441b0dd7c83909b8ed, type: 3}
+      propertyPath: sceneID
+      value: Level2-Sokoban-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697963747189513900, guid: b3c876dffa2a9b441b0dd7c83909b8ed, type: 3}
+      propertyPath: blockIDWanted
+      value: Block_02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3c876dffa2a9b441b0dd7c83909b8ed, type: 3}
 --- !u!1001 &1374481890
@@ -3438,6 +3484,10 @@ PrefabInstance:
     - target: {fileID: 3115187304851239816, guid: 34bbcc96bb3d9ec4f9b8cbf5a9f2735b, type: 3}
       propertyPath: blockID
       value: Spirit_Ghost_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115187304851239816, guid: 34bbcc96bb3d9ec4f9b8cbf5a9f2735b, type: 3}
+      propertyPath: sceneID
+      value: Level2-Sokoban-2
       objectReference: {fileID: 0}
     - target: {fileID: 7984315041148269475, guid: 34bbcc96bb3d9ec4f9b8cbf5a9f2735b, type: 3}
       propertyPath: m_Name
@@ -3540,6 +3590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -3655,6 +3706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -3769,6 +3821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -3884,6 +3937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -3959,6 +4013,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 40152525}
     m_Modifications:
+    - target: {fileID: 6430238952214629404, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
+      propertyPath: sceneID
+      value: Level2-Sokoban-2
+      objectReference: {fileID: 0}
     - target: {fileID: 6430238952214629407, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -4056,6 +4114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -4171,6 +4230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -4316,6 +4376,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 40152525}
     m_Modifications:
+    - target: {fileID: 6430238952214629404, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
+      propertyPath: sceneID
+      value: Level2-Sokoban-2
+      objectReference: {fileID: 0}
     - target: {fileID: 6430238952214629407, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -4568,6 +4632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -4747,6 +4812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -4866,6 +4932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -4941,9 +5008,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 40152525}
     m_Modifications:
+    - target: {fileID: 6430238952214629404, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
+      propertyPath: sceneID
+      value: Level2-Sokoban-2
+      objectReference: {fileID: 0}
     - target: {fileID: 6430238952214629407, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 6430238952214629407, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5042,6 +5113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}
@@ -5157,6 +5229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e54e28503444ba8df4a234c5bd919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: Level2-Sokoban-2
   neighbours: []
   directionalData:
     posX: {fileID: 0}

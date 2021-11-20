@@ -11,6 +11,7 @@ namespace DeadTired.Sokoban
 {
     public class SokobanBlock : BaseInteraction, IInteractable
     {
+        [SerializeField] private string sceneID;
         [SerializeField] private Vector3Reference playerDirection;
         [SerializeField] private string blockID;
 
@@ -23,7 +24,7 @@ namespace DeadTired.Sokoban
         protected override void Awake()
         {
             base.Awake();
-            sokobanManager = SceneElly.GetComponentFromScene<SokobanManager>("Level2-Sokoban-1");
+            sokobanManager = SceneElly.GetComponentFromScene<SokobanManager>(sceneID);
             triggerVolume = GetComponentsInChildren<BoxCollider>().FirstOrDefault(t => t.isTrigger);
         }
 
