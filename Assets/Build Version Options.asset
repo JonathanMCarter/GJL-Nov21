@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df096f8ca6f24682bc18e5260b3655c2, type: 3}
   m_Name: Build Version Options
   m_EditorClassIdentifier: 
-  assetActive: 1
+  assetActive: 0
   buildUpdateTime: 1
   updateSystematic: 1
   androidUpdateBundleCode: 0

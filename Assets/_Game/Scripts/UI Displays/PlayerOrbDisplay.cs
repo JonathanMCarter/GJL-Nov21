@@ -47,7 +47,7 @@ namespace DeadTired.UI
 
         private void UpdateTextDisplay()
         {
-            displayText.text = MoneyFormat.Format(playerOrbCount);
+            displayText.text = playerOrbCount.variable.Value.ToString();
 
             if (!shouldFade) return;
             if (visualCo != null)
