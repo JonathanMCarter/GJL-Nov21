@@ -25,6 +25,7 @@ namespace DeadTired.Scenes
             if (!other.CompareTag("Player")) return;
             if (player.currentState.Equals(PlayerState.Ghost)) return;
             sceneGroupChangeWithFade.LoadSceneGroup();
+            gameObject.SetActive(false);
         }
     }
 }
