@@ -1,11 +1,17 @@
 ﻿using System.Collections.Generic;
+using MultiScene.Core;
 using UnityEngine;
 
 namespace DeadTired.Interactables
 {
-    public class InteractionsManager : MonoBehaviour
+    public class InteractionsManager : MonoBehaviour, IMultiSceneAwake
     {
         private List<IInteractable> validInteractions;
+
+        public void OnMultiSceneAwake()
+        {
+            validInteractions = new List<IInteractable>();
+        }
 
         private void Awake()
         {

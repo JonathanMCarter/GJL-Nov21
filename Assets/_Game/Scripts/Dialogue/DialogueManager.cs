@@ -41,26 +41,21 @@ namespace DeadTired.Dialogue
 
         private void Update()
         {
-            if (Input.GetButtonDown("Fire1")){
-                
-                 ShowNextDialogue();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                ShowNextDialogue();
             }
-            
-            
-                
-                
         }
 
 
         private void ShowNextDialogue()
         {
-            
-           
             if (!canContinue) return; 
             
             if (HasFinishedFile)
             {
                 fade.LoadSceneGroup();
+                gameObject.SetActive(false);
                 return;
             }
 

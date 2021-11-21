@@ -40,9 +40,9 @@ namespace DeadTired.Interactables
             light = GetComponentInChildren<Light>();
 
             if (orbInLamp)
-                TurnLightOn();
+                TurnLightOn(true);
             else
-                TurnLightOff();
+                TurnLightOff(true);
         }
 
 
@@ -68,11 +68,16 @@ namespace DeadTired.Interactables
         }
 
 
-        protected virtual void TurnLightOn()
+        protected virtual void TurnLightOn(bool awake = false)
         {
             if (playerOrbCount.Value <= 0) return;
-            playerOrbCount.variable.IncrementValue(-1);
-            PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
+            
+            if (!awake)
+            {
+                playerOrbCount.variable.IncrementValue(-1);
+                PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
+            }
+            
             orbInLamp = true;
 
             if (light != null)
@@ -85,10 +90,14 @@ namespace DeadTired.Interactables
         }
 
 
-        protected virtual void TurnLightOff()
+        protected virtual void TurnLightOff(bool awake = false)
         {
-            playerOrbCount.variable.IncrementValue(1);
-            PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
+            if (!awake)
+            {
+                playerOrbCount.variable.IncrementValue(1);
+                PlayerOrbDisplay.OnOrbCountChanged?.Invoke();
+            }
+            
             orbInLamp = false;
 
             if (light != null)

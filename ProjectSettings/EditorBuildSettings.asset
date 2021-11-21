@@ -66,9 +66,6 @@ EditorBuildSettings:
     path: Assets/_Game/Scenes/Menu/QuitConfirm.unity
     guid: d77a435312dbbc84e975d39e50238f7c
   - enabled: 1
-    path: Assets/_Game/Scenes/Menu/Death.unity
-    guid: dc594b8c4ef47584e81ff2e929b5be64
-  - enabled: 1
     path: Assets/_Game/Scenes/Menu/Win.unity
     guid: 1f12c0d9ae1fb1c4ea716cea228c9570
   - enabled: 1
