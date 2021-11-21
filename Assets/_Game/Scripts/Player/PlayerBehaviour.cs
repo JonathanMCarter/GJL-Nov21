@@ -224,7 +224,7 @@ namespace DeadTired
         public void PlayerHit()
         {
             if (currentState != PlayerState.Ghost) return;
-            OnPlayerKilled?.Invoke();
+            ReturnPlayerToBody();
         }
 
 
