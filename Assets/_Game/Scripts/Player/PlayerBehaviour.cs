@@ -49,6 +49,7 @@ namespace DeadTired
 
         [SerializeField] private GameObject anchorPrefab;
         [SerializeField] private GameObject ghostObject;
+        [SerializeField] private GameObject bodyObject;
         private GameObject cachedAnchor;
         private Vector3 cachedAnchorPosition;
         private bool hasCachedTransform;
@@ -79,8 +80,8 @@ namespace DeadTired
             
             //have it set in the physics settings so items on the player ghost layer cant interact with the anchor
             playerObject.layer = PlayerBodyLayer;
-            
-            ghostObject.SetActive(false);
+
+            MakeGhostModelVisible(false);
         }
 
 
@@ -109,8 +110,8 @@ namespace DeadTired
                 else
                     ReturnPlayerToBody();
                 
-                isPlayerGhost.SetValue(currentState.Equals(PlayerState.Ghost));
-                OnPlayerStateChanged?.Invoke(isPlayerGhost.Value);
+                //isPlayerGhost.SetValue(currentState.Equals(PlayerState.Ghost));
+                //OnPlayerStateChanged?.Invoke(isPlayerGhost.Value);
             }
             
             if (Input.GetButtonDown(PlayerInteractInput))
@@ -154,7 +155,7 @@ namespace DeadTired
                 hasCachedTransform = false;
             }
 
-            ghostObject.SetActive(true);
+            MakeGhostModelVisible();
             
             // some fancy particles so it looks nice
             switchParticle.emitParticle(PlayerAnchorPosition);
@@ -171,6 +172,9 @@ namespace DeadTired
                 StopCoroutine(returnAfterTimerCo);
 
             returnAfterTimerCo = StartCoroutine(PlayerReturnCountDownCo());
+
+            isPlayerGhost.SetValue(currentState.Equals(PlayerState.Ghost));
+            OnPlayerStateChanged?.Invoke(isPlayerGhost.Value);
         }
 
         
@@ -192,9 +196,16 @@ namespace DeadTired
 
             //hide and deactivate the enemies about the place
             enemyParentBehaviour.DisableEnemies();
+
+            isPlayerGhost.SetValue(currentState.Equals(PlayerState.Ghost));
+            OnPlayerStateChanged?.Invoke(isPlayerGhost.Value);
         }
 
-        
+        private void MakeGhostModelVisible(bool makeVisible = true) {
+            ghostObject.SetActive(makeVisible);
+            bodyObject.SetActive(!makeVisible);
+        }
+
         private void MovePlayer()
         {
             // Distance moved equals elapsed time times speed..
@@ -209,7 +220,7 @@ namespace DeadTired
             
             volumeManager.setBodyVolume();
             spiritLineBehaviour.deactiveSpiritLine();
-            ghostObject.SetActive(false);
+            MakeGhostModelVisible(false);
 
             // destroy the anchor we placed
             cachedAnchor.SetActive(false);
@@ -218,13 +229,12 @@ namespace DeadTired
             playerObject.layer = PlayerBodyLayer;
         }
         
-
-        
         // call this from other scripts!!
         public void PlayerHit()
         {
             if (currentState != PlayerState.Ghost) return;
             ReturnPlayerToBody();
+
         }
 
 
