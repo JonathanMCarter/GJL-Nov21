@@ -6,7 +6,7 @@ namespace DeadTired.Interactables
     public class Lever : BaseInteraction, IInteractable
     {
         private static readonly int UseLever = Animator.StringToHash("UseLever");
-        
+
         private Animator anim;
         public UnityEvent OnLeverPulled;
         protected bool leverPulled;

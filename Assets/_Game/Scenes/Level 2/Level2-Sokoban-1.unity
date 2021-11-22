@@ -692,8 +692,46 @@ PrefabInstance:
       propertyPath: OnLeverPulled.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: DeadTired.Sokoban.SokobanManager, Assembly-CSharp
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5360165147523249291, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+--- !u!1 &140496471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5360165147523249289, guid: e0bef2a7d476936408951ed7077d1c13, type: 3}
+  m_PrefabInstance: {fileID: 140496470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &140496472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140496471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843527198e594fe39eca4d5bf502990e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayerGhost:
+    useConstant: 0
+    constantValue: 1
+    variable: {fileID: 11400000, guid: b22d3f446a99ffb4799dd2ffe0192dd1, type: 2}
+  shouldPlayerBeGhost: 1
+  OnLeverPulled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 61272452}
+        m_TargetAssemblyTypeName: DeadTired.Sokoban.SokobanManager, Assembly-CSharp
+        m_MethodName: ResetBoard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &156680892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6430238952214629407, guid: 4534a5faf1140a8449010f29df0b72aa, type: 3}

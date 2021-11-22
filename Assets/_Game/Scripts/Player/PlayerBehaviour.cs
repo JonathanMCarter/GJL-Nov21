@@ -146,6 +146,7 @@ namespace DeadTired
             if (cachedAnchor == null)
             {
                 cachedAnchor = Instantiate(anchorPrefab, playerObject.transform.position, playerObject.transform.rotation);
+                SceneElly.MoveObjectToScene(cachedAnchor, "Player");
                 hasCachedTransform = false;
             }
             else
@@ -201,7 +202,8 @@ namespace DeadTired
             OnPlayerStateChanged?.Invoke(isPlayerGhost.Value);
         }
 
-        private void MakeGhostModelVisible(bool makeVisible = true) {
+        private void MakeGhostModelVisible(bool makeVisible = true) 
+        {
             ghostObject.SetActive(makeVisible);
             bodyObject.SetActive(!makeVisible);
         }
